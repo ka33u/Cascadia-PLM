@@ -1,0 +1,210 @@
+{
+  "verifiedAt": "2026-09-15T16:09:32.544Z",
+  "originalFailure": "Old shared form lacks refresh-only recovery after confirmed save. Failure reproduced by component test; original shared refresh callback also swallowed read failures.",
+  "actualBrowser": {
+    "passed": true,
+    "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "refreshFailuresRecovered": 2,
+    "committedWriteRetained": true,
+    "refreshOnlyRetry": true,
+    "immediateDoubleSubmitPrevented": true,
+    "pendingDialogCloseProtected": true,
+    "conflictDraftAndReasonRetained": true,
+    "untouchedNodeRefreshed": true,
+    "originalPromisePreserved": true,
+    "lostInlineResponseRecovered": true,
+    "actorMismatchBlocked": true,
+    "projectIsolation": true,
+    "putCounts": {
+      "A": 3,
+      "B": 2
+    },
+    "historyCounts": {
+      "A": 3,
+      "B": 2
+    },
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "candidateBrowser": {
+    "passed": true,
+    "applicationRoot": "/private/tmp/npi-manufacturing-recovery-review",
+    "refreshFailuresRecovered": 2,
+    "committedWriteRetained": true,
+    "refreshOnlyRetry": true,
+    "immediateDoubleSubmitPrevented": true,
+    "pendingDialogCloseProtected": true,
+    "conflictDraftAndReasonRetained": true,
+    "untouchedNodeRefreshed": true,
+    "originalPromisePreserved": true,
+    "lostInlineResponseRecovered": true,
+    "actorMismatchBlocked": true,
+    "projectIsolation": true,
+    "putCounts": {
+      "A": 3,
+      "B": 2
+    },
+    "historyCounts": {
+      "A": 3,
+      "B": 2
+    },
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "actualQuickReplyRegression": {
+    "passed": true,
+    "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "oneClickDialog": true,
+    "partialFirstReply": true,
+    "fourNodeBatchFromProject": true,
+    "reasonRequired": true,
+    "historyPreserved": true,
+    "conflictDraftRetained": true,
+    "refreshBeforeExplicitReload": true,
+    "completedNodeReadOnly": true,
+    "pendingSaveCannotDismiss": true,
+    "lateNavigationIgnored": true,
+    "projectIdentityIsolation": true,
+    "countersPrecedeFilters": true,
+    "counterNodeScope": true,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "runtime": {
+    "verifiedAt": "2026-09-15T16:08:00.147Z",
+    "observations": [
+      {
+        "file": "NpiWorkspace.tsx",
+        "status": 200,
+        "markers": {
+          "reloadManufacturingPlan": true,
+          "refreshManufacturingReply": true,
+          "setDashboard(nextDashboard)": true
+        },
+        "sha256": "f56e0b2f47995ff400879d85cedbe9cc815f3e53c920840dd88020de30109933"
+      },
+      {
+        "file": "NpiManufacturingReply.tsx",
+        "status": 200,
+        "markers": {
+          "needsReload": true,
+          "重试刷新列表": true,
+          "npi-reply-feedback": true,
+          "未完成节点的未保存输入已保留": true
+        },
+        "sha256": "17fe7a8120042ff7f4a29f3159f055549b6c3a942e49a8e6895666d133d6dbde"
+      },
+      {
+        "file": "NpiManufacturingReplyDialog.tsx",
+        "status": 200,
+        "markers": {
+          "pending.current": true,
+          "onReload": true
+        },
+        "sha256": "8b93437d7dec697e7471277528bfb8a2e1e4d9b95ec05464c90951f5572ecff3"
+      },
+      {
+        "file": "npi.css",
+        "status": 200,
+        "markers": {
+          ".npi-reply-feedback": true,
+          ".npi-reply-actions": true
+        },
+        "sha256": "d66a721bd4bcd9b59029baad65a4ef4e0a0fa81383c73ffec705eec27f274ce5"
+      }
+    ],
+    "scope": "Read-only 3410 source modules; no login, restart or formal data requests."
+  },
+  "fixtureCleanup": {
+    "createdAt": "2026-09-15T16:07:51.035Z",
+    "ownerPid": 13107,
+    "projectIds": [
+      "2885f4bb-62d1-4c6a-a5ac-5d8c7e1c4587",
+      "0fd2017e-b5c8-417a-9d0a-e3713f149740"
+    ],
+    "userIds": [
+      "cf4310d8-3d8f-472b-9c92-6866b46a5b1f",
+      "c4b3b1bf-4266-4072-99fb-0943d5b212b5",
+      "0dec3aab-cf9c-4d19-9941-326c18487a6e"
+    ],
+    "appRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "cleaned": true,
+    "cleanedAt": "2026-09-15T16:07:55.583Z"
+  },
+  "checks": {
+    "dom": "11 passed: 6 new manufacturing recovery plus 5 file operation regressions",
+    "typecheck": "Core, app and root passed; root repeated after browser script",
+    "lint": "passed",
+    "format": "passed",
+    "candidateBuild": "passed exit 0",
+    "actualBuild": "passed exit 0",
+    "candidateBrowser": "passed exit 0 and cleanup",
+    "actualBrowser": "passed exit 0 and cleanup",
+    "quickReplyRegression": "passed on actual build with exit 0 and cleanup"
+  },
+  "files": {
+    "packages/core/src/components/npi/NpiManufacturingReply.tsx": "fa300b7377cc105cf9145009e6303941e1802afd1db61d866ac10a8b34b911bb",
+    "packages/core/src/components/npi/NpiManufacturingReplyDialog.tsx": "08d2dc42d9f28ffbda18351ab96246431b969099f22267d3dfe1fd6de95e7a01",
+    "packages/core/src/components/npi/NpiWorkspace.tsx": "6f62c2e1124e458c3f924eb4c47ae7f213da20baee53d43d9ef3c990c28abb07",
+    "packages/core/src/components/npi/npi.css": "27ae5e3667a68ebd3072c950113d4c1f2d00ee148ab4cd567112c900b9059c30",
+    "scripts/npi-manufacturing-recovery-dom.test.mjs": "64759c45b0133868b885fbfed2bf5ee620b68e11a9b42a5465d72bd8a7956a80",
+    "scripts/npi-manufacturing-recovery-browser.test.ts": "f9de160cc0584eaa32102e1328d266487a30024fb24e95ce34e0e922992f84ae",
+    "scripts/npi-manufacturing-quick-browser.test.ts": "78bbd0014fc48140bfaa0ef6bb1d54bdc9a018fc1dcd902e8fa7021d28aa3e22"
+  },
+  "logs": {
+    "npi-manufacturing-recovery-before.log": {
+      "path": "/tmp/npi-manufacturing-recovery-before.log",
+      "sha256": "417c638e91e0067a841f644a47a74ac3398a6cfa75cedeec6b66d83e0bd8158a"
+    },
+    "npi-manufacturing-recovery-types.log": {
+      "path": "/tmp/npi-manufacturing-recovery-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-manufacturing-recovery-test-types.log": {
+      "path": "/tmp/npi-manufacturing-recovery-test-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-manufacturing-recovery-lint.log": {
+      "path": "/tmp/npi-manufacturing-recovery-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-manufacturing-recovery-format.log": {
+      "path": "/tmp/npi-manufacturing-recovery-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-manufacturing-recovery-dom.log": {
+      "path": "/tmp/npi-manufacturing-recovery-dom.log",
+      "sha256": "29663a348654b2fcf67a6325f2840719e46813c031c04e7dccfbbfda15b4e7e3"
+    },
+    "npi-manufacturing-recovery-dom-regression.log": {
+      "path": "/tmp/npi-manufacturing-recovery-dom-regression.log",
+      "sha256": "25b6920a4930ace03bccc055895a026c5a8bfb93e23a9aa14a83f7ad7821dc13"
+    },
+    "npi-manufacturing-recovery-build.log": {
+      "path": "/tmp/npi-manufacturing-recovery-build.log",
+      "sha256": "66070a0c38414617c59023619eba1680eb66590fbd092125869c44504a9971e7"
+    },
+    "npi-manufacturing-recovery-browser.log": {
+      "path": "/tmp/npi-manufacturing-recovery-browser.log",
+      "sha256": "df77b636015301db67b6b6425cc279cb430db3dcd8ea22c5f9cffde694cf6fd2"
+    },
+    "npi-manufacturing-recovery-delivered-build.log": {
+      "path": "/tmp/npi-manufacturing-recovery-delivered-build.log",
+      "sha256": "43281ebcf925a34807b5c1849e62223c25b7fc9286c6c75a2ef4fcbfd16979b4"
+    },
+    "npi-manufacturing-recovery-delivered-browser.log": {
+      "path": "/tmp/npi-manufacturing-recovery-delivered-browser.log",
+      "sha256": "df77b636015301db67b6b6425cc279cb430db3dcd8ea22c5f9cffde694cf6fd2"
+    },
+    "npi-manufacturing-recovery-quick-regression.log": {
+      "path": "/tmp/npi-manufacturing-recovery-quick-regression.log",
+      "sha256": "f4882e8fb5c151f17a569128de2c01e3d0e97add017390746d406971cdedf0bb"
+    }
+  },
+  "screenshots": [
+    "docs/npi/screenshots/manufacturing-recovery-saved-desktop.png",
+    "docs/npi/screenshots/manufacturing-recovery-conflict-mobile.png",
+    "docs/npi/screenshots/manufacturing-recovery-inline-mobile.png"
+  ],
+  "limits": "Shared dialog and inline reply form. No global browser unload or inline-tab navigation guard. Existing API, permissions and database schema unchanged. Explicit isolated _test database and own fixtures cleaned; not full SRS or pilot acceptance."
+}

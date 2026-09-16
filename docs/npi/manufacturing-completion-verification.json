@@ -1,0 +1,166 @@
+{
+  "verifiedAt": "2026-09-15T14:18:59.685Z",
+  "candidateBrowser": {
+    "passed": true,
+    "applicationRoot": "/private/tmp/npi-manufacturing-completion-review",
+    "directTaskEntry": true,
+    "sharedProjectEntry": true,
+    "emptyAndFutureDatesRejected": true,
+    "partialCompletion": true,
+    "allFourBatchCompletion": true,
+    "existingActualsLocked": true,
+    "conflictKeepsPendingInputs": true,
+    "explicitLatestAcceptance": true,
+    "saveCannotDismiss": true,
+    "savedRefreshRetriesReadOnly": true,
+    "revokedPermissionLocks": true,
+    "lateNavigationIgnored": true,
+    "separateProjectInputs": true,
+    "supervisorAndTechnicalNoWrites": true,
+    "completedCountsRefreshed": true,
+    "historyUnchanged": true,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "actualBrowser": {
+    "passed": true,
+    "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "directTaskEntry": true,
+    "sharedProjectEntry": true,
+    "emptyAndFutureDatesRejected": true,
+    "partialCompletion": true,
+    "allFourBatchCompletion": true,
+    "existingActualsLocked": true,
+    "conflictKeepsPendingInputs": true,
+    "explicitLatestAcceptance": true,
+    "saveCannotDismiss": true,
+    "savedRefreshRetriesReadOnly": true,
+    "revokedPermissionLocks": true,
+    "lateNavigationIgnored": true,
+    "separateProjectInputs": true,
+    "supervisorAndTechnicalNoWrites": true,
+    "completedCountsRefreshed": true,
+    "historyUnchanged": true,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "replyRegression": {
+    "passed": true,
+    "applicationRoot": "/private/tmp/npi-manufacturing-completion-review",
+    "oneClickDialog": true,
+    "partialFirstReply": true,
+    "fourNodeBatchFromProject": true,
+    "reasonRequired": true,
+    "historyPreserved": true,
+    "conflictDraftRetained": true,
+    "refreshBeforeExplicitReload": true,
+    "completedNodeReadOnly": true,
+    "pendingSaveCannotDismiss": true,
+    "lateNavigationIgnored": true,
+    "projectIdentityIsolation": true,
+    "countersPrecedeFilters": true,
+    "counterNodeScope": true,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "runtime": {
+    "verifiedAt": "2026-09-15T14:17:16.386Z",
+    "observations": [
+      {
+        "file": "NpiWorkspace.tsx",
+        "status": 200,
+        "markers": {
+          "NpiManufacturingCompletionDialog": true,
+          "manufacturingCompletionOpen": true
+        },
+        "sourceSha256": "eaedb7e985a0b9f80bf507859eba4069f3a4e4f2e92c9af18f74be2a18be8d94"
+      },
+      {
+        "file": "NpiModuleViews.tsx",
+        "status": 200,
+        "markers": {
+          "onComplete": true,
+          "确认完成": true
+        },
+        "sourceSha256": "87d10218cc2f57f3137cef69537ae625148faeae50c3682b39b88eafab190dbf"
+      },
+      {
+        "file": "NpiManufacturingCompletionDialog.tsx",
+        "status": 200,
+        "markers": {
+          "保存完成记录": true,
+          "重试刷新": true,
+          "actualDates": true,
+          "按最新记录继续": true
+        },
+        "sourceSha256": "d2bfe2d72071c53fe99eb772759bc3503dd18c70b6cd17d35d54282695474396"
+      },
+      {
+        "file": "navigation.ts",
+        "status": 200,
+        "markers": {
+          "确认完成": true
+        },
+        "sourceSha256": "79c4a3dfbd3b89f2fdbcd09f880178332ba86794f1e4c2597547670fe856f67e"
+      },
+      {
+        "file": "npi.css",
+        "status": 200,
+        "markers": {
+          "npi-manufacturing-completion-dialog": true
+        },
+        "sourceSha256": "a777e2c8b7a829b2dada6326b79c7dca3b96666d0a40b3ac80d436ad569e0ebe"
+      }
+    ],
+    "scope": "Read-only 3410 Vite source modules; no restart or authenticated browser interaction"
+  },
+  "checks": {
+    "standardTypecheck": "passed on final candidate application source",
+    "changedSourceAndTestsLint": "passed",
+    "testTypecheck": "passed",
+    "candidateBuild": "passed with exit 0",
+    "candidateBrowser": "passed with exit 0 and own fixtures cleaned",
+    "actualBuild": "passed with exit 0",
+    "actualBrowser": "passed with exit 0 and own fixtures cleaned",
+    "legacyFullBrowser": "selectors and completed-field assertion updated; full script was not executed"
+  },
+  "logs": {
+    "npi-manufacturing-completion-all-types-final.log": {
+      "path": "/tmp/npi-manufacturing-completion-all-types-final.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-manufacturing-completion-test-types-final.log": {
+      "path": "/tmp/npi-manufacturing-completion-test-types-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-manufacturing-completion-lint-final.log": {
+      "path": "/tmp/npi-manufacturing-completion-lint-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-manufacturing-completion-build-final.log": {
+      "path": "/tmp/npi-manufacturing-completion-build-final.log",
+      "sha256": "13e498c481e43d0ad97f8d10f32df887a58c8d0877831d71eb7b76b21db35cfd"
+    },
+    "npi-manufacturing-completion-browser-final.log": {
+      "path": "/tmp/npi-manufacturing-completion-browser-final.log",
+      "sha256": "3ea27bb457dad5a1539e8d72213a85eda6d7033043af14cc64d25cd30fa13236"
+    },
+    "npi-manufacturing-completion-reply-regression.log": {
+      "path": "/tmp/npi-manufacturing-completion-reply-regression.log",
+      "sha256": "f4882e8fb5c151f17a569128de2c01e3d0e97add017390746d406971cdedf0bb"
+    },
+    "npi-manufacturing-completion-delivered-build.log": {
+      "path": "/tmp/npi-manufacturing-completion-delivered-build.log",
+      "sha256": "cc33a7009bbf268d9fa7b6cc196ec6f7199dea15514a8f49d89d99b0e79f762d"
+    },
+    "npi-manufacturing-completion-delivered-browser.log": {
+      "path": "/tmp/npi-manufacturing-completion-delivered-browser.log",
+      "sha256": "3ea27bb457dad5a1539e8d72213a85eda6d7033043af14cc64d25cd30fa13236"
+    }
+  },
+  "screenshots": [
+    "screenshots/manufacturing-completion-mobile.png",
+    "screenshots/manufacturing-completion-desktop.png"
+  ],
+  "limits": "UI uses existing completion endpoint and permission policy; no schema changes, formal database writes or real-project pilot. Current full SRS and comprehensive browser acceptance remain outstanding."
+}

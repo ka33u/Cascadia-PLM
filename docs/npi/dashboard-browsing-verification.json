@@ -1,0 +1,132 @@
+{
+  "verifiedAt": "2026-09-15T15:10:54.417Z",
+  "actualBrowser": {
+    "passed": true,
+    "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "projects": 80,
+    "normalProjects": 26,
+    "todosTraversed": 112,
+    "warningsTraversed": 53,
+    "independentPaging": true,
+    "allRecordSearch": true,
+    "overdueOnlyIncluded": true,
+    "taskNavigation": true,
+    "projectNavigation": true,
+    "mobileOverflow": false,
+    "mobilePaging": true,
+    "businessWrites": [],
+    "pageErrors": []
+  },
+  "candidateBrowser": {
+    "passed": true,
+    "applicationRoot": "/private/tmp/npi-dashboard-browsing-review",
+    "projects": 80,
+    "normalProjects": 26,
+    "todosTraversed": 112,
+    "warningsTraversed": 53,
+    "independentPaging": true,
+    "allRecordSearch": true,
+    "overdueOnlyIncluded": true,
+    "taskNavigation": true,
+    "projectNavigation": true,
+    "mobileOverflow": false,
+    "businessWrites": [],
+    "pageErrors": []
+  },
+  "runtime": {
+    "verifiedAt": "2026-09-15T15:10:40.265Z",
+    "observations": [
+      {
+        "file": "NpiProjectDashboard.tsx",
+        "status": 200,
+        "markers": {
+          "NpiDashboardBriefs": true,
+          "项目概览顶部翻页": true,
+          "正常项目顶部翻页": true
+        },
+        "sha256": "3e84d9b420cda26006f8feb7787ce7b9ddf77fb3b7816a990a1d30eaa514f43c"
+      },
+      {
+        "file": "NpiDashboardBriefs.tsx",
+        "status": 200,
+        "markers": {
+          "今日待办": true,
+          "风险预警": true,
+          "查看全部": true,
+          "data-brief-id": true
+        },
+        "sha256": "c43ed080d3efe349c1227a9a58e28670d8858bd33c94f196d2f8378dca57af96"
+      },
+      {
+        "file": "npi.css",
+        "status": 200,
+        "markers": {
+          ".npi-dashboard-brief > .npi-module-filters": true
+        },
+        "sha256": "3c35c6ff3af247f49d9573cbfa1b86ac730c81beab002896e698329dd7f49160"
+      }
+    ],
+    "scope": "Read-only source module requests from local 3410; no login, restart or formal data writes."
+  },
+  "checks": {
+    "typecheck": "Core, app and root passed; root repeated after final browser test edits",
+    "lint": "passed",
+    "format": "passed",
+    "dom": "3 passed; 132 projects",
+    "candidateBuild": "passed exit 0",
+    "actualBuild": "passed exit 0",
+    "candidateBrowser": "passed exit 0; before adding mobile multi-page assertion",
+    "actualBrowser": "passed exit 0 including mobile multi-page assertion; own fixtures cleaned"
+  },
+  "files": {
+    "packages/core/src/components/npi/NpiDashboardBriefs.tsx": "9ccbe1e83fca7dce9bd0cd408d546787f9051b35ada214eb7d3e75d15027a772",
+    "packages/core/src/components/npi/NpiProjectDashboard.tsx": "66e238eb61d90c56c9a39304c633aaa8811cd3ed282175835e7b6b73eec02780",
+    "packages/core/src/components/npi/npi.css": "66205b37838bcf57bd13097f7330cc44394279d91f9d2327d5222e91ce8d5c23",
+    "scripts/npi-dashboard-browsing-dom.test.mjs": "b3b7bb6b629220075306d131a6b84f058571736a8ac145c949c08ab3cc23dbcd",
+    "scripts/npi-dashboard-browsing-browser.test.ts": "748cd08b45804624810d2b398d6d1a26d076ca61ef88bb8b57686b1c62d05b86"
+  },
+  "logs": {
+    "npi-dashboard-browsing-types.log": {
+      "path": "/tmp/npi-dashboard-browsing-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-dashboard-browsing-test-types.log": {
+      "path": "/tmp/npi-dashboard-browsing-test-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-dashboard-browsing-lint.log": {
+      "path": "/tmp/npi-dashboard-browsing-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-dashboard-browsing-format.log": {
+      "path": "/tmp/npi-dashboard-browsing-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-dashboard-browsing-dom.log": {
+      "path": "/tmp/npi-dashboard-browsing-dom.log",
+      "sha256": "77dbc382b4563f717d7829907f525339991c18196510bfe27c8c262bb99c2e21"
+    },
+    "npi-dashboard-browsing-build.log": {
+      "path": "/tmp/npi-dashboard-browsing-build.log",
+      "sha256": "0cc0f489ca9ce771963d0502e947cbe6d479294af94bf96c068b43f254487bce"
+    },
+    "npi-dashboard-browsing-browser.log": {
+      "path": "/tmp/npi-dashboard-browsing-browser.log",
+      "sha256": "d09088acb1e03ee7a937c2e0da2ff606a560e086953addff0c8b4024315eacf2"
+    },
+    "npi-dashboard-browsing-delivered-build.log": {
+      "path": "/tmp/npi-dashboard-browsing-delivered-build.log",
+      "sha256": "a14292cd00d7f8223f0015f6d6c9fc6945c404062c9873ad23f15d1c5a353d81"
+    },
+    "npi-dashboard-browsing-delivered-browser.log": {
+      "path": "/tmp/npi-dashboard-browsing-delivered-browser.log",
+      "sha256": "d09088acb1e03ee7a937c2e0da2ff606a560e086953addff0c8b4024315eacf2"
+    }
+  },
+  "screenshots": [
+    "docs/npi/screenshots/dashboard-browsing-desktop.png",
+    "docs/npi/screenshots/dashboard-browsing-mobile.png",
+    "docs/npi/screenshots/dashboard-browsing-mobile-paging.png"
+  ],
+  "limits": "Client-side browsing pagination. Server response size and authorization rules unchanged. Isolated synthetic data only; not full SRS acceptance or production load validation."
+}

@@ -1,0 +1,77 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+export const eventLabels: Record<string, string> = {
+  PROJECT_CREATED: '创建新品项目',
+  PROJECT_CHANGED: '调整项目计划与负责人',
+  DOCUMENT_SPACE_CREATED: '建立项目资料空间',
+  FILE_UPLOADED: '上传资料',
+  FILE_ARCHIVED: '归档资料',
+  ISSUE_CREATED: '创建项目问题',
+  ISSUE_UPDATED: '调整项目问题',
+  ISSUE_NOTE: '补充问题进展',
+  EXTERNAL_CREATED: '添加BOM外物料',
+  PROMISE_CHANGED: '回复 / 修改承诺',
+  COMPLETED: '确认完成',
+  TRACKING_PLAN_ADJUSTED: '调整要求日期 / 责任人',
+  COMPLETION_CORRECTED: '更正实际完成日期',
+  MANUFACTURING_COMPLETED: '制造节点集中完成',
+  MANUFACTURING_EXCEPTION_REPORTED: '添加制造异常件',
+  MANUFACTURING_PLAN_REPLIED: '集中回复制造计划',
+  STAGE_CHANGED: '推进项目阶段',
+  BOM_IMPORTED: '导入BOM新版本',
+  PROJECT_INHERITED: '从相似项目继承配置',
+  BOM_DRAFT_SAVED: '保存BOM草稿',
+  BOM_DRAFT_UPDATED: '更新BOM草稿',
+  BOM_DRAFT_RESUMED: '恢复BOM草稿',
+  BOM_DRAFT_DISCARDED: '移除BOM草稿',
+  TRACKING_CHANGED: '调整物料跟踪',
+  BOM_TRACKING_MIGRATED: '换版关联原跟踪',
+  BOM_TRACKING_RETIRED: '换版停止旧跟踪',
+  DETAILS_UPDATED: '补充供应商 / 备注',
+}
+export const eventGroups = {
+  promises: {
+    label: '承诺回复',
+    actions: [
+      'PROMISE_CHANGED',
+      'MANUFACTURING_PLAN_REPLIED',
+      'DETAILS_UPDATED',
+    ],
+  },
+  completion: {
+    label: '完成与更正',
+    actions: ['COMPLETED', 'MANUFACTURING_COMPLETED', 'COMPLETION_CORRECTED'],
+  },
+  bom: {
+    label: 'BOM与物料跟踪',
+    actions: [
+      'BOM_IMPORTED',
+      'BOM_DRAFT_SAVED',
+      'BOM_DRAFT_UPDATED',
+      'BOM_DRAFT_RESUMED',
+      'BOM_DRAFT_DISCARDED',
+      'TRACKING_CHANGED',
+      'BOM_TRACKING_MIGRATED',
+      'BOM_TRACKING_RETIRED',
+      'TRACKING_PLAN_ADJUSTED',
+      'EXTERNAL_CREATED',
+      'MANUFACTURING_EXCEPTION_REPORTED',
+    ],
+  },
+  project: {
+    label: '项目与阶段',
+    actions: [
+      'PROJECT_CREATED',
+      'PROJECT_CHANGED',
+      'PROJECT_INHERITED',
+      'STAGE_CHANGED',
+    ],
+  },
+  issues: {
+    label: '项目问题',
+    actions: ['ISSUE_CREATED', 'ISSUE_UPDATED', 'ISSUE_NOTE'],
+  },
+  files: {
+    label: '资料记录',
+    actions: ['DOCUMENT_SPACE_CREATED', 'FILE_UPLOADED', 'FILE_ARCHIVED'],
+  },
+} as const

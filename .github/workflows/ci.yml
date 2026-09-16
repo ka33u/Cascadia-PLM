@@ -1,0 +1,678 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# The token reads this repository and nothing else. Nothing in this workflow
+# writes: every job checks out, runs npm scripts and uploads artifacts, and
+# none of that needs a scope beyond reads. A job that later does — posting a
+# pull-request comment, say — widens at job level, so the extra scope sits next
+# to the step that asked for it and expires with it.
+permissions:
+  contents: read
+
+# Cancel superseded PR runs; never cancel or drop a main run. Each merge commit
+# is a distinct state that needs its own verdict — on 2026-08-05 two merges
+# landed 14 seconds apart, and a blanket cancel-in-progress would have left the
+# first one permanently unjudged. That guarantee needs more than a false
+# cancel-in-progress: GitHub queues at most one *pending* run per concurrency
+# group, so with a ref-keyed group a third push landing while one run is
+# executing and another is pending gets its pending run silently dropped, not
+# queued. Keying push runs by SHA gives every push its own group so none can
+# supersede another; PR runs stay keyed by ref so a new push still collapses
+# the old one. `github.ref` is always set on a pull_request event, so the
+# `a && b || c` short-circuit here can't fall through the falsy-middle trap.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.sha }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  NODE_ENV: test
+  DATABASE_URL: postgresql://postgres:postgres@localhost:5432/cascadia_test
+  # The unit suite runs against its own database and refuses to guess which
+  # one (packages/core/src/__tests__/global-setup.ts). Here it is the same
+  # database DATABASE_URL names, because each job gets a throwaway service
+  # container — locally the two are deliberately different.
+  TEST_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/cascadia_test
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run lint
+        run: npm run lint
+
+      # Prettier was never gated here, so formatting drifted across 179 files
+      # before anyone noticed. `prettier` is pinned to an exact version in
+      # package.json — a floating range reformats different files per minor
+      # release, which is drift by another name.
+      - name: Check formatting
+        run: npm run format:check
+
+      # Every file carries the SPDX header its edition requires. This matters
+      # because the OSS publish pipeline copies core files downstream verbatim —
+      # there is no header-rewriting step, by design — so a wrong header here
+      # becomes a wrong licence there.
+      - name: Check license headers
+        run: npm run license:check
+
+      # No dependency may oblige us to publish source we sell. The gate is
+      # edition-blind by construction: its closure comes from the lockfile,
+      # which spans every workspace, so which manifest declares a package never
+      # changes the verdict and a strong-copyleft addition is caught wherever it
+      # was added. Reads the lockfile, so it needs no install of its own and
+      # cannot drift from what ships.
+      - name: Check third-party licenses
+        run: npm run license:thirdparty
+
+      # Core must not reach proprietary code. Resolves every import specifier
+      # and classifies the target, rather than matching patterns: two rounds of
+      # grepping previously declared a package "fully seamed" while a dynamic
+      # import and a bare package-id string were still live. Ratcheted — the
+      # known-pending list may only shrink.
+      - name: Check core/proprietary boundary
+        run: npm run boundary:check
+
+      # `item_type_configs` holds one row per item type for the whole instance.
+      # A suite that overrides one in `beforeAll` writes outside the gate
+      # transaction, so the row outlives the run and the next one inherits it —
+      # which is how a test came to assert on file order. Six suites did it;
+      # this catches the seventh.
+      - name: Check test config hygiene
+        run: npm run test:hygiene:check
+
+      # A documented request body must be an enforced one. Forty-three routes
+      # declared a schema in their OpenAPI annotation and ran none of it, so
+      # the spec described a contract the server did not have. `body:` now
+      # both validates and documents; this keeps the next annotation honest.
+      - name: Check annotated request bodies
+        run: npm run bodies:check
+
+      # And a declared permission tuple must be one a role can hold. `manage`
+      # sits on no item-type resource, so `['documents', 'manage']` was a route
+      # that answered 403 to everyone including the Administrator for as long
+      # as it existed — a dead endpoint is indistinguishable from a tight one
+      # from the outside, and its own suite minted a role to reach it. Reasons
+      # over ROLE_DEFINITIONS, which is the whole universe of principals: there
+      # is no role-creation route and API key scopes only narrow.
+      - name: Check permission tuples are satisfiable
+        run: npm run permissions:check
+
+      # Since v0.5 the committed migrations under apps/*/drizzle are the
+      # upgrade path for real installs. If the schema changed and drizzle-kit
+      # can still mint a new migration, someone edited the schema without
+      # committing the migration alongside it — the tree goes dirty and this
+      # fails. `generate` is offline (it diffs schema against the committed
+      # migrations), so no database is needed.
+      - name: Check schema/migration drift
+        run: |
+          npm run db:generate
+          if [ -n "$(git status --porcelain apps/cascadia/drizzle)" ]; then
+            git status --porcelain apps/cascadia/drizzle
+            echo "::error::Schema changed without a committed migration. Run 'npm run db:generate', then commit the new files under apps/cascadia/drizzle."
+            exit 1
+          fi
+
+  openapi:
+    name: OpenAPI Snapshot
+    # Pushes to `main` only. The snapshot in this repository is written by
+    # the release pipeline, not by hand, so regenerating it in a pull request
+    # is churn the next release overwrites — and a failing check on a
+    # contribution that could not have avoided it. The contract is still
+    # enforced on `main`.
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Regenerates the OpenAPI spec from route metadata and diffs it against
+      # the committed snapshot. Fails when a route signature changed without
+      # `npm run openapi:snapshot` being committed alongside.
+      - name: Verify OpenAPI snapshot is up to date
+        run: npm run openapi:check
+
+      - name: Verify generated API types match the snapshot
+        run: npm run types:openapi:check
+
+  # Since v0.5 the committed migrations under apps/*/drizzle are the upgrade
+  # path for every real install, and until now nothing ever ran them. The drift
+  # gate in Lint proves a migration *exists* for each schema change; it says
+  # nothing about whether the SQL applies. This job applies both editions'
+  # migrations to their own empty database and then seeds the enterprise one,
+  # which is the fresh-install sequence docs/deployment/upgrading.md documents.
+  #
+  # Runs on push as well as pull_request, like Lint: it is cheap, and two
+  # migrations that each apply cleanly alone can still collide once merged —
+  # exactly the semantic conflict the post-merge run exists for.
+  #
+  # An empty database is also the one thing a data-dependent migration cannot
+  # be judged on: a backfill UPDATE matches nothing and a guard that is meant to
+  # abort — an ADD CONSTRAINT, a SET NOT NULL, a CREATE UNIQUE INDEX — has
+  # nothing to abort on, so both are green here for the wrong reason. The last
+  # step therefore replays the journal against *seeded* databases — see
+  # scripts/check-migration-backfills.mjs, which classifies both families.
+  migrations:
+    name: Migrations Apply
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: cascadia_migrate
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Step-level DATABASE_URL overrides the workflow-level one, which names
+      # cascadia_test — a database this job's service does not create. A real
+      # environment variable wins over the repo's .env because dotenv does not
+      # overwrite (scripts/drizzle.mjs).
+      - name: Apply enterprise migrations to an empty database
+        run: npm run db:migrate
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/cascadia_migrate
+
+      # The other half of "Fresh installs" in upgrading.md: migrate, then seed.
+      # Seeding a migrated database is what proves the migrations produce the
+      # schema the application actually writes to.
+      - name: Seed the migrated database
+        run: npm run db:seed
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/cascadia_migrate
+
+      # Applying without throwing is not the same as arriving at the right
+      # schema. This pushes `modules.schema.ts` to a second database and diffs
+      # the two: a migration that drifted from the declared schema — a dropped
+      # statement, a column the schema later renamed — produces a database that
+      # is fine in dev (pushed) and wrong on a real install (migrated).
+      - name: Create a database to push the declared schema into
+        run: psql -h localhost -U postgres -c 'CREATE DATABASE cascadia_pushed'
+        env:
+          PGPASSWORD: postgres
+      - name: The migrations build the schema the code declares
+        run: npm run db:check-migrations
+        env:
+          MIGRATED_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/cascadia_migrate
+          PUSHED_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/cascadia_pushed
+      - name: Create a database for the community edition
+        run: psql -h localhost -U postgres -c 'CREATE DATABASE cascadia_migrate_community'
+        env:
+          PGPASSWORD: postgres
+
+      # The published edition has its own journal, and nothing else in CI runs
+      # it. CASCADIA_APP is the edition override (scripts/edition.mjs).
+      - name: Apply community migrations to an empty database
+        run: CASCADIA_APP=cascadia npm run db:migrate
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/cascadia_migrate_community
+
+      # Everything above applies migrations to empty databases, which is the
+      # fresh-install path. This is the upgrade path: stage the journal to the
+      # tag before the one under test, seed the shape of data that tag's SQL
+      # exists to handle, then apply it and assert what it did. It also fails
+      # when a new migration's outcome depends on rows — whether it writes them
+      # or merely asks Postgres to validate them — and registers no scenario,
+      # so the gap cannot reopen on the next backfill or the next constraint.
+      #
+      # No CASCADIA_APP prefix: the script resolves the edition itself, so this
+      # step is correct in the published tree too, where only apps/cascadia
+      # exists.
+      - name: Create a database to replay the migrations against rows
+        run: psql -h localhost -U postgres -c 'CREATE DATABASE cascadia_migrate_backfills'
+        env:
+          PGPASSWORD: postgres
+      - name: The data-dependent migrations do what they document
+        run: npm run db:check-backfills
+        env:
+          BACKFILL_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/cascadia_migrate_backfills
+
+      # Every step above starts from an empty database, which is the one state
+      # in which `db:baseline` is never used — so nothing here exercised the
+      # upgrade path for the pre-0.5 installs it exists to rescue. This asserts
+      # the invariant that path turns on: for every prefix of the journal,
+      # push-to-there then baseline then migrate lands on exactly the schema
+      # migrate-from-empty builds. It is what catches a stamp that records a
+      # migration whose SQL never ran, which drizzle's resume-from-newest-row
+      # migrator then skips in silence rather than retrying.
+      #
+      # No CASCADIA_APP prefix, same as the step above: the script resolves the
+      # edition itself.
+      - name: Create a database to baseline and upgrade
+        run: psql -h localhost -U postgres -c 'CREATE DATABASE cascadia_baseline'
+        env:
+          PGPASSWORD: postgres
+      - name: db:baseline puts a pushed database on the migration path
+        run: npm run db:check-baseline
+        env:
+          BASELINE_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/cascadia_baseline
+
+  unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: cascadia_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Deliberately still `push`, while E2E builds its schema with `migrate`.
+      # Push is the dev and demo loop (db:drop:seed, the demo stack), so one job
+      # on each path keeps both continuously exercised; the drift gate in Lint
+      # already pins the two representations together, and Migrations Apply
+      # covers the migrations themselves.
+      - name: Setup database schema
+        run: npm run db:push
+
+      # `npm run test`, not `test:coverage`: vitest.config.ts enforces no
+      # coverage thresholds, and the codecov upload that consumed the report was
+      # dropped when this repo went proprietary — it had no token here and would
+      # have shipped source paths and per-line coverage of closed code to a third
+      # party. Nothing consumed the report, so nothing generates it.
+      - name: Run unit tests
+        run: npm run test
+
+      # The Python workers' shared database layer rides this job rather than a
+      # tenth one. It needs exactly what is already standing here — the postgres
+      # service and the real jobs/job_logs schema `db:push` just built — so a
+      # separate job would duplicate both to save nothing, and would be a new
+      # required context that only a repo-admin ruleset re-import could enforce.
+      # Appended here it is binding the moment it merges, because Unit Tests
+      # already is.
+      #
+      # Scope is workers/py-common only. The cad-converter and cad-generator
+      # suites stay local: they import pythonocc-core and cadquery, which are
+      # conda-only, so running them here would mean a third-party setup action
+      # and a multi-hundred-megabyte solve for pure-geometry unit tests. Their
+      # results belong in the pull request body instead. py-common needs pip and
+      # nothing else.
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
+      - name: Install Python worker test dependencies
+        run: pip install -r workers/py-common/requirements-dev.txt
+
+      # TEST_DATABASE_URL comes from the workflow-level env. Its absence is an
+      # error rather than a skip under CI (tests/conftest.py) — a suite that
+      # silently skipped every database assertion would be a green check
+      # gating nothing.
+      - name: Run Python worker tests
+        run: pytest workers/py-common
+
+  e2e-tests:
+    name: E2E Tests
+    runs-on: ubuntu-latest
+    # PR-only. The pull_request event checks out refs/pull/N/merge — main with
+    # this branch already merged — so by the time the merge commit lands on main,
+    # E2E has already run against that exact tree. Across the last 10 merges the
+    # post-merge run matched its PR run 10 times out of 10, at ~11 of the 22
+    # billed runner-minutes per run. That was half the CI bill for a replay.
+    #
+    # The main run is kept for what a PR run genuinely cannot cover: main
+    # advancing after a PR's last green run. GitHub recomputes the merge ref but
+    # does not re-run CI, so two independently-passing PRs can break once merged.
+    # Lint, Unit Tests, OpenAPI and Build still run on main and catch that class
+    # of semantic conflict — E2E is both the least likely to add a verdict there
+    # and by far the slowest to deliver one.
+    if: github.event_name == 'pull_request'
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: cascadia_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      # E2E is the closest thing CI has to a production boot, so it builds its
+      # schema the way a real install does. Roughly the same wall time as push.
+      - name: Setup database schema
+        run: npm run db:migrate
+
+      - name: Seed database
+        run: npm run db:seed
+
+      - name: Run E2E tests
+        run: npm run test:e2e
+        env:
+          CI: true
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: test-results/
+          retention-days: 7
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    # No `needs:` — deliberately. This was `needs: [lint, unit-tests]`, which made
+    # the strictest gate in the repo hostage to the weakest: a prettier failure in
+    # Lint skipped Build, and `typecheck:strict` with it. Between 2026-07-30 and
+    # 2026-08-05 that skipped Build on 15 of 18 runs, and two pull requests reached
+    # main with no typecheck signal at all — the PR page showed a red X everyone
+    # had already filed under "formatting".
+    #
+    # Building unconditionally costs ~2.5 runner-minutes on runs that would have
+    # skipped it. That is the point: when lint is red is precisely when you still
+    # want to know whether the types are sound. It also shortens the post-merge
+    # run, where Build is otherwise the tail of a lint -> unit -> build chain.
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Both editions, because a change can break one and not the other — the
+      # community app is not a subset of the enterprise app's build, it is a
+      # separate composition with its own route tree.
+      - name: Build (enterprise)
+        run: npm run build
+        env:
+          NODE_OPTIONS: '--max-old-space-size=4096'
+
+      - name: Build (community)
+        run: npm run build:community
+        env:
+          NODE_OPTIONS: '--max-old-space-size=4096'
+
+      # Deliberately lives in this job, after Build, rather than standing alone:
+      # apps/*/src/routeTree.gen.ts is gitignored and generated by
+      # TanStackRouterVite during `vite build`. It carries the module
+      # augmentation typing every createFileRoute() site, so on a fresh checkout
+      # a standalone tsc job would report a number unrelated to the code and
+      # gate nothing. Running here reuses the trees the builds just produced —
+      # and both must exist, since `typecheck-all` checks each app separately.
+      #
+      # No NODE_OPTIONS: tsc's heap is set inside typecheck-all, so every caller
+      # of that script gets it. It lived here once, and a caller without it ran
+      # out of heap at Node's ~2 GB runner default while this job stayed green.
+      - name: Typecheck
+        run: npm run typecheck:strict
+
+  compose-config:
+    name: Compose Config Validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # `docker compose config` is a no-network, no-daemon-needed YAML/schema
+      # validation. Catches drift between docker-compose.demo.yml (image-only
+      # quickstart) and docker-compose.demo-with-build.yml (contributor build)
+      # before they break end-users pulling the file via curl.
+      - name: Validate quickstart compose
+        run: docker compose -f docker-compose.demo.yml config --quiet
+
+      - name: Validate contributor compose
+        run: docker compose -f docker-compose.demo-with-build.yml config --quiet
+
+      # The main compose requires POSTGRES_PASSWORD/PGADMIN_PASSWORD (no
+      # defaults, deliberately — see docker-compose.yml). Dummy values here
+      # exercise exactly what an operator's .env provides.
+      - name: Validate main compose
+        env:
+          POSTGRES_PASSWORD: ci-validation-only
+          PGADMIN_PASSWORD: ci-validation-only
+        run: docker compose -f docker-compose.yml config --quiet
+
+      # The five deployment templates under docs/orchestration are the files an
+      # operator copies to stand Cascadia up, and until now nothing parsed them:
+      # a service or image name renamed in the repo's own compose and not in
+      # theirs stays green here and fails on someone else's first
+      # `docker compose up`. Each declares its own required variables with `:?`
+      # and each step supplies exactly those, same dummy convention as above.
+      - name: Validate single-server compose
+        env:
+          POSTGRES_PASSWORD: ci-validation-only
+        run: docker compose -f docs/orchestration/deployments/single-server/docker-compose.yml config --quiet
+
+      - name: Validate cloud-database compose
+        env:
+          DATABASE_URL: ci-validation-only
+        run: docker compose -f docs/orchestration/deployments/cloud-database/docker-compose.yml config --quiet
+
+      - name: Validate distributed infrastructure compose
+        env:
+          POSTGRES_PASSWORD: ci-validation-only
+          RABBITMQ_PASSWORD: ci-validation-only
+          MINIO_PASSWORD: ci-validation-only
+        run: docker compose -f docs/orchestration/deployments/distributed/infrastructure/docker-compose.yml config --quiet
+
+      - name: Validate distributed app compose
+        env:
+          DATABASE_URL: ci-validation-only
+          S3_ENDPOINT: ci-validation-only
+          S3_ACCESS_KEY: ci-validation-only
+          S3_SECRET_KEY: ci-validation-only
+          RABBITMQ_URL: ci-validation-only
+        run: docker compose -f docs/orchestration/deployments/distributed/app/docker-compose.yml config --quiet
+
+      # `deploy.replicas` here reads a variable with a default, so it needs no
+      # dummy of its own. An older compose on the runner may warn about that key
+      # and still exit zero — `--quiet` suppresses the rendered document, not
+      # warnings, so the exit code is the whole verdict and is left to fail.
+      - name: Validate distributed jobs compose
+        env:
+          DATABASE_URL: ci-validation-only
+          RABBITMQ_URL: ci-validation-only
+          S3_ENDPOINT: ci-validation-only
+          S3_ACCESS_KEY: ci-validation-only
+          S3_SECRET_KEY: ci-validation-only
+        run: docker compose -f docs/orchestration/deployments/distributed/jobs/docker-compose.yml config --quiet
+
+  docker-build-smoke:
+    name: Docker Build Smoke
+    runs-on: ubuntu-latest
+    # `compose-config` above validates the YAML that *references* these images.
+    # Nothing validated the images themselves, and both of them spent weeks
+    # unbuildable: their workspace-manifest COPY lists named
+    # `packages/cad-generation` after the package was deleted, and Docker fails
+    # a COPY whose source is missing. Every check in this workflow stayed
+    # green throughout, because not one of them ran a docker build.
+    #
+    # Deliberately unfiltered — no `if:`, no `paths:`. This is a required
+    # context, and a required check that does not report on a run leaves the
+    # pull request permanently *pending* rather than red: there is no failure
+    # to read and nothing to override. A path filter would buy back a few
+    # minutes on doc-only PRs and cost exactly that.
+    steps:
+      - uses: actions/checkout@v4
+
+      # The `deps` target stops after the workspace manifests and `npm ci`. It
+      # is the whole of the class this job exists for: the manifest list is one
+      # stage (see the Dockerfiles), building it resolves every path in that
+      # list, and `npm ci` then proves the list and the lockfile agree.
+      #
+      # Stopping there is the deliberate trade. `builder` runs a full Vite
+      # build of the edition — ten-plus minutes on top of what `Build` already
+      # spends, failing for reasons `Build` reports first and faster. What
+      # stays uncovered is the production stage's copies out of the builder;
+      # those name build outputs rather than workspaces, and both files are
+      # checked statically when this tree is assembled for publication.
+      #
+      # No buildx, no cache action: every workflow here uses first-party
+      # `actions/*` only, and BuildKit is already the default builder on
+      # ubuntu-latest. The two builds share a daemon, and the manifests and
+      # deps stages are instruction-identical between the two files, so the
+      # second one hits the first one's layers and the job costs roughly one
+      # cold `npm ci` rather than two. That is a property of the current
+      # Dockerfiles, not a guarantee — if the two lists ever diverge the second
+      # build pays for itself, which is the correct price for having diverged.
+      #
+      # Measured on the first run of this job: 51 seconds end to end, 46 of
+      # them the app build and under one second the worker build. Budget for a
+      # minute, not the five-to-eight this was estimated at — and do not
+      # "optimise" it away or bolt a cache action onto it on the strength of
+      # that estimate.
+      - name: Build app image dependency stage
+        run: docker build --target deps -f docker/app.Dockerfile .
+
+      - name: Build jobs worker image dependency stage
+        run: docker build --target deps -f workers/node/Dockerfile .
+
+      # The runtime install, which is a different install from the one above and
+      # failed repeatedly without any check noticing. `deps` runs a full
+      # `npm ci`; the production stage runs `npm ci --omit=dev` and then adds
+      # the admin tools, and only that second combination hit npm's
+      # "Cannot read properties of null (reading 'edgesOut')" — and it surfaced
+      # on the public image, which is the most expensive place to find it.
+      #
+      # It was uncoverable until the Dockerfiles grew a `runtime-deps` stage.
+      # The install sits above the first `COPY --from=builder`, so stopping
+      # there needs no Vite build: this costs one production `npm ci` per
+      # image, not the ten-plus minutes that building `production` would.
+      - name: Build app image runtime dependency stage
+        run: docker build --target runtime-deps -f docker/app.Dockerfile .
+
+      - name: Build jobs worker image runtime dependency stage
+        run: docker build --target runtime-deps -f workers/node/Dockerfile .
+
+  large-files:
+    name: Large File Guard
+    runs-on: ubuntu-latest
+    # PR-only: it needs a base to diff against. Every change reaches main via a
+    # PR, so this is sufficient.
+    if: github.event_name == 'pull_request'
+    steps:
+      # Needs real history to enumerate the objects this PR introduces.
+      # Cheap now: the packed repo is ~3 MB.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # demo-data/robot-arm/glb was once 95% of this repo's history — 79 GLB
+      # files, one of them 62 MB — before it moved to Cascadia-PLM/Demo-Data and
+      # the history was rewritten to reclaim it. Nothing structural stops that
+      # from happening again, so this does.
+      #
+      # rev-list --not base enumerates objects the PR *introduces*, which catches
+      # a blob that was committed and then deleted again: it no longer appears in
+      # any tree, but it is permanently in history all the same.
+      - name: Reject new blobs over 5 MB
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          LIMIT=$((5 * 1024 * 1024))
+
+          offenders=$(
+            git rev-list --objects "$HEAD" --not "$BASE" \
+              | git cat-file --batch-check='%(objecttype) %(objectsize) %(rest)' \
+              | awk -v lim="$LIMIT" '
+                  $1 == "blob" && $2 > lim {
+                    size = $2; $1 = ""; $2 = ""; sub(/^ +/, "")
+                    printf "  %.1f MB  %s\n", size / 1048576, $0
+                  }'
+          )
+
+          if [ -n "$offenders" ]; then
+            echo "::error::This PR introduces blobs larger than 5 MB. Git history is forever."
+            echo ""
+            echo "$offenders"
+            echo ""
+            echo "Large binaries do not belong in this repo. Options:"
+            echo "  - CAD/demo assets  -> Cascadia-PLM/Demo-Data, fetched via 'npm run demo:fetch'"
+            echo "  - build outputs    -> generate them, and add the path to .gitignore"
+            echo "  - genuinely needed -> publish as a release asset and download at build time"
+            echo ""
+            echo "Deleting the file in a later commit does NOT help; the blob stays in history."
+            exit 1
+          fi
+
+          echo "No blobs over 5 MB introduced."

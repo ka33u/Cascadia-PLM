@@ -1,0 +1,223 @@
+{
+  "verifiedAt": "2026-09-15T17:49:15.666Z",
+  "requirement": "SRS47: duplicate project code uses HTTP409/DUPLICATE_PROJECT_CODE, including concurrent inserts rejected by the database unique constraint.",
+  "originalFailure": {
+    "passed": false,
+    "sourceRoot": "file:///Users/zhangyu/Documents/Cascadia-NPI/app/packages/core/src/",
+    "arrivals": 5,
+    "concurrent": [
+      {
+        "status": 201,
+        "code": "RACE-1f6c3ab6-e6fc-4360-92f0-128c54815126",
+        "id": "2ce110b2-6c9f-4677-add9-df6024d81731"
+      },
+      {
+        "status": 409,
+        "code": "VERSION_CONFLICT",
+        "error": "编号或版本已存在，请刷新核对"
+      },
+      {
+        "status": 409,
+        "code": "VERSION_CONFLICT",
+        "error": "编号或版本已存在，请刷新核对"
+      },
+      {
+        "status": 409,
+        "code": "VERSION_CONFLICT",
+        "error": "编号或版本已存在，请刷新核对"
+      },
+      {
+        "status": 409,
+        "code": "VERSION_CONFLICT",
+        "error": "编号或版本已存在，请刷新核对"
+      }
+    ],
+    "verifiedAt": "2026-09-15T17:42:29.824Z",
+    "cleaned": true,
+    "residuals": {
+      "programs": 0,
+      "users": 0,
+      "sessions": 0,
+      "events": 0
+    },
+    "scope": "Project creation duplicate-code conflict and error-boundary controls only; no full HTTP suite or BOM/browser/real-pilot acceptance."
+  },
+  "focusedHttp": {
+    "passed": true,
+    "sourceRoot": "file:///private/tmp/npi-project-code-review/packages/core/src/",
+    "arrivals": 5,
+    "concurrent": [
+      {
+        "status": 201,
+        "code": "RACE-197935fb-53d3-45af-9712-40790d9a810d",
+        "id": "a4d00ffb-ec20-4a6f-8915-905634463be2"
+      },
+      {
+        "status": 409,
+        "code": "DUPLICATE_PROJECT_CODE",
+        "error": "项目编号已存在"
+      },
+      {
+        "status": 409,
+        "code": "DUPLICATE_PROJECT_CODE",
+        "error": "项目编号已存在"
+      },
+      {
+        "status": 409,
+        "code": "DUPLICATE_PROJECT_CODE",
+        "error": "项目编号已存在"
+      },
+      {
+        "status": 409,
+        "code": "DUPLICATE_PROJECT_CODE",
+        "error": "项目编号已存在"
+      }
+    ],
+    "counts": {
+      "programs": 1,
+      "projects": 1,
+      "plans": 1,
+      "nodes": 4,
+      "events": 1
+    },
+    "existingCodeRejected": true,
+    "otherCodeCreated": true,
+    "errorBoundaryControls": {
+      "raw-code": "DUPLICATE_PROJECT_CODE",
+      "wrapped-code": "DUPLICATE_PROJECT_CODE",
+      "raw-other": "VERSION_CONFLICT",
+      "wrapped-other": "VERSION_CONFLICT"
+    },
+    "verifiedAt": "2026-09-15T17:44:02.342Z",
+    "cleaned": true,
+    "residuals": {
+      "programs": 0,
+      "users": 0,
+      "sessions": 0,
+      "events": 0
+    },
+    "scope": "Project creation duplicate-code conflict and error-boundary controls only; no full HTTP suite or BOM/browser/real-pilot acceptance."
+  },
+  "boundaryControls": "Four test-only routes inject raw/wrapped unique errors for project-code and unrelated constraints. Actual five-way conflict uses real PostgreSQL writes after a process-local scheduling gate.",
+  "fixtureCleanup": {
+    "before": {
+      "sourceRoot": "file:///Users/zhangyu/Documents/Cascadia-NPI/app/packages/core/src/",
+      "ownerPid": 24579,
+      "userIds": [
+        "adc058fe-afcb-4a09-883c-58672d668dbe",
+        "2882be36-1b4c-4fad-8f7a-a575e22271a5",
+        "20c08bac-d740-4a66-b16d-08d37d812e87"
+      ],
+      "codes": [
+        "RACE-1f6c3ab6-e6fc-4360-92f0-128c54815126",
+        "OTHER-632fa832-c36f-44ba-b30e-d6f471d25ac7"
+      ],
+      "cleaned": true,
+      "projectIds": [
+        "2ce110b2-6c9f-4677-add9-df6024d81731"
+      ],
+      "cleanedAt": "2026-09-15T17:42:29.824Z",
+      "residuals": {
+        "programs": 0,
+        "users": 0,
+        "sessions": 0,
+        "events": 0
+      }
+    },
+    "candidate": {
+      "sourceRoot": "file:///private/tmp/npi-project-code-review/packages/core/src/",
+      "ownerPid": 24769,
+      "userIds": [
+        "cdfd179b-f62a-4354-8b76-075b65954343",
+        "98b978ff-b902-4292-99c1-eafe21609c05",
+        "93e49c06-8d63-4c34-8755-8bef17cdd2c5"
+      ],
+      "codes": [
+        "RACE-197935fb-53d3-45af-9712-40790d9a810d",
+        "OTHER-45b9c1ff-614a-4cad-8be8-4aaa2fc330d7"
+      ],
+      "cleaned": true,
+      "projectIds": [
+        "a4d00ffb-ec20-4a6f-8915-905634463be2",
+        "0c856644-bdce-4c16-bf0a-253650430578"
+      ],
+      "cleanedAt": "2026-09-15T17:44:02.342Z",
+      "residuals": {
+        "programs": 0,
+        "users": 0,
+        "sessions": 0,
+        "events": 0
+      }
+    }
+  },
+  "checks": {
+    "candidateTypecheck": "core/app/root passed",
+    "changedFilesLint": "passed",
+    "candidateBuild": "passed exit 0",
+    "actualBuild": "passed exit 0",
+    "candidateFocusedHttp": "passed exit 0; source byte-identical after sync",
+    "actualSource": "delivered hashes matched",
+    "fullHttp": "not run; existing approval question remains pending",
+    "browser": "not run; no frontend changes"
+  },
+  "runtime": {
+    "verifiedAt": "2026-09-15T17:48:08.595Z",
+    "sourceSha256": "893422327b8252a633d308dc559e888e01d134790164dd2ec56931b14254cea7",
+    "bundleSha256": "266d204880bb939690419b8a6712ccc8f08689a6bbba4bee0f2e9eb390681029",
+    "bundleHasProjectCodeBranch": true,
+    "api": {
+      "pid": 25073,
+      "cwd": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+      "startedAt": "Wed Sep 16 01:46:52 2026",
+      "sourceModifiedAt": "2026-09-15T17:46:39.327Z",
+      "startedAtOrAfterSourceSecond": true,
+      "anonymousStatus": 401
+    },
+    "scope": "Read-only actual source/bundle, listener directory/start time and anonymous API status. Test HTTP behavior was executed against identical candidate source in the explicit _test DB; no formal data requests or restart."
+  },
+  "files": {
+    "packages/core/src/server/routes/npi.ts": "893422327b8252a633d308dc559e888e01d134790164dd2ec56931b14254cea7",
+    "scripts/npi-project-code-http.test.ts": "c6e7ade68525ba094f6d7dc316e1bb0de8d4a136acabb54682ad0577125e1619"
+  },
+  "originalSources": {
+    "route": {
+      "path": "/tmp/npi-project-code-backup/packages/core/src/server/routes/npi.ts",
+      "sha256": "51856c473c6b41f148f0c8a2cac753b6e2b94231c4b0ba88931eea6e320003ce"
+    },
+    "test": {
+      "path": "/tmp/npi-project-code-before-test.ts",
+      "sha256": "dc22aa60c756c8f0ecdfeea4ceaf2a488f172144ee19e38885cb3ebd984384fe"
+    }
+  },
+  "logs": {
+    "npi-project-code-before.log": {
+      "path": "/tmp/npi-project-code-before.log",
+      "sha256": "cc3c3694f476e9e300a86b648286a50efa0f569444c0027ea4cc2a26ab1ff593"
+    },
+    "npi-project-code-candidate.log": {
+      "path": "/tmp/npi-project-code-candidate.log",
+      "sha256": "27d8fd131516bde4fbf7aa98a5dab8c4b412bafd546f1a15b1532b825e15d9dc"
+    },
+    "npi-project-code-types.log": {
+      "path": "/tmp/npi-project-code-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-project-code-lint.log": {
+      "path": "/tmp/npi-project-code-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-project-code-format.log": {
+      "path": "/tmp/npi-project-code-format.log",
+      "sha256": "170cff786e364d9d6798995813b6e88d6e976dc7fde877cd9191a8a904f3a0b8"
+    },
+    "npi-project-code-build.log": {
+      "path": "/tmp/npi-project-code-build.log",
+      "sha256": "5b1c4841961a097143f031921098e837ae3c3af69e096bce6fd5dacf5adfae38"
+    },
+    "npi-project-code-delivered-build.log": {
+      "path": "/tmp/npi-project-code-delivered-build.log",
+      "sha256": "e44083cc5f8c45920f31ac9127f922f9dd10bc2661970ae0a22b667811a6837a"
+    }
+  },
+  "limits": "Only project-code conflict translation. No change to project transactions, roles, schema or formal business records. Full npi-http was not executed or replaced by this scoped test. No complete SRS, current full browser or real-pilot acceptance claim."
+}

@@ -1,0 +1,251 @@
+{
+  "verifiedAt": "2026-09-15T16:33:12.698Z",
+  "originalFailure": {
+    "concurrentRequests": 5,
+    "createdMaterials": 5
+  },
+  "candidateHttp": {
+    "passed": true,
+    "sourceRoot": "file:///private/tmp/npi-external-recovery-review/packages/core/src/",
+    "concurrentRequests": 5,
+    "concurrentUniqueMaterials": 1,
+    "creationEvents": 1,
+    "exactQuantity": "999999999999.123456",
+    "changedPayloadRejected": true,
+    "scopeIsolation": true,
+    "legacyRequestsIndependent": true,
+    "subsequentHistoryPreserved": true,
+    "inactiveOriginalBuyerReplay": true,
+    "permissionRechecked": true,
+    "completedProjectReadOnly": true,
+    "invalidInputsNoWrite": true
+  },
+  "actualHttp": {
+    "passed": true,
+    "sourceRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app/packages/core/src/",
+    "concurrentRequests": 5,
+    "concurrentUniqueMaterials": 1,
+    "creationEvents": 1,
+    "exactQuantity": "999999999999.123456",
+    "changedPayloadRejected": true,
+    "scopeIsolation": true,
+    "legacyRequestsIndependent": true,
+    "subsequentHistoryPreserved": true,
+    "inactiveOriginalBuyerReplay": true,
+    "permissionRechecked": true,
+    "completedProjectReadOnly": true,
+    "invalidInputsNoWrite": true
+  },
+  "candidateBrowser": {
+    "passed": true,
+    "applicationRoot": "/private/tmp/npi-external-recovery-review",
+    "lostResponseRecovered": true,
+    "singleMaterialPerSubmission": true,
+    "creationEvents": 2,
+    "closeAndDoubleSubmitProtected": true,
+    "validationCorrection": true,
+    "refreshOnlyRetry": true,
+    "refreshFailures": 2,
+    "directTechnicalFiles": true,
+    "exactQuantityPreserved": true,
+    "buyerQueueUnique": true,
+    "manufacturingQueueUnique": true,
+    "fileBytesAndOwnershipVerified": true,
+    "otherBuyerDownloadDenied": true,
+    "crossProjectIsolation": true,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "actualBrowser": {
+    "passed": true,
+    "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "lostResponseRecovered": true,
+    "singleMaterialPerSubmission": true,
+    "creationEvents": 2,
+    "closeAndDoubleSubmitProtected": true,
+    "validationCorrection": true,
+    "refreshOnlyRetry": true,
+    "refreshFailures": 2,
+    "directTechnicalFiles": true,
+    "exactQuantityPreserved": true,
+    "buyerQueueUnique": true,
+    "manufacturingQueueUnique": true,
+    "fileBytesAndOwnershipVerified": true,
+    "otherBuyerDownloadDenied": true,
+    "crossProjectIsolation": true,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "runtime": {
+    "verifiedAt": "2026-09-15T16:31:30.059Z",
+    "observations": [
+      {
+        "file": "NpiWorkspace.tsx",
+        "status": 200,
+        "markers": {
+          "status: response.status": true,
+          "onOpenFiles: setFileItem": true,
+          "新增物料尚未出现在最新清单": true
+        },
+        "sha256": "7a71b08699736ed1581c16e588c9ba4c7b49603b3e6eaab91957a1a969fc6275"
+      },
+      {
+        "file": "NpiExternalMaterial.tsx",
+        "status": 200,
+        "markers": {
+          "保存并补充资料": true,
+          "重试本次保存": true,
+          "requestId: crypto.randomUUID()": true,
+          "dialog.current.scrollTop = 0": true
+        },
+        "sha256": "6140ddfa631cdaee08af9667bb46ed960a87d294fc09ee87df407f50892bc7d4"
+      },
+      {
+        "file": "npi.css",
+        "status": 200,
+        "markers": {
+          ".npi-external-feedback": true,
+          ".npi-external-material-dialog": true
+        },
+        "sha256": "76f10b2e2914057fc2815589119c4072a731ee4e156208e1287100d4a4e4d8ac"
+      }
+    ],
+    "api": {
+      "pid": 15925,
+      "parentPid": 37440,
+      "cwd": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+      "startedAt": "Wed Sep 16 00:30:17 2026",
+      "sourceModifiedAt": "2026-09-15T16:29:49.457Z",
+      "startedAtOrAfterSourceSecond": true,
+      "statuses": {
+        "page": 200,
+        "api": 401,
+        "proxy": 401
+      }
+    },
+    "scope": "Read-only source modules, listener working directory/start and anonymous responses. No login, service restart or formal business requests. Process time has second precision; actual source and built application are independently tested on _test."
+  },
+  "fixtureCleanup": {
+    "http": {
+      "createdAt": "2026-09-15T16:31:24.596Z",
+      "sourceRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app/packages/core/src/",
+      "ownerPid": 16037,
+      "projectIds": [
+        "13bb7aca-3dd6-4520-bcb4-f186f7a1f3b4",
+        "dd910781-58c2-4596-8467-c2faf5962fa7"
+      ],
+      "userIds": [
+        "55dff644-bd8f-44c5-8fc7-e5d6a81c8fac",
+        "e566c797-df54-476b-916b-016cc9715a39",
+        "f19b8670-eb22-459b-a8d5-5e42b3852bb2",
+        "f0220575-51b8-42c9-b65b-e5ae1fd43c45",
+        "a0777605-0068-4efd-810e-af714b94da35",
+        "84754ce0-68fb-4d79-8a87-313a75e3c502",
+        "b651feaa-49ff-4352-92a8-1c4ffd8290e6"
+      ],
+      "cleaned": true,
+      "cleanedAt": "2026-09-15T16:31:24.836Z"
+    },
+    "browser": {
+      "createdAt": "2026-09-15T16:31:25.651Z",
+      "appRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+      "ownerPid": 16046,
+      "projectIds": [
+        "56632b79-05b0-46a8-81e5-7168d78033cd",
+        "4e7b3d72-c479-4aa6-b2df-cd03428cc3d8"
+      ],
+      "userIds": [
+        "16241317-c731-4659-9d73-e8285c5c3033",
+        "be2e2f2a-e579-4d50-b7cb-0df7e30b1441",
+        "65270129-b71e-45d9-aee0-b27415bd1217",
+        "e2442110-066e-4e33-8cf2-91f0cb0e0b6a"
+      ],
+      "vaultRoot": "/tmp/npi-external-recovery-vault-OgijyV",
+      "cleaned": true,
+      "cleanedAt": "2026-09-15T16:31:29.761Z"
+    }
+  },
+  "checks": {
+    "dom": "7 passed: 5 new plus 2 external type regressions",
+    "apiRegression": "36 passed on candidate source; fixtures retained by existing suite for diagnosis",
+    "typecheck": "Core, app and root passed on final source",
+    "lint": "passed",
+    "format": "passed",
+    "candidateBuild": "passed exit 0",
+    "actualBuild": "passed exit 0",
+    "candidateHttp": "passed exit 0 and cleanup",
+    "actualHttp": "passed exit 0 and cleanup",
+    "candidateBrowser": "passed exit 0 and cleanup",
+    "actualBrowser": "passed exit 0 and cleanup"
+  },
+  "files": {
+    "packages/core/src/lib/npi/service.ts": "f9889d4bf7a431526d7fd8c942a55de86a0bfd959ed97623eceb48103e5de149",
+    "packages/core/src/components/npi/NpiExternalMaterial.tsx": "20d8ce619b93de8179105442d1deb19125130d657516e5cf9b0ad5cc8fe593b3",
+    "packages/core/src/components/npi/NpiWorkspace.tsx": "2a45d98fb63a8e1214d8a006c27310ae9a7d5522be4b55152c176fb07904c87f",
+    "packages/core/src/components/npi/npi.css": "c88d9e11c8b7728944e6014ffa8a186852e47e3551a6f94742ee53b1c0529526",
+    "scripts/npi-other-material-dom.test.mjs": "fb0e98d93327dd42be94e57b8c3253207a205df0276802296f91649242075783",
+    "scripts/npi-external-recovery-dom.test.mjs": "d96dcc5d50deaec8c813bbbea77b009ec4dcded2ec8e47bd035492ced94c285b",
+    "scripts/npi-external-recovery-http.test.ts": "87373c51dfa447ebb2e8f83464fc293e5c8cfb4afef174b9aef8757dfd573b4b",
+    "scripts/npi-external-recovery-browser.test.ts": "5a9490af25eebbab33d9dc5d9f5ef54cccf28dc9b5ff98001333399777adc212"
+  },
+  "logs": {
+    "npi-external-recovery-before.log": {
+      "path": "/tmp/npi-external-recovery-before.log",
+      "sha256": "70c917e3a3b706a33f4ad6f192f8a8e5edbb9cbdb6153bb7d256e91cc55806ba"
+    },
+    "npi-external-recovery-types.log": {
+      "path": "/tmp/npi-external-recovery-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-external-recovery-test-types.log": {
+      "path": "/tmp/npi-external-recovery-test-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-external-recovery-lint.log": {
+      "path": "/tmp/npi-external-recovery-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-external-recovery-format.log": {
+      "path": "/tmp/npi-external-recovery-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-external-recovery-dom.log": {
+      "path": "/tmp/npi-external-recovery-dom.log",
+      "sha256": "2d52b6fc3f05dec89831e92fead4f7353c887407396009c31de89f3896a70750"
+    },
+    "npi-external-recovery-api-regression.log": {
+      "path": "/tmp/npi-external-recovery-api-regression.log",
+      "sha256": "d3c44e87769ae35f5134e6d33e93fda7a2d35e4c086c52aeb314c388c041b563"
+    },
+    "npi-external-recovery-http.log": {
+      "path": "/tmp/npi-external-recovery-http.log",
+      "sha256": "f11919b1e60e98a940106fb002b6deb27984371022cdc244bd0e1f1d3df9c478"
+    },
+    "npi-external-recovery-build.log": {
+      "path": "/tmp/npi-external-recovery-build.log",
+      "sha256": "a3531eb28a7ae20208175b749c05cc8611418facbe51380d8bd35454ac7c0533"
+    },
+    "npi-external-recovery-browser.log": {
+      "path": "/tmp/npi-external-recovery-browser.log",
+      "sha256": "6e205b7fa945cdbadc5d984de63bdf57a04e9a6d137503b677a8491714f71e70"
+    },
+    "npi-external-recovery-delivered-build.log": {
+      "path": "/tmp/npi-external-recovery-delivered-build.log",
+      "sha256": "4196a93426df1aeea9eeaecdfc73c4a5aeb671c22d50bd8c4241ceec1e686469"
+    },
+    "npi-external-recovery-delivered-http.log": {
+      "path": "/tmp/npi-external-recovery-delivered-http.log",
+      "sha256": "dfbdbdc6b098cdd33f0696a99e907ca924498e67fc2cb844ac8b488c9da83fbc"
+    },
+    "npi-external-recovery-delivered-browser.log": {
+      "path": "/tmp/npi-external-recovery-delivered-browser.log",
+      "sha256": "6e205b7fa945cdbadc5d984de63bdf57a04e9a6d137503b677a8491714f71e70"
+    }
+  },
+  "screenshots": [
+    "docs/npi/screenshots/external-recovery-unknown-mobile.png",
+    "docs/npi/screenshots/external-recovery-files-mobile.png",
+    "docs/npi/screenshots/external-recovery-saved-desktop.png"
+  ],
+  "limits": "Retry identity persists in the current form and is scoped to actor/project; closing or reloading the page requires checking the project list before new creation. Legacy calls without requestId keep their behavior. Existing project locks and audit JSON used without schema change. Explicit _test database and temporary Vault; targeted fixtures cleaned, established 36-test suite retains diagnostic fixtures. No formal data writes or full SRS/pilot acceptance claim."
+}

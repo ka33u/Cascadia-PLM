@@ -1,0 +1,259 @@
+{
+  "verifiedAt": "2026-09-15T17:35:17.317Z",
+  "scope": "SRS navigation and requirement traceability; fresh unit and rollback-only DB-01/DB-02 checks. No product source changes or complete SRS acceptance claim.",
+  "sourceDocument": {
+    "path": "/tmp/codex-remote-attachments/01a09dd1-a3b2-7181-bcaf-196914666f83/BC8DBBF3-CFCE-4346-8BE3-5FBCE3FB6649/1-Cascadia_NPI_SRS_V1.4_数据库_API_BOM导入开发版.docx",
+    "sha256": "b110f8ee79642540a86b624c0de32a894ee7961905279d161d8abb70d548af1e",
+    "bytes": 1514704
+  },
+  "extractedText": {
+    "path": "/tmp/cascadia-srs.txt",
+    "sha256": "027c282ad8da3b0460e61d77205424beb5645ba6cb34527f36513a95f46608fb",
+    "bytes": 53997
+  },
+  "inspectedPrototype": {
+    "path": "/tmp/npi-prototype-review/image1.png",
+    "sha256": "5bc997fcb1060cd0fdc0102162f5c39d74ec456711c8fb07593f2280bc52cb74",
+    "bytes": 1600044
+  },
+  "realSamples": [
+    {
+      "path": "/Users/zhangyu/Documents/161F1246BM0001.xlsx",
+      "sha256": "b8157c3d487625c40b8af62ba8878a61c14abddaa134c97a9a34b0581b0c5f38",
+      "bytes": 18796,
+      "rows": 47,
+      "roots": 16,
+      "maxLevel": 4
+    },
+    {
+      "path": "/Users/zhangyu/Documents/161H1866BM0001-M12x30.xlsx",
+      "sha256": "f7ef3d406d02a1f0e2f090f242737485b9895af70bd8285b11e8c65a0e3f3659",
+      "bytes": 20151,
+      "rows": 56,
+      "roots": 23,
+      "maxLevel": 4
+    }
+  ],
+  "currentExecution": {
+    "unit": {
+      "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+      "pass": 26,
+      "fail": 0,
+      "skipped": 0,
+      "tests": [
+        "date boundaries use Beijing and reject invalid calendar dates",
+        "completed > overdue > pending > risk; commitment day is not overdue",
+        "promise preserves first commitment and requires reason plus version",
+        "kit predicts independently, tracks missing replies, excludes completed and assembly",
+        "BOM builds arbitrary depth, trims NBSP and preserves engineering codes and leading zeroes",
+        "hierarchy jumps and invalid quantity stop import",
+        "BOM float noise normalizes, real rounding is warned, raw data retained",
+        "BOM diff respects position and reports added/removed/quantity",
+        "real XLSX parser identifies template and preserves source codes",
+        "ERP sample: 161F1246BM0001.xlsx",
+        "ERP sample: 161H1866BM0001-M12x30.xlsx",
+        "BOM moves retain one identity and expose quantity changes as well",
+        "BOM matching uses whole ancestry even when repeated subassemblies reorder",
+        "Ambiguous duplicate BOM positions are never paired by row order",
+        "Stopped tracking no longer creates pending or risk counts",
+        "Today activity uses Shanghai midnight, counts changes rather than first replies, and includes late completion confirmations",
+        "Newly overdue compares with yesterday and reconstructs the opening commitment through same-day changes",
+        "Dashboard KPI drilldowns share scope and membership, including overlapping risk and pending states",
+        "Dashboard exception selection sorts severity, supports trimmed model/code search and completed/month drilldowns",
+        "Optional project profile normalizes numeric values, distinguishes clear/omit, and preserves unrelated native attributes",
+        "Project profile rejects invalid engineering input and malformed namespaces without erasing data",
+        "Mother confirmation preserves source rows, keeps other errors, and restores only for unchanged mapping and raw mother",
+        "BOM quantities keep 18-digit decimals exact, round half up, bound exponents and distinguish float noise from text",
+        "BOM comparison detects one-millionth changes in large decimal quantities and ignores equivalent notation",
+        "SRS43 suggestions use explicit properties, precedence and levels without guessing from purchase or stock names",
+        "BOM parser keeps raw tracking attributes and warns on unknown, missing or ambiguous mapped columns"
+      ],
+      "command": "NPI_SAMPLE_DIR=/Users/zhangyu/Documents TSX_TSCONFIG_PATH=packages/core/tsconfig.json node --import tsx --test --test-reporter=tap scripts/npi-unit.test.ts"
+    },
+    "database": {
+      "verifiedAt": "2026-09-15T17:20:16.701Z",
+      "passed": true,
+      "scope": [
+        "DB-01",
+        "DB-02"
+      ],
+      "checks": [
+        "DB-01: NPI project, referenced tracking and BOM deletion rejected; records retained",
+        "DB-01: orphan BOM row insert rejected",
+        "DB-02: duplicate project/version rejected; distinct version accepted"
+      ],
+      "rolledBack": true,
+      "residuals": {
+        "users": 0,
+        "programs": 0,
+        "imports": 0,
+        "tracking": 0,
+        "history": 0
+      },
+      "fixtureIds": {
+        "user": "4df70a43-d92f-450c-bfe9-8a8dd3fd5ad3",
+        "program": "5953928c-d82e-49fa-b229-d78dad6acbe6",
+        "import": "765de360-c110-40a8-88ab-ec487d18a24d",
+        "import2": "d8867755-f1f5-4f20-95d2-7bc1cb009eea",
+        "duplicate": "f9fec48a-a755-4751-93f2-4694e63e9e09",
+        "parent": "10204adb-ca1b-44d9-b9b6-ebc9b6670d4c",
+        "child": "59996592-1d16-4410-be13-815d8708a5f6",
+        "tracking": "ce536f11-649f-4318-9cbf-ae2b9ca88d5d",
+        "history": "14e7e53e-d3fc-4ba6-bee2-25c8885a3b23"
+      },
+      "note": "Database constraints only; no HTTP or browser flow, no retained fixtures and no complete SRS acceptance claim.",
+      "sourceRoot": "/tmp/npi-srs-audit-review",
+      "log": "/tmp/npi-db-contract.log",
+      "environment": "Explicit local TEST_DATABASE_URL ending in _test; all fixture writes rolled back in one transaction; existing test data preserved"
+    },
+    "scriptChecks": {
+      "rootTypecheck": "passed exit 0",
+      "eslint": "passed exit 0",
+      "format": "Prettier applied before execution",
+      "productBuild": "not rerun; no product changes"
+    },
+    "runtime": {
+      "verifiedAt": "2026-09-15T17:32:25.057Z",
+      "observations": [
+        {
+          "file": "navigation.ts",
+          "status": 200,
+          "markers": {
+            "新品项目": true,
+            "BOM管理": true,
+            "制造准备": true,
+            "采购管理": true,
+            "报表看板": true,
+            "基础数据": true,
+            "系统设置": true
+          },
+          "sha256": "79c4a3dfbd3b89f2fdbcd09f880178332ba86794f1e4c2597547670fe856f67e"
+        },
+        {
+          "file": "NpiWorkspace.tsx",
+          "status": 200,
+          "markers": {
+            "navigationFor": true,
+            "NpiPreparationBoard": true,
+            "NpiProjectLibrary": true,
+            "NpiReports": true
+          },
+          "sha256": "1db47feba4d0d16f5ce689e81aaca91a7e424da5b127ecd71720af734c76b4a6"
+        }
+      ],
+      "pageStatus": 200,
+      "anonymousApiStatus": 401,
+      "scope": "Read-only local source-module and anonymous status checks; no login, browser UI actions, data writes, service restart or full HTTP test."
+    }
+  },
+  "historicalFullApi": {
+    "record": "docs/npi/external-recovery-verification.json",
+    "recordSha256": "781d8a5e0035cd9dca641cc7e3e1fb51168fc07ad5fcb8fd3efb0582929ffea5",
+    "path": "/tmp/npi-external-recovery-api-regression.log",
+    "sha256": "d3c44e87769ae35f5134e6d33e93fda7a2d35e4c086c52aeb314c388c041b563",
+    "bytes": 6418,
+    "pass": 36,
+    "fail": 0,
+    "rerunThisAudit": false
+  },
+  "fullApiAttempt": {
+    "executed": false,
+    "disposition": "Rejected by automatic approval review",
+    "reason": "The full npi-http suite is restricted and preserves synthetic diagnostic rows in the test database; use allowed focused checks instead.",
+    "noEquivalentWorkaroundRun": true
+  },
+  "sourceFiles": {
+    "package-lock.json": "16955df9628a0dec5307617cbf59b53b1592362de8efc88a40b46f16c3a8af9f",
+    "packages/core/src/components/npi/NpiWorkspace.tsx": "db16343057267fab06e907463959b71b9231cc2cf0f77b162ff41564327c9ad0",
+    "packages/core/src/components/npi/navigation.ts": "054eca0ebb79019257588cd0ab258980fecc3eef383d9cd05fdd87d16097cd29",
+    "packages/core/src/lib/db/schema/npi.ts": "f9954c5e19c48fd1d8873fb4917941430996df4390067e454ed1eac7a60c0eb1",
+    "packages/core/src/lib/npi/activity.ts": "1a21423cfcce9943fa96ba37205f4a9b053fc264b4f595d10c6addc4f257a9c6",
+    "packages/core/src/lib/npi/bom-quantity.ts": "9c7caf107820ddec373cd8482cf8c2d99e45d1f1ddc7fd445b1b9a771ccbf9ff",
+    "packages/core/src/lib/npi/bom-tracking.ts": "82053e5f3fb59d5144eba35741ce78a927a3573b7e6f14d28102f4385c1b8e16",
+    "packages/core/src/lib/npi/bom.ts": "f68545573afa241d49a1d8660d119a6e806d063d680c30250a293ab037405dc1",
+    "packages/core/src/lib/npi/domain.ts": "dae1fc78e46997a9ea97d8d367d36de08116ba2e2bf7ccb6bd6fc8d038939c4a",
+    "packages/core/src/lib/npi/excel.ts": "613d450ddb759c1c0e08390543a10dcdc9ace2c3dad35a293befda8584d918d6",
+    "packages/core/src/lib/npi/mother-confirmation.ts": "b4392d6dec31dbf618db07415272d7236c743087ab8bdf28d950419e81d81e6d",
+    "packages/core/src/lib/npi/project-dashboard.ts": "00dd49a4e9e72a5525952c6f8202729a967bd6ca006e5378406a778f5e65d3e5",
+    "packages/core/src/lib/npi/project-profile.ts": "145acbaa6e6af991340d709c4cbbc278aa53d11d19096ddbbf45fcdf741677f9",
+    "packages/core/src/lib/npi/service.ts": "f9889d4bf7a431526d7fd8c942a55de86a0bfd959ed97623eceb48103e5de149",
+    "packages/core/src/server/routes/npi.ts": "51856c473c6b41f148f0c8a2cac753b6e2b94231c4b0ba88931eea6e320003ce",
+    "scripts/npi-http.test.ts": "58f3b0eab4ed49ceb3c0e3e3142f4bfc1920c28761f8fe8c7bf32572ff6b0a81",
+    "scripts/npi-unit.test.ts": "d40cb58bb6134cfc1fb51bb9c915384c7a6712667cccebd452d166e96f25cebc",
+    "scripts/npi-db-contract.test.ts": "1d33394f47c0417bb665221732d8b733917dd047aa48cb1199a39d60170b5b19"
+  },
+  "logs": {
+    "npi-srs-audit-unit.log": {
+      "path": "/tmp/npi-srs-audit-unit.log",
+      "sha256": "43299a7c8062ef5e55d38b75283811f21a17b70667da66e43034f127cfe6ac51",
+      "bytes": 6228
+    },
+    "npi-db-contract.log": {
+      "path": "/tmp/npi-db-contract.log",
+      "sha256": "94bbb9d9e19d8227920b473df0e9994f9d8e26938e28c8342b83cc9a7448a0fb",
+      "bytes": 95
+    },
+    "npi-db-contract-lint.log": {
+      "path": "/tmp/npi-db-contract-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "npi-db-contract-types.log": {
+      "path": "/tmp/npi-db-contract-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "npi-db-contract-format-write.log": {
+      "path": "/tmp/npi-db-contract-format-write.log",
+      "sha256": "b2bcfd38c65a441b1c362d661f210b16534176fe938a0f39b54369b1baa3f40a",
+      "bytes": 37
+    },
+    "npi-srs-audit-doc-format.log": {
+      "path": "/tmp/npi-srs-audit-doc-format.log",
+      "sha256": "546cca98851da0dcf40cfe21a7a96c3001438d77ad31fc0321a42706f061b7e4",
+      "bytes": 67
+    }
+  },
+  "referencedHistoricalEvidence": {
+    "navigation-browser-verification.json": "2d91ab6673eb1c60e201d754db6cdd1275314969815e1fb5c890ab563a10f309",
+    "manufacturing-quick-verification.json": "bc1d3e5940dbdf50c8abf5ee9c1ef6f019887f1100899d29a9aa1906c9ebc793",
+    "supervisor-history-browser-verification.json": "bcd24555c831af1ea3c6190f52f2ec782ba4c85d64b6cc0422e985728b3a282b",
+    "project-history-verification.json": "097d80f599338b8682c50d9b0e7e3729b3aea244dd9ff3f3130d111f97c32785",
+    "bottleneck-browser-verification.json": "227cdc4cd3e582c442cc02b928f1caff5106eb0de21fa716a032dfd952ac00c1",
+    "dashboard-browsing-verification.json": "30df665107bc2d2f045cda43a7e72e2feb56d25cd87e66285a5410d65ad4cec1",
+    "procurement-reply-verification.json": "e28d5de6842fcbf228e8d0bf5fdde799beca0806734ebbe3fa6d1eb7c59d6e95",
+    "procurement-receipt-verification.json": "689d5f3fa36cb0efddd604bcaaa8798c085890a8ab8e9146ae02ed2020ac019b",
+    "external-recovery-verification.json": "781d8a5e0035cd9dca641cc7e3e1fb51168fc07ad5fcb8fd3efb0582929ffea5",
+    "upgrade-verification.json": "be593666926b6b03c0f759a6367b9dc6831438a286ea6fcdff2c4c78d615cd21"
+  },
+  "documentationChecks": {
+    "localLinksChecked": 116,
+    "businessRules": 10,
+    "uiCases": 10,
+    "namedCases": [
+      "DB-01",
+      "DB-02",
+      "BOM-01",
+      "BOM-02",
+      "BOM-03",
+      "BOM-04",
+      "API-01",
+      "API-02",
+      "KIT-01",
+      "KIT-02",
+      "KIT-03",
+      "STATE-01",
+      "CONC-01",
+      "E2E-01"
+    ],
+    "apiEntries": 10,
+    "wholeChapterIndex": "1–51, grouped explicitly in srs-traceability.md; this is traceability, not a coverage percentage"
+  },
+  "unresolved": [
+    "Supervisor authorized-adjustment semantics",
+    "Current complete browser acceptance: earlier full runs restricted after approval timeouts",
+    "Current full API rerun rejected",
+    "3–5 real projects and staff pilot acceptance",
+    "Documented schema, date, attachment-format, route and API compatibility differences require final design acceptance"
+  ]
+}

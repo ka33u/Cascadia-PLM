@@ -1,0 +1,33 @@
+{
+  "observedAt": "2026-09-15T17:54:16.289Z",
+  "scope": "Local formal database aggregate readiness snapshot in a read-only transaction. No record content, credentials, test fixtures or business writes. SRS18 recommends a 3–5-project pilot; the pilot is not a hard prerequisite for code delivery.",
+  "transactionReadOnly": "on",
+  "counts": {
+    "npi_projects": 0,
+    "bom_versions": 0,
+    "tracking_items": 0,
+    "promise_history": 0,
+    "active_users": 1
+  },
+  "assignedNpiRoles": [
+    {
+      "role": "admin",
+      "active_users": 1
+    }
+  ],
+  "templates": {
+    "total": 1,
+    "enabled": 1
+  },
+  "stages": [],
+  "script": {
+    "path": "/tmp/npi-pilot-readiness.mjs",
+    "sha256": "dd06ae0f90b9478c4f03a43f32d5c90da1e32c4586dfb2a80a692e00526e66b5"
+  },
+  "interpretation": "SRS18 says recommended. Real pilot data is useful for operational acceptance, but absent real projects must not block code delivery or imply permission to create fictional records.",
+  "remainingDevelopmentGates": [
+    "Supervisor authorized-adjustment semantics still unanswered",
+    "Full npi-http permission question still unanswered after automatic review rejection",
+    "Current full desktop/mobile browser acceptance remains restricted after previous approval timeouts"
+  ]
+}

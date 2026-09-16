@@ -1,0 +1,146 @@
+{
+  "verifiedAt": "2026-09-15T23:09:04.375Z",
+  "requirement": "SRS figure 28-1 project files: technical requirements.docx and BOM source.xlsx attachments",
+  "formats": [
+    "docx",
+    "xlsx"
+  ],
+  "existingFormats": [
+    "pdf",
+    "png",
+    "jpg",
+    "jpeg",
+    "webp"
+  ],
+  "maxFileBytes": 5242880,
+  "officeChecks": {
+    "zipDirectory": true,
+    "declaredMainPart": true,
+    "contentType": true,
+    "rejectMacrosAndEncryption": true,
+    "maxEntries": 2000,
+    "maxExpandedBytes": 67108864,
+    "maxManifestBytes": 524288
+  },
+  "bomImportLimitsUnchanged": {
+    "maxEntries": 400,
+    "maxExpandedBytes": 20971520
+  },
+  "checks": {
+    "formatAndBomUnit": 31,
+    "realErpSamples": 2,
+    "skipped": 0,
+    "existingAttachmentDom": 5,
+    "typecheck": "core/app/root passed",
+    "lint": "changed files passed",
+    "candidateBuild": "passed",
+    "actualBuild": "passed",
+    "candidateBrowser": "passed",
+    "actualBrowser": "passed",
+    "fullHttp": "not run; diagnostic-retention confirmation pending",
+    "fullBomBrowser": "not run"
+  },
+  "browser": {
+    "verifiedAt": "2026-09-15T23:07:56.189Z",
+    "passed": true,
+    "checks": [
+      "Desktop: Word and Excel project upload, real downloaded bytes/name preserved, archived Word still downloadable",
+      "Mobile: assigned buyer uploads Excel receipt and downloads exact bytes with no horizontal overflow",
+      "Native Document/Vault: 3 files, correct MIME/size; supervisor download only, unrelated buyer/project access denied; invalid formats create no files; Office always attachment"
+    ],
+    "cleaned": true,
+    "residuals": {
+      "users": 0,
+      "projects": 0,
+      "events": 0,
+      "sessions": 0
+    },
+    "pageErrors": [],
+    "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "scope": "Word/Excel attachment UI, original byte downloads, archive, format and scoped access checks only; own database fixtures and temporary Vault removed. No full API/browser suite."
+  },
+  "runtime": {
+    "verifiedAt": "2026-09-15T23:07:58.422Z",
+    "sourceSha256": "de95d377df1938ff5c228b217059501393667380328af4a10d52643f54e142a0",
+    "bundleSha256": "805eb187ecd5f647ad4a90ac6a4e494a705347230fef9d6ccabcf34ee0d513c5",
+    "bundleHasOfficeFileValidation": true,
+    "ui3410AcceptsWordExcel": true,
+    "api": {
+      "pid": 45426,
+      "cwd": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+      "startedAt": "Wed Sep 16 07:07:08 2026",
+      "sourceModifiedAt": "2026-09-15T23:06:41.171Z",
+      "startedAtOrAfterSourceSecond": true,
+      "anonymousStatus": 401
+    },
+    "scope": "Read-only actual source/bundle, listener directory/start time and anonymous API status. Office attachment browser behavior tested against actual bundle in the explicit _test DB; no formal data requests or restart."
+  },
+  "fixtures": {
+    "userIds": [
+      "e6f23606-2584-4d1c-b658-6048b7d22951",
+      "5a5bdd40-63bf-4df4-a664-85065abe5f10",
+      "95112108-b306-4c1e-9f0e-8e3e3055d8dd",
+      "909a819f-918c-4328-a43a-8f6efff95a0c",
+      "89c786c9-4080-45d9-a74f-c0c0c84c9001"
+    ],
+    "vaultRoot": "/tmp/npi-office-files-vault-d07hoB",
+    "cleaned": true,
+    "projectIds": [
+      "bfbe6631-b038-4fa1-80d5-0beb49b34543"
+    ],
+    "residuals": {
+      "users": 0,
+      "projects": 0,
+      "events": 0,
+      "sessions": 0
+    },
+    "vaultRemoved": true,
+    "sharedNativeNumbering": "Document sequence may advance normally; shared counters are not rewound"
+  },
+  "files": {
+    "packages/core/src/lib/npi/office-archive.ts": "16d62d1d39b9c458e53d2c79e7582809750930f2ce2270b88fa294a325ae7f9d",
+    "packages/core/src/lib/npi/file-types.ts": "c93acc1c077b9349b20a2ea57f3b931eeeb52ee536897e6f78d3846cc12ef3df",
+    "packages/core/src/lib/npi/file-validation.ts": "5f42876768e43743bb72da3569bd551e978d7e10c60080333b0c6993a5abf0db",
+    "packages/core/src/lib/npi/excel.ts": "41a841c18ecf71706607bbc18821b2211dafb28b5c02dba2cdea09772f1b2b38",
+    "packages/core/src/lib/npi/file-service.ts": "de95d377df1938ff5c228b217059501393667380328af4a10d52643f54e142a0",
+    "packages/core/src/components/npi/NpiFiles.tsx": "bf60db580f773edcc337a1dbb19158b2071b24371eb026aee9eccbc26cb16ccb",
+    "scripts/npi-office-fixtures.ts": "bc72affde4ac7d596df33ed1aa0d67404463d78b21a1b6d411c34e141c933e86",
+    "scripts/npi-file-validation.test.ts": "056e4e695a972bba520ed4cfd455828346705238a488fe78cf29bfe9254f5c5b",
+    "scripts/npi-office-files-browser.test.ts": "7e71421abccade24e9f426a02aac9521e610297c43f85262f8322e26e4035a94"
+  },
+  "logs": {
+    "unit": {
+      "path": "/tmp/npi-office-files-unit.log",
+      "sha256": "f0223d7b306dc160af85f5a3e9c51517ed317bff1e2a036966748c113a345126"
+    },
+    "dom": {
+      "path": "/tmp/npi-office-files-dom.log",
+      "sha256": "4a99bad6cb40fe0836ae2554d624d9ca469285610240eadab5702bdea05b45f0"
+    },
+    "types-final": {
+      "path": "/tmp/npi-office-files-types-final.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "lint-final": {
+      "path": "/tmp/npi-office-files-lint-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build": {
+      "path": "/tmp/npi-office-files-build.log",
+      "sha256": "95a38d0db25c0da52963617093e252fe021827d513ec023fda665f6193d2ba61"
+    },
+    "browser": {
+      "path": "/tmp/npi-office-files-browser.log",
+      "sha256": "5c57a42613781311c3a413665d4b7c80d997d7837361b1929ee8db264fe30016"
+    },
+    "delivered-build": {
+      "path": "/tmp/npi-office-files-delivered-build.log",
+      "sha256": "cf6a4fe57390459ee3bf7e321fac01aaa8264faf47112ddacc36d9626d5570f2"
+    },
+    "delivered-browser": {
+      "path": "/tmp/npi-office-files-delivered-browser.log",
+      "sha256": "5c57a42613781311c3a413665d4b7c80d997d7837361b1929ee8db264fe30016"
+    }
+  },
+  "limits": "Supports original attachments, not Office editing/preview or all Office/CAD formats. Format identification is not malware scanning or validation of all document content. Scoped synthetic fixtures cleaned; no formal business data written or full SRS acceptance claim."
+}

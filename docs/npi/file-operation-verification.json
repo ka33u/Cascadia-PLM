@@ -1,0 +1,229 @@
+{
+  "verifiedAt": "2026-09-15T15:52:12.314Z",
+  "actualBrowser": {
+    "passed": true,
+    "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "uploadCloseProtected": true,
+    "archiveCloseProtected": true,
+    "issueCloseProtected": true,
+    "repeatUploadPrevented": true,
+    "outsideCloseProtected": true,
+    "archiveReasonLocked": true,
+    "archiveRecordPreserved": true,
+    "archivedDownloadMatches": true,
+    "issueActionsPaused": true,
+    "uploadPosts": 1,
+    "archivePosts": 1,
+    "issueUploadPosts": 1,
+    "issueNotePosts": 0,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "candidateBrowser": {
+    "passed": true,
+    "applicationRoot": "/private/tmp/npi-file-operation-review",
+    "uploadCloseProtected": true,
+    "archiveCloseProtected": true,
+    "issueCloseProtected": true,
+    "repeatUploadPrevented": true,
+    "outsideCloseProtected": true,
+    "archiveReasonLocked": true,
+    "archiveRecordPreserved": true,
+    "archivedDownloadMatches": true,
+    "issueActionsPaused": true,
+    "uploadPosts": 1,
+    "archivePosts": 1,
+    "issueUploadPosts": 1,
+    "issueNotePosts": 0,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "actualProcurementReceiptRegression": {
+    "passed": true,
+    "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "refreshFailuresRecovered": 2,
+    "completionPosts": {
+      "A": 1,
+      "B": 1
+    },
+    "completionEvents": {
+      "A": 1,
+      "B": 1
+    },
+    "replyPosts": 1,
+    "pendingCloseProtected": true,
+    "lostResponseRecovered": true,
+    "changedActorBlocked": true,
+    "attachmentIntentPreserved": true,
+    "photoUploadedAndDownloaded": true,
+    "photoOwnershipCorrect": true,
+    "otherProjectFilesIsolated": true,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "runtime": {
+    "verifiedAt": "2026-09-15T15:50:53.676Z",
+    "observations": [
+      {
+        "file": "NpiWorkspace.tsx",
+        "status": 200,
+        "markers": {
+          "useNpiFileOperation": true,
+          "fileOperation.isBusy()": true,
+          "onBusyChange": true
+        },
+        "sha256": "d42eab2fa33137507921179dab3f9722480352639bca2b4592dc0f7a09298d6a"
+      },
+      {
+        "file": "NpiAssignedMaterials.tsx",
+        "status": 200,
+        "markers": {
+          "useNpiFileOperation": true,
+          "fileOperation.isBusy()": true,
+          "onBusyChange": true
+        },
+        "sha256": "1da89f4e534fe6b0af1f8a9a97b499f8a53218b384403b79cc4091a3f1e26dca"
+      },
+      {
+        "file": "NpiIssues.tsx",
+        "status": 200,
+        "markers": {
+          "fileOperation.isBusy()": true,
+          "fileOperation.busy": true,
+          "onBusyChange": true
+        },
+        "sha256": "f4d5b30cca9e5e31f9678c96d494d172d6ce0e5546f5f3a5b7ffc445924881dc"
+      },
+      {
+        "file": "NpiFiles.tsx",
+        "status": 200,
+        "markers": {
+          "onBusyChange": true,
+          "正在归档资料": true,
+          "保存完成前请保持当前窗口": true
+        },
+        "sha256": "8411c976c41e01b7bcfa5a773523a1c640adb8f6d137e4f79fcf0427e4e149bd"
+      },
+      {
+        "file": "useNpiFileOperation.ts",
+        "status": 200,
+        "markers": {
+          "active.current.token !== token": true,
+          "pending.current.token === token": true
+        },
+        "sha256": "9f3a3f9a1d37e9f9bfe57b96f324baf105ce9b3a2bd9f489d43dfb09891c31f8"
+      },
+      {
+        "file": "npi.css",
+        "status": 200,
+        "markers": {
+          "npi-file-operation-dialog": true,
+          "data-saving='true'": true
+        },
+        "sha256": "70e84faa85fbbdd2e196bdf52176085e9019779b1a09da6cefb6914ddd29e81b"
+      }
+    ],
+    "scope": "Read-only 3410 source module inspection; no login, restart or formal data requests."
+  },
+  "checks": {
+    "typecheck": "Core, app and root passed; root repeated after final browser script changes",
+    "lint": "passed",
+    "format": "passed",
+    "dom": "13 passed: 5 new, 8 assignment-files/issue-recovery regressions",
+    "candidateBuild": "passed exit 0",
+    "actualBuild": "passed exit 0",
+    "candidateBrowser": "passed exit 0 and cleanup",
+    "actualBrowser": "passed exit 0 and cleanup",
+    "procurementReceiptRegression": "passed on actual build with exit 0 and cleanup"
+  },
+  "testCleanup": {
+    "latestRun": {
+      "createdAt": "2026-09-15T15:49:19.916Z",
+      "appRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+      "ownerPid": 10697,
+      "projectIds": [
+        "71652d60-1dc3-4510-a719-3d2d2e233340",
+        "6bad5e87-9caf-4815-b3a6-8e21dc70ea51"
+      ],
+      "userIds": [
+        "346305c8-c282-4549-9e67-83e46060c737",
+        "df4d1267-cef2-4e54-a0b6-d4467e8b4767",
+        "94b4226c-ab87-4fda-8c38-94e50546e3f8",
+        "e5a462fb-40c0-48a9-9650-b2bae3860c38"
+      ],
+      "vaultRoot": "/tmp/npi-file-operation-vault-eNG7DU",
+      "cleaned": true,
+      "cleanedAt": "2026-09-15T15:49:23.914Z"
+    },
+    "interruptedDebugRunRecovery": {
+      "recoveredAt": "2026-09-15T15:42:11.883Z",
+      "projectsRemoved": 2,
+      "usersRemoved": 4,
+      "vaultRemoved": true,
+      "testServerPid9353": "previous read-only process check found it exited"
+    },
+    "reason": "Initial test expected 200 while upload correctly returned 201. Callback assertions moved into main try/finally. Fixture manifest now prevents a new run while previous owned fixtures remain."
+  },
+  "files": {
+    "packages/core/src/components/npi/useNpiFileOperation.ts": "245a027917514c673b30b53ef86adc4a4b098aa438d2ae2c936ffffdce9d460b",
+    "packages/core/src/components/npi/NpiFiles.tsx": "5b079a6becd8d9f8d2d94c973d141c8b45a2e62d651ee079fa85d5eee6180d10",
+    "packages/core/src/components/npi/NpiWorkspace.tsx": "c2e9282e53fe8faff9e964decc84c9074748d84cd923424283800376fcdda3e5",
+    "packages/core/src/components/npi/NpiAssignedMaterials.tsx": "d76ad211bd7a68e85b754d28b53387ae6d7087f13affbe102d71d76336d9b1b4",
+    "packages/core/src/components/npi/NpiIssues.tsx": "58e4c5bacf50220cca0cfa459d7d12f28296bedabf1595355a35c26d709fd8cb",
+    "packages/core/src/components/npi/npi.css": "3c40f5f175cdd856c78b1c25f39c4f42d69fb4770f965dec942fc51b93944663",
+    "scripts/npi-file-operation-dom.test.mjs": "1a4a916dee95a3a59e033eefeac61f5ce8c89fb949708ff6007fcbeb7d383e85",
+    "scripts/npi-file-operation-browser.test.ts": "60d4b2f231cd5442828546b2adc9acd2aa286bc880a8b56599bc856fcf2e66f8"
+  },
+  "logs": {
+    "npi-file-operation-types.log": {
+      "path": "/tmp/npi-file-operation-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-file-operation-test-types.log": {
+      "path": "/tmp/npi-file-operation-test-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-file-operation-lint.log": {
+      "path": "/tmp/npi-file-operation-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-file-operation-format.log": {
+      "path": "/tmp/npi-file-operation-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-file-operation-dom.log": {
+      "path": "/tmp/npi-file-operation-dom.log",
+      "sha256": "20884fa08b853a870de7544d7f1968fe7a9c32d132dba30904d6be0178331034"
+    },
+    "npi-file-operation-dom-regression.log": {
+      "path": "/tmp/npi-file-operation-dom-regression.log",
+      "sha256": "6267c486783640d256b6566eaa45ff8043dd3e90a1e97791e521a2cbf45dacd2"
+    },
+    "npi-file-operation-build.log": {
+      "path": "/tmp/npi-file-operation-build.log",
+      "sha256": "3a4254d6dfde70c77ed2433728427a85ddc18673c32df37d580c339df0753a2d"
+    },
+    "npi-file-operation-browser.log": {
+      "path": "/tmp/npi-file-operation-browser.log",
+      "sha256": "469367d835e11523249c52acef14c9ef2cb01c19e1ea5223716589144ec46e0f"
+    },
+    "npi-file-operation-delivered-build.log": {
+      "path": "/tmp/npi-file-operation-delivered-build.log",
+      "sha256": "7a9d47bd1632388bb8d28261af463dd642d1cedbcf13a3bc26cd48ce10045cdf"
+    },
+    "npi-file-operation-delivered-browser.log": {
+      "path": "/tmp/npi-file-operation-delivered-browser.log",
+      "sha256": "36c4929f283d422d058469c417de93ce1155e6c7a49f0b61ad91bc2f02f90061"
+    },
+    "npi-file-operation-receipt-regression.log": {
+      "path": "/tmp/npi-file-operation-receipt-regression.log",
+      "sha256": "04cd16d0042e4726ad6b754c6fb4bd1db326724b195285496b2a8e7bf134f3cd"
+    }
+  },
+  "screenshots": [
+    "docs/npi/screenshots/file-operation-upload-mobile.png",
+    "docs/npi/screenshots/file-operation-archive-desktop.png",
+    "docs/npi/screenshots/file-operation-issue-mobile.png"
+  ],
+  "limits": "Modal close protection for material, assigned-material and issue windows; no whole-browser unload or inline project-tab navigation guard. Existing backend permission and Document/Vault rules unchanged. Explicit _test database and temporary Vault; owned fixtures cleaned and previous shared data preserved. Not full SRS or pilot acceptance."
+}

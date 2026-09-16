@@ -1,0 +1,192 @@
+{
+  "verifiedAt": "2026-09-15T17:13:35.927Z",
+  "originalFailure": "No refresh-only retry after known successful exception save with failed list reload",
+  "candidateBrowser": {
+    "passed": true,
+    "applicationRoot": "/private/tmp/npi-exception-recovery-review",
+    "savedRefreshOnly": true,
+    "failedReads": 2,
+    "closeAndDoubleWriteProtection": true,
+    "conflictRequiresExplicitReview": true,
+    "editedInputsPreserved": true,
+    "trackingIdRetained": true,
+    "firstPromisePreserved": true,
+    "projectAHistoryRows": 3,
+    "projectAExceptionEvents": 2,
+    "unknownResponseReviewedWithoutResubmit": true,
+    "bomReplacementRequiresReselection": true,
+    "sameCodeNeverAutoSelected": true,
+    "projectBExceptionEvents": 1,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "actualBrowser": {
+    "passed": true,
+    "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "savedRefreshOnly": true,
+    "failedReads": 2,
+    "closeAndDoubleWriteProtection": true,
+    "conflictRequiresExplicitReview": true,
+    "editedInputsPreserved": true,
+    "trackingIdRetained": true,
+    "firstPromisePreserved": true,
+    "projectAHistoryRows": 3,
+    "projectAExceptionEvents": 2,
+    "unknownResponseReviewedWithoutResubmit": true,
+    "bomReplacementRequiresReselection": true,
+    "sameCodeNeverAutoSelected": true,
+    "projectBExceptionEvents": 1,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "runtime": {
+    "verifiedAt": "2026-09-15T17:11:05.047Z",
+    "observations": [
+      {
+        "file": "NpiWorkspace.tsx",
+        "status": 200,
+        "markers": {
+          "NpiManufacturingException": true,
+          "actorId: meta.actor.id": true,
+          "最新清单尚未包含已保存物料": true,
+          "expectedActor": true
+        },
+        "sha256": "1db47feba4d0d16f5ce689e81aaca91a7e424da5b127ecd71720af734c76b4a6"
+      },
+      {
+        "file": "NpiManufacturingException.tsx",
+        "status": 200,
+        "markers": {
+          "核对后载入最新BOM": true,
+          "重试刷新列表": true,
+          "本次已保存预计完成": true,
+          "npi-exception-dialog": true,
+          "savedId": true
+        },
+        "sha256": "90c15a8784b2109816272b89257d1d1031e361fe3696aa0f83adcc61be3c2da5"
+      },
+      {
+        "file": "npi.css",
+        "status": 200,
+        "markers": {
+          ".npi-exception-feedback .npi-alert": true,
+          ".npi-exception-dialog": true
+        },
+        "sha256": "9ba7c0145bc2285dc6b2c7fb6fa82af111db42fb94cd52dc8e12c2d3d4ab5b37"
+      }
+    ],
+    "scope": "Read-only 3410 source modules; no login, restart or formal data requests."
+  },
+  "fixtureCleanup": {
+    "candidate": {
+      "ownerPid": 21112,
+      "applicationRoot": "/private/tmp/npi-exception-recovery-review",
+      "projectIds": [
+        "e5923289-07cd-4ac1-985e-dd02896318db",
+        "2d96e243-77af-49d9-b167-3c0b898e43a9"
+      ],
+      "templateIds": [
+        "exception-0ad53e47-8763-4d82-b0da-4d5d400e7854"
+      ],
+      "userIds": [
+        "357695af-c875-40e8-af76-d3ac13f1f573",
+        "26b2d687-3765-4d4f-8053-dc1a75fb88ca",
+        "09558cd0-474a-4c6f-b2d3-b9b06eddf17e"
+      ],
+      "cleaned": true,
+      "cleanedAt": "2026-09-15T17:10:01.784Z"
+    },
+    "actual": {
+      "ownerPid": 21522,
+      "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+      "projectIds": [
+        "7d231426-97fe-4f09-8f0e-f837eb46cb67",
+        "aa3606bb-369c-4643-b6d6-48ba66f302f6"
+      ],
+      "templateIds": [
+        "exception-e6a7b768-7c7c-4779-ad2f-409db26a899c"
+      ],
+      "userIds": [
+        "a9ca8d4d-38e0-49dd-b493-db71fe32f936",
+        "8458f4dd-6edd-4cc4-9ca2-25c42a968455",
+        "84b7825b-396b-4468-8ddc-303a6b214c0a"
+      ],
+      "cleaned": true,
+      "cleanedAt": "2026-09-15T17:12:54.112Z"
+    }
+  },
+  "checks": {
+    "dom": "7 passed",
+    "typecheck": "candidate and actual core/app/root passed",
+    "lint": "passed",
+    "format": "passed",
+    "candidateBuild": "passed exit 0",
+    "actualBuild": "passed exit 0",
+    "candidateBrowser": "passed exit 0 and cleanup",
+    "actualBrowser": "passed exit 0 and cleanup",
+    "manufacturingQuickRegression": "existing four-node quick-reply browser passed on actual build"
+  },
+  "files": {
+    "packages/core/src/components/npi/NpiManufacturingException.tsx": "f3bf68bf0da6de6303b59d64f5810a46d024a47a9c5621c9ffc81da670354cf6",
+    "packages/core/src/components/npi/NpiWorkspace.tsx": "db16343057267fab06e907463959b71b9231cc2cf0f77b162ff41564327c9ad0",
+    "packages/core/src/components/npi/npi.css": "b4fddd2c82872e8d5767b4be6afdf63f1e21b40df49f3c43ba7e85b36fc93097",
+    "scripts/npi-exception-recovery-dom.test.mjs": "97f797e7065191517475c4c333af7e55192db6dbfb85b990eee9e40e42fc40d2",
+    "scripts/npi-exception-recovery-browser.test.ts": "c98210d0b2f998137bafec94f1c6354d691a9698fe27d1eb2be3186e90408c2a"
+  },
+  "logs": {
+    "npi-exception-recovery-before.log": {
+      "path": "/tmp/npi-exception-recovery-before.log",
+      "sha256": "3633b2bca6a8996cfe84893c1159803e9301e9ce0a333fafbf5b66300e044137"
+    },
+    "npi-exception-recovery-types.log": {
+      "path": "/tmp/npi-exception-recovery-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-exception-recovery-delivered-types.log": {
+      "path": "/tmp/npi-exception-recovery-delivered-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-exception-recovery-test-types.log": {
+      "path": "/tmp/npi-exception-recovery-test-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-exception-recovery-lint.log": {
+      "path": "/tmp/npi-exception-recovery-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-exception-recovery-format.log": {
+      "path": "/tmp/npi-exception-recovery-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-exception-recovery-dom.log": {
+      "path": "/tmp/npi-exception-recovery-dom.log",
+      "sha256": "a8a3589e71f6b5eabdba3f140ed9bb27e40b3823c9e07bbe6902c382ab6f3d0d"
+    },
+    "npi-exception-recovery-build.log": {
+      "path": "/tmp/npi-exception-recovery-build.log",
+      "sha256": "19d2b46e774a697706cad61a5e028deb71e6002b1d5a52ec26bb4b6ad25e66a2"
+    },
+    "npi-exception-recovery-browser.log": {
+      "path": "/tmp/npi-exception-recovery-browser.log",
+      "sha256": "7b0280218acb826cae789e5119c7f28d34da0dfb262951c42b4abd0b2fcd8c63"
+    },
+    "npi-exception-recovery-delivered-build.log": {
+      "path": "/tmp/npi-exception-recovery-delivered-build.log",
+      "sha256": "917bec39fca4f1b20b2418de4553b05447f32fd0a95fd3ef64d0c6550b1706cd"
+    },
+    "npi-exception-recovery-delivered-browser.log": {
+      "path": "/tmp/npi-exception-recovery-delivered-browser.log",
+      "sha256": "7b0280218acb826cae789e5119c7f28d34da0dfb262951c42b4abd0b2fcd8c63"
+    },
+    "npi-exception-recovery-quick-regression.log": {
+      "path": "/tmp/npi-exception-recovery-quick-regression.log",
+      "sha256": "f4882e8fb5c151f17a569128de2c01e3d0e97add017390746d406971cdedf0bb"
+    }
+  },
+  "screenshots": [
+    "docs/npi/screenshots/exception-recovery-saved-mobile.png",
+    "docs/npi/screenshots/exception-recovery-review-desktop.png",
+    "docs/npi/screenshots/exception-recovery-new-bom-mobile.png"
+  ],
+  "limits": "Frontend recovery and scope handling only; backend transactions, history, permissions and concurrency versions unchanged. Known saved retries only read. Unknown response is not automatically confirmed or resubmitted: browser explicitly reads, reviews and closes. DOM covers role/actor/item/project lock and unmount; browser covers write/refresh, real version conflict and BOM replacement. Explicit _test DB; scoped projects/users/templates/sessions cleaned. Not full SRS or real pilot acceptance."
+}

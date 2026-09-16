@@ -1,0 +1,2482 @@
+{
+  "scope": "Current V1 delivery with complete synthetic API and actual-build desktop/mobile regression; business signoff and production-scale acceptance separate",
+  "verifiedFiles": [
+    {
+      "file": "packages/core/src/lib/npi/service.ts",
+      "expected": "fa7fcde177d1cedcf4872063b7a5cb1a6b4e5d07195baa257899e77598ac65dd",
+      "actual": "fa7fcde177d1cedcf4872063b7a5cb1a6b4e5d07195baa257899e77598ac65dd",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/lib/npi/bom.ts",
+      "expected": "f68545573afa241d49a1d8660d119a6e806d063d680c30250a293ab037405dc1",
+      "actual": "f68545573afa241d49a1d8660d119a6e806d063d680c30250a293ab037405dc1",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/server/routes/npi.ts",
+      "expected": "893422327b8252a633d308dc559e888e01d134790164dd2ec56931b14254cea7",
+      "actual": "893422327b8252a633d308dc559e888e01d134790164dd2ec56931b14254cea7",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-http.test.ts",
+      "expected": "5455e65d1f9ffceeb426b80317a74f9d747836f9cac9f1c8c77fcf937004ff16",
+      "actual": "5455e65d1f9ffceeb426b80317a74f9d747836f9cac9f1c8c77fcf937004ff16",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/bom-tree-api.md",
+      "expected": "f32d726cdfc1dd48ca6e1d13f77001a24965b92a0116a7324501cbe05c568d51",
+      "actual": "f32d726cdfc1dd48ca6e1d13f77001a24965b92a0116a7324501cbe05c568d51",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/bom-validation-api.md",
+      "expected": "24c2fd359aa02ac01e9dfbf2a00bfc2cc732d8ff0f35cc94d2823820e91c2f04",
+      "actual": "24c2fd359aa02ac01e9dfbf2a00bfc2cc732d8ff0f35cc94d2823820e91c2f04",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-upgrade.test.ts",
+      "expected": "59f402b0ec8699b3b0a3c7730970586fd18bd77ee9a2c0824a8ba5b661d8c1e6",
+      "actual": "59f402b0ec8699b3b0a3c7730970586fd18bd77ee9a2c0824a8ba5b661d8c1e6",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/upgrade-verification.md",
+      "expected": "27dc30f18283e0def0d1edac6fd20deda77f3617c4c6bb44a59eba01951dc50d",
+      "actual": "27dc30f18283e0def0d1edac6fd20deda77f3617c4c6bb44a59eba01951dc50d",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/upgrade-verification.json",
+      "expected": "be593666926b6b03c0f759a6367b9dc6831438a286ea6fcdff2c4c78d615cd21",
+      "actual": "be593666926b6b03c0f759a6367b9dc6831438a286ea6fcdff2c4c78d615cd21",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiProjectDashboard.tsx",
+      "expected": "66e238eb61d90c56c9a39304c633aaa8811cd3ed282175835e7b6b73eec02780",
+      "actual": "66e238eb61d90c56c9a39304c633aaa8811cd3ed282175835e7b6b73eec02780",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiAssignedMaterials.tsx",
+      "expected": "d76ad211bd7a68e85b754d28b53387ae6d7087f13affbe102d71d76336d9b1b4",
+      "actual": "d76ad211bd7a68e85b754d28b53387ae6d7087f13affbe102d71d76336d9b1b4",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-assignment-browser.test.ts",
+      "expected": "cbebef7517e980b1f385d3c924e9f98a6be46597733087949d7d8db7db01e204",
+      "actual": "cbebef7517e980b1f385d3c924e9f98a6be46597733087949d7d8db7db01e204",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/assigned-materials.md",
+      "expected": "b6b370ce1702c62a872e8607cfbf23a0d0f446f764971f641b720837ccbfffcf",
+      "actual": "b6b370ce1702c62a872e8607cfbf23a0d0f446f764971f641b720837ccbfffcf",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiExternalMaterial.tsx",
+      "expected": "20d8ce619b93de8179105442d1deb19125130d657516e5cf9b0ad5cc8fe593b3",
+      "actual": "20d8ce619b93de8179105442d1deb19125130d657516e5cf9b0ad5cc8fe593b3",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiKitMaterials.tsx",
+      "expected": "d78817b48ed44894d3b9bcc3eb3178f1773e283c07477e5a857b386bb67ab375",
+      "actual": "d78817b48ed44894d3b9bcc3eb3178f1773e283c07477e5a857b386bb67ab375",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-other-material-dom.test.mjs",
+      "expected": "fb0e98d93327dd42be94e57b8c3253207a205df0276802296f91649242075783",
+      "actual": "fb0e98d93327dd42be94e57b8c3253207a205df0276802296f91649242075783",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/external-material-types.md",
+      "expected": "ffdf17155b37df1de6612bfb311f39a05d2b8b567dee8fa782f24534ee982294",
+      "actual": "ffdf17155b37df1de6612bfb311f39a05d2b8b567dee8fa782f24534ee982294",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/lib/npi/file-service.ts",
+      "expected": "de95d377df1938ff5c228b217059501393667380328af4a10d52643f54e142a0",
+      "actual": "de95d377df1938ff5c228b217059501393667380328af4a10d52643f54e142a0",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-files-http.test.ts",
+      "expected": "397a1dc98698c779de6a57b3981d1a54aee42733d2a4a97382ee1cbb91b47deb",
+      "actual": "397a1dc98698c779de6a57b3981d1a54aee42733d2a4a97382ee1cbb91b47deb",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-assignment-files-dom.test.mjs",
+      "expected": "9637f217dacedd2ea5accae4c58d3fb65bb55717bf52c2eece1bac8e24ade316",
+      "actual": "9637f217dacedd2ea5accae4c58d3fb65bb55717bf52c2eece1bac8e24ade316",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/assigned-material-files.md",
+      "expected": "9f5edd2a61546d28188ae4e3f09f5ab0080e28e71cf69dafaac31b64d9f4fce6",
+      "actual": "9f5edd2a61546d28188ae4e3f09f5ab0080e28e71cf69dafaac31b64d9f4fce6",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiProjectChange.tsx",
+      "expected": "2b58682c839e9e7d95e3de8246574940073c1e826c689c39ce64d38d39fe5a1c",
+      "actual": "2b58682c839e9e7d95e3de8246574940073c1e826c689c39ce64d38d39fe5a1c",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiWorkspace.tsx",
+      "expected": "1e8238f7a93c5fa27865fcb22527f44da02f394af013684ad72edb9ffa69a948",
+      "actual": "1e8238f7a93c5fa27865fcb22527f44da02f394af013684ad72edb9ffa69a948",
+      "matches": true
+    },
+    {
+      "file": "tsconfig.json",
+      "expected": "88e69422ecd4f11180e5004f657e5c95e73dfe5ad5f58010e950ccb5aae989ca",
+      "actual": "88e69422ecd4f11180e5004f657e5c95e73dfe5ad5f58010e950ccb5aae989ca",
+      "matches": true
+    },
+    {
+      "file": "packages/core/tsconfig.typecheck.json",
+      "expected": "eb410391d3eeed36971126fd9ad1890435c12586ebfab191890eafe776636b78",
+      "actual": "eb410391d3eeed36971126fd9ad1890435c12586ebfab191890eafe776636b78",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiIssues.tsx",
+      "expected": "58e4c5bacf50220cca0cfa459d7d12f28296bedabf1595355a35c26d709fd8cb",
+      "actual": "58e4c5bacf50220cca0cfa459d7d12f28296bedabf1595355a35c26d709fd8cb",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-issue-recovery-dom.test.mjs",
+      "expected": "9a1966cdce9faa5a4ede310bf89da21a0daa41a3ccf5f24bb5e475b1598fef62",
+      "actual": "9a1966cdce9faa5a4ede310bf89da21a0daa41a3ccf5f24bb5e475b1598fef62",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/issue-refresh-recovery.md",
+      "expected": "890ed7ce463127dc932b7b43b804f75fda927e195ad3ae097b35d1e1a776ba6f",
+      "actual": "890ed7ce463127dc932b7b43b804f75fda927e195ad3ae097b35d1e1a776ba6f",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/lib/npi/issue-service.ts",
+      "expected": "188941a159918826a768971b29c6c2e777bcd9960a54109c2f5c567a2911f6a6",
+      "actual": "188941a159918826a768971b29c6c2e777bcd9960a54109c2f5c567a2911f6a6",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/issue-handoff-concurrency.md",
+      "expected": "cce838a6a48a179fcdc9043cc77fdf4f45a2ccf8cfcee28bf66b3fe5cac02163",
+      "actual": "cce838a6a48a179fcdc9043cc77fdf4f45a2ccf8cfcee28bf66b3fe5cac02163",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/issue-note-retry.md",
+      "expected": "9fa8a9b0cbf2ea85ff98d3af14ef04fecdbdef7a2e571da76c90601dcc1fbb68",
+      "actual": "9fa8a9b0cbf2ea85ff98d3af14ef04fecdbdef7a2e571da76c90601dcc1fbb68",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/kit-export.ts",
+      "expected": "ec7e96374d4206b8e5c4a1b2341d1764e949cb0b38c37b973c6a72bad8e8081f",
+      "actual": "ec7e96374d4206b8e5c4a1b2341d1764e949cb0b38c37b973c6a72bad8e8081f",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-kit-export.test.mjs",
+      "expected": "8552f12962424a9a495c937a1c760587fa35d5e0cbec5a3b637ad1e23c2a121e",
+      "actual": "8552f12962424a9a495c937a1c760587fa35d5e0cbec5a3b637ad1e23c2a121e",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-kit-export-dom.test.mjs",
+      "expected": "07312a1c7886b4905fdc7e784b020257e0db04e7d9cddbd315b597e68b507b05",
+      "actual": "07312a1c7886b4905fdc7e784b020257e0db04e7d9cddbd315b597e68b507b05",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/kit-export.md",
+      "expected": "24d2d7ff1c09314c860a62a4f2d0ff28aca2f0ce8d0af1994a882f391ae5b7f3",
+      "actual": "24d2d7ff1c09314c860a62a4f2d0ff28aca2f0ce8d0af1994a882f391ae5b7f3",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-kit-export-browser.test.ts",
+      "expected": "658229b9d025cdf5f75d769dbfa1ab47ccce89ef2c5e241bb11f8121c6875845",
+      "actual": "658229b9d025cdf5f75d769dbfa1ab47ccce89ef2c5e241bb11f8121c6875845",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/kit-export-browser-verification.json",
+      "expected": "f176d8310e3f515cbedf2df2be252abf5d0bb42c92e5d479903dc36333b613c0",
+      "actual": "f176d8310e3f515cbedf2df2be252abf5d0bb42c92e5d479903dc36333b613c0",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/kit-export-desktop.png",
+      "expected": "2e19bf04db33b93730b7a89a8c6432ea83c156114498be1a54a35e16971034ed",
+      "actual": "2e19bf04db33b93730b7a89a8c6432ea83c156114498be1a54a35e16971034ed",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/kit-export-mobile.png",
+      "expected": "3ff57d2bc2b145c750dcecbc55319edcf609a28f8800b56f2e037cdee3504201",
+      "actual": "3ff57d2bc2b145c750dcecbc55319edcf609a28f8800b56f2e037cdee3504201",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiBottleneck.tsx",
+      "expected": "26c46665cab72ab6be32a7a264c0567fc956551b05a3f1b6ccd6a0a1a454b00d",
+      "actual": "26c46665cab72ab6be32a7a264c0567fc956551b05a3f1b6ccd6a0a1a454b00d",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-bottleneck-browser.test.ts",
+      "expected": "5bf9d75884f8dd3c4cef6cc82ba5a7f56c18de893e35aca28f3b8502c85d9d9d",
+      "actual": "5bf9d75884f8dd3c4cef6cc82ba5a7f56c18de893e35aca28f3b8502c85d9d9d",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/bottleneck-material.png",
+      "expected": "06728bae792401352a583945c1de21c6fd2ed37b2ffc3164361110070c8dff4a",
+      "actual": "06728bae792401352a583945c1de21c6fd2ed37b2ffc3164361110070c8dff4a",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/bottleneck-focus.md",
+      "expected": "a4dc1c9d3f3504f997057b8ed456f25d91db91b5d1630a9d32cf62dd0b6e61bc",
+      "actual": "a4dc1c9d3f3504f997057b8ed456f25d91db91b5d1630a9d32cf62dd0b6e61bc",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/bottleneck-manufacturing-mobile.png",
+      "expected": "2c66d5b55a55e70d9e67565915b7faf9c3bd61ef3969dc9fc1038ad69f867507",
+      "actual": "2c66d5b55a55e70d9e67565915b7faf9c3bd61ef3969dc9fc1038ad69f867507",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-bottleneck-dom.test.mjs",
+      "expected": "43cc6345d2f10d8daab5353c799cb4d601b34aa5f05255d8a650636c66fdb588",
+      "actual": "43cc6345d2f10d8daab5353c799cb4d601b34aa5f05255d8a650636c66fdb588",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/bottleneck-browser-verification.json",
+      "expected": "227cdc4cd3e582c442cc02b928f1caff5106eb0de21fa716a032dfd952ac00c1",
+      "actual": "227cdc4cd3e582c442cc02b928f1caff5106eb0de21fa716a032dfd952ac00c1",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/overview-browser-verification.json",
+      "expected": "6858fe5e89c792e78b0e7e782659a4a441c8c867046ccd602ac58179d58003a2",
+      "actual": "6858fe5e89c792e78b0e7e782659a4a441c8c867046ccd602ac58179d58003a2",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-overview-dom.test.mjs",
+      "expected": "ffb764c6cbb98ebd6da6a5943f908a0dec5184edf51276052868914d0697ff00",
+      "actual": "ffb764c6cbb98ebd6da6a5943f908a0dec5184edf51276052868914d0697ff00",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiProjectOverview.tsx",
+      "expected": "806c2046ec7402c053b8e0809fb999e1dc371d8068f1229414b31b638a5b86b5",
+      "actual": "806c2046ec7402c053b8e0809fb999e1dc371d8068f1229414b31b638a5b86b5",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/overview-bottleneck-mobile.png",
+      "expected": "c941cb565643ddaa446acf4a5fc72a7076adf81135d7bf3e773ba30df1c1ef75",
+      "actual": "c941cb565643ddaa446acf4a5fc72a7076adf81135d7bf3e773ba30df1c1ef75",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/overview-bottleneck-desktop.png",
+      "expected": "544a7bdd6a3c7c324e81a187e75547493aa75e860e1001c557146f7ae9977a79",
+      "actual": "544a7bdd6a3c7c324e81a187e75547493aa75e860e1001c557146f7ae9977a79",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/prediction-review-desktop.png",
+      "expected": "966730679a732065ba5e043904c0e0f1582ef3e5172adf72fbececdaef79addb",
+      "actual": "966730679a732065ba5e043904c0e0f1582ef3e5172adf72fbececdaef79addb",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/prediction-completeness.md",
+      "expected": "495539fde293393856cff049fce644bbb5705252227d8598b6c37d32ee84c9f9",
+      "actual": "495539fde293393856cff049fce644bbb5705252227d8598b6c37d32ee84c9f9",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/prediction-review-mobile.png",
+      "expected": "fc744c3608c09f5d6a790eaef0e38fbf84e2c64faec445bcff86a4554e0aa1ad",
+      "actual": "fc744c3608c09f5d6a790eaef0e38fbf84e2c64faec445bcff86a4554e0aa1ad",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/prediction-browser-verification.json",
+      "expected": "f3f4c6ba01a8f8dd70733c067ca8ccaaa65b8b932007ed11eedbae3887458a30",
+      "actual": "f3f4c6ba01a8f8dd70733c067ca8ccaaa65b8b932007ed11eedbae3887458a30",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-prediction-note.test.mjs",
+      "expected": "24034d87f4a14d05ec11fd3163ae9b4c4abfac1ee7233589a2a4f2dcaa203050",
+      "actual": "24034d87f4a14d05ec11fd3163ae9b4c4abfac1ee7233589a2a4f2dcaa203050",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/prediction-note.ts",
+      "expected": "e3a22b07cafd64090eb5c423f177b08d76c95ae0ca194e48d61aae0a66d8b07b",
+      "actual": "e3a22b07cafd64090eb5c423f177b08d76c95ae0ca194e48d61aae0a66d8b07b",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/supervisor-history-browser-verification.json",
+      "expected": "bcd24555c831af1ea3c6190f52f2ec782ba4c85d64b6cc0422e985728b3a282b",
+      "actual": "bcd24555c831af1ea3c6190f52f2ec782ba4c85d64b6cc0422e985728b3a282b",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiTrackingHistory.tsx",
+      "expected": "79a0b6d33b9418486331abddcbf71cf0ee976534483c2efac9b49cf4074d04d2",
+      "actual": "79a0b6d33b9418486331abddcbf71cf0ee976534483c2efac9b49cf4074d04d2",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiActivity.tsx",
+      "expected": "565d4b1bb194aedb4a575d64bdf20cd866a212e240e62fcc9501914238255a0a",
+      "actual": "565d4b1bb194aedb4a575d64bdf20cd866a212e240e62fcc9501914238255a0a",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/supervisor-history-mobile.png",
+      "expected": "3015bf1c60dbf1a0c683ce647b1e2f1ae46bf30e7ff15b5c3c1ddd8c7e2a85bb",
+      "actual": "3015bf1c60dbf1a0c683ce647b1e2f1ae46bf30e7ff15b5c3c1ddd8c7e2a85bb",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-supervisor-history-browser.test.ts",
+      "expected": "60f2acd7d0a9aec87e963d6e0cec9b4d11a41e38344ab2c831eb656f33b5fae5",
+      "actual": "60f2acd7d0a9aec87e963d6e0cec9b4d11a41e38344ab2c831eb656f33b5fae5",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/supervisor-history-desktop.png",
+      "expected": "f5afaaf42bca3b0f0ace142a17534e0104187d242a50ecfc7c3149c983fbdc3b",
+      "actual": "f5afaaf42bca3b0f0ace142a17534e0104187d242a50ecfc7c3149c983fbdc3b",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/supervisor-history-verification.md",
+      "expected": "09fb2423856f5392f60c5ea5a5fd33fa28e5d8f78859a6db55c23f20b62fda09",
+      "actual": "09fb2423856f5392f60c5ea5a5fd33fa28e5d8f78859a6db55c23f20b62fda09",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/local-runtime-verification.md",
+      "expected": "ca197477f7ced9d1be597b70171c873315840bba3e76a60bce9003efebe3d158",
+      "actual": "ca197477f7ced9d1be597b70171c873315840bba3e76a60bce9003efebe3d158",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/local-runtime-verification.json",
+      "expected": "dfdfdcf105025baa6f2c1f787facab59ec20bf9e63eb8a43180b44f0dae26f50",
+      "actual": "dfdfdcf105025baa6f2c1f787facab59ec20bf9e63eb8a43180b44f0dae26f50",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/npi.css",
+      "expected": "b4fddd2c82872e8d5767b4be6afdf63f1e21b40df49f3c43ba7e85b36fc93097",
+      "actual": "b4fddd2c82872e8d5767b4be6afdf63f1e21b40df49f3c43ba7e85b36fc93097",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-bom-browser.test.ts",
+      "expected": "4ec06a7ee4e31e53c6841a4db2d5c0dad97bd77c8ab6fe9bc492bfe67ed32471",
+      "actual": "4ec06a7ee4e31e53c6841a4db2d5c0dad97bd77c8ab6fe9bc492bfe67ed32471",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-ui-smoke.mjs",
+      "expected": "2654e89cb6a1bab780a8beb38bc1aeb16e7e6801cfc3970df81e1c3a386c4ddc",
+      "actual": "2654e89cb6a1bab780a8beb38bc1aeb16e7e6801cfc3970df81e1c3a386c4ddc",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/README.md",
+      "expected": "98798b81936f8c6da87510d0ce098256c147208d846eb139417269ec0821980c",
+      "actual": "98798b81936f8c6da87510d0ce098256c147208d846eb139417269ec0821980c",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiSettings.tsx",
+      "expected": "380ad45b3736001db1901f4fd65606c0319509257ab1a45a8c0021154c5f820e",
+      "actual": "380ad45b3736001db1901f4fd65606c0319509257ab1a45a8c0021154c5f820e",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/settings-delivery.md",
+      "expected": "183531a3e4a5b1243694ab1e98b22ce692d7d3e201855296c6b3ebefd92cb816",
+      "actual": "183531a3e4a5b1243694ab1e98b22ce692d7d3e201855296c6b3ebefd92cb816",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/settings-browser-verification.json",
+      "expected": "26e20fd9571b608c8f9c358c3e2c5331cce78065b7ccb22321291ac9c5a88059",
+      "actual": "26e20fd9571b608c8f9c358c3e2c5331cce78065b7ccb22321291ac9c5a88059",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/settings-desktop.png",
+      "expected": "b49242b4281f336fd013b8978f56fe83aa0573323a3fe9fece18be61b17d7026",
+      "actual": "b49242b4281f336fd013b8978f56fe83aa0573323a3fe9fece18be61b17d7026",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/settings-mobile.png",
+      "expected": "3c7fed67fde682ebd5cfdaf71d7eeb9c7766ba79e2f6b3f1f8e8b9f72b9d0129",
+      "actual": "3c7fed67fde682ebd5cfdaf71d7eeb9c7766ba79e2f6b3f1f8e8b9f72b9d0129",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/navigation.ts",
+      "expected": "054eca0ebb79019257588cd0ab258980fecc3eef383d9cd05fdd87d16097cd29",
+      "actual": "054eca0ebb79019257588cd0ab258980fecc3eef383d9cd05fdd87d16097cd29",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiModuleViews.tsx",
+      "expected": "ea592e40304a8ae96cf52586667ec2ff7db5ac7479da14fb0e920de442caa7ba",
+      "actual": "ea592e40304a8ae96cf52586667ec2ff7db5ac7479da14fb0e920de442caa7ba",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-navigation-browser.test.ts",
+      "expected": "cfb67215749e1c9e02e6f513628fc19dc29627c097d2e80be324ff6824315600",
+      "actual": "cfb67215749e1c9e02e6f513628fc19dc29627c097d2e80be324ff6824315600",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/navigation-alignment.md",
+      "expected": "ca6058da59a4400f03e210cd1217dbea75e6ec466b127159196765553e496d98",
+      "actual": "ca6058da59a4400f03e210cd1217dbea75e6ec466b127159196765553e496d98",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/navigation-browser-verification.json",
+      "expected": "2d91ab6673eb1c60e201d754db6cdd1275314969815e1fb5c890ab563a10f309",
+      "actual": "2d91ab6673eb1c60e201d754db6cdd1275314969815e1fb5c890ab563a10f309",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/navigation-home-desktop.png",
+      "expected": "fb3a6f9bfa0de654bf9636e15acba133766d2c693ad0d2334848460ffbf3f08c",
+      "actual": "fb3a6f9bfa0de654bf9636e15acba133766d2c693ad0d2334848460ffbf3f08c",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/navigation-bom-desktop.png",
+      "expected": "64c1db24f0674e8b4fcb8f0bc47002824c05693fdbc1740b5bbf4cc86d823ca5",
+      "actual": "64c1db24f0674e8b4fcb8f0bc47002824c05693fdbc1740b5bbf4cc86d823ca5",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/navigation-manufacturing-desktop.png",
+      "expected": "2b1ce3be53e4696a5b873a568d794ef31b4b9dd3062057f37deb4f3a105f08d5",
+      "actual": "2b1ce3be53e4696a5b873a568d794ef31b4b9dd3062057f37deb4f3a105f08d5",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/navigation-manufacturing-mobile.png",
+      "expected": "4669d1d08a09f9a2d0fc64543048e8e6e02cb8f4f9216860476de4a5a6c2600f",
+      "actual": "4669d1d08a09f9a2d0fc64543048e8e6e02cb8f4f9216860476de4a5a6c2600f",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/navigation-reports-desktop.png",
+      "expected": "5c88c070ed2dffbecaffe18391a0781d676f2349b8dd51a5781d33d577d0da77",
+      "actual": "5c88c070ed2dffbecaffe18391a0781d676f2349b8dd51a5781d33d577d0da77",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/navigation-settings-mobile.png",
+      "expected": "12ac7bcde6e8d69636a6f2c048c880555014e84346b12655f89a5ab1216c6c74",
+      "actual": "12ac7bcde6e8d69636a6f2c048c880555014e84346b12655f89a5ab1216c6c74",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiManufacturingReply.tsx",
+      "expected": "fa300b7377cc105cf9145009e6303941e1802afd1db61d866ac10a8b34b911bb",
+      "actual": "fa300b7377cc105cf9145009e6303941e1802afd1db61d866ac10a8b34b911bb",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiManufacturingReplyDialog.tsx",
+      "expected": "08d2dc42d9f28ffbda18351ab96246431b969099f22267d3dfe1fd6de95e7a01",
+      "actual": "08d2dc42d9f28ffbda18351ab96246431b969099f22267d3dfe1fd6de95e7a01",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-manufacturing-quick-browser.test.ts",
+      "expected": "78bbd0014fc48140bfaa0ef6bb1d54bdc9a018fc1dcd902e8fa7021d28aa3e22",
+      "actual": "78bbd0014fc48140bfaa0ef6bb1d54bdc9a018fc1dcd902e8fa7021d28aa3e22",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/manufacturing-quick-reply.md",
+      "expected": "8d41e3cbc75ef56332381a257d4ae398325e5b068695a3a7c5a25c73a1e94fec",
+      "actual": "8d41e3cbc75ef56332381a257d4ae398325e5b068695a3a7c5a25c73a1e94fec",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/manufacturing-quick-verification.json",
+      "expected": "bc1d3e5940dbdf50c8abf5ee9c1ef6f019887f1100899d29a9aa1906c9ebc793",
+      "actual": "bc1d3e5940dbdf50c8abf5ee9c1ef6f019887f1100899d29a9aa1906c9ebc793",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/manufacturing-quick-desktop.png",
+      "expected": "61d69f8a97c94f20bc5803c7707b7594d06f2b20d17d973fd147222c3de70f41",
+      "actual": "61d69f8a97c94f20bc5803c7707b7594d06f2b20d17d973fd147222c3de70f41",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/manufacturing-quick-mobile.png",
+      "expected": "78e7c44393e31d07b68da3cd638d4216a95e8a5e47a86449a36a02a0eff9f694",
+      "actual": "78e7c44393e31d07b68da3cd638d4216a95e8a5e47a86449a36a02a0eff9f694",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-bom-context-browser.test.ts",
+      "expected": "8bb0ce153c5f00fc4ec9110350fa1d32368fe642555c5602669f5b2190398dc2",
+      "actual": "8bb0ce153c5f00fc4ec9110350fa1d32368fe642555c5602669f5b2190398dc2",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/bom-request-context.md",
+      "expected": "e1e976e3c75ed28bebb7cfff43150005e987749ca088f2d42ed50941857a7152",
+      "actual": "e1e976e3c75ed28bebb7cfff43150005e987749ca088f2d42ed50941857a7152",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/bom-request-context-verification.json",
+      "expected": "c816180cf90c5e6630f392eaa9ead25d3038921c9608668875608686b587dd8f",
+      "actual": "c816180cf90c5e6630f392eaa9ead25d3038921c9608668875608686b587dd8f",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/bom-request-context-desktop.png",
+      "expected": "19f667540fc6836615073f0e1afd0936277eb2878f248e1921285cc6feaaf0f4",
+      "actual": "19f667540fc6836615073f0e1afd0936277eb2878f248e1921285cc6feaaf0f4",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/bom-request-context-mobile.png",
+      "expected": "ecc2fba094fb5e62f752b772795cec3e7e58aa8148d38a050813af80e652cddd",
+      "actual": "ecc2fba094fb5e62f752b772795cec3e7e58aa8148d38a050813af80e652cddd",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiProcurementReplyDialog.tsx",
+      "expected": "4155c9eb9eb3a07e48e38d66bfddc76deeb130a656c0a7e729e06055fce57bfb",
+      "actual": "4155c9eb9eb3a07e48e38d66bfddc76deeb130a656c0a7e729e06055fce57bfb",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-procurement-reply-browser.test.ts",
+      "expected": "299815e2f11ad67725d75ef28f249e5b089ab4baa9d16bf985c5624a001ba6bc",
+      "actual": "299815e2f11ad67725d75ef28f249e5b089ab4baa9d16bf985c5624a001ba6bc",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/procurement-reply.md",
+      "expected": "f43a2bb26c7064336b8d4105fcf0d491dc198498498358d71e520ce6c65c396b",
+      "actual": "f43a2bb26c7064336b8d4105fcf0d491dc198498498358d71e520ce6c65c396b",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/procurement-reply-verification.json",
+      "expected": "e28d5de6842fcbf228e8d0bf5fdde799beca0806734ebbe3fa6d1eb7c59d6e95",
+      "actual": "e28d5de6842fcbf228e8d0bf5fdde799beca0806734ebbe3fa6d1eb7c59d6e95",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/procurement-reply-desktop.png",
+      "expected": "825226cdceb2124d83afe19c6380bcc8300a93a800e400cb54602f03c6dcbc4a",
+      "actual": "825226cdceb2124d83afe19c6380bcc8300a93a800e400cb54602f03c6dcbc4a",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/procurement-reply-mobile.png",
+      "expected": "2cb79778b6662342b2de48e2a095e9eee00ae563b68c2e562b0b846aaa0199b4",
+      "actual": "2cb79778b6662342b2de48e2a095e9eee00ae563b68c2e562b0b846aaa0199b4",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/procurement-reply-conflict-mobile.png",
+      "expected": "0be8502ffc8b8205d4e59aef1ed08d4f51879d6e129d862179e8dcf1330b8cdd",
+      "actual": "0be8502ffc8b8205d4e59aef1ed08d4f51879d6e129d862179e8dcf1330b8cdd",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiProcurementWorkbench.tsx",
+      "expected": "3f09f898d7ad9124fc6a751658a9a7b786258e2e1a53731460bf9b1d48e72ed6",
+      "actual": "3f09f898d7ad9124fc6a751658a9a7b786258e2e1a53731460bf9b1d48e72ed6",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-list-paging-browser.test.ts",
+      "expected": "1cf8ca129607c21cfff8170f583a149b859b5b8929585cda98f9f7daea66695d",
+      "actual": "1cf8ca129607c21cfff8170f583a149b859b5b8929585cda98f9f7daea66695d",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/list-pagination.md",
+      "expected": "a231f656bd8438e5e40080a7911661b6d727a05a1a00dec9df1f913eee58739f",
+      "actual": "a231f656bd8438e5e40080a7911661b6d727a05a1a00dec9df1f913eee58739f",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/list-pagination-verification.json",
+      "expected": "e044a86b26cf3b9c8b67b62cccff6de955b206998384c97510022f346e16b6a7",
+      "actual": "e044a86b26cf3b9c8b67b62cccff6de955b206998384c97510022f346e16b6a7",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/list-paging-purchase-mobile.png",
+      "expected": "6ff81189af8e81b57ee2a500141e6cf1c2d6583f6313e21d9c829282b44e1c84",
+      "actual": "6ff81189af8e81b57ee2a500141e6cf1c2d6583f6313e21d9c829282b44e1c84",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/list-paging-report-desktop.png",
+      "expected": "163db7da18456844617323ea757e172e40a0d435dc145c3e0794d9035d282bd3",
+      "actual": "163db7da18456844617323ea757e172e40a0d435dc145c3e0794d9035d282bd3",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/list-paging-report-mobile.png",
+      "expected": "592fac5ec1d90057386cc325311683e6efab91eb5255518931ac4d5c51098fbe",
+      "actual": "592fac5ec1d90057386cc325311683e6efab91eb5255518931ac4d5c51098fbe",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-dashboard-load.test.ts",
+      "expected": "a86ce6a8296abf45141ab1ccf4464bb2248d1a543113269954904512e0184b3a",
+      "actual": "a86ce6a8296abf45141ab1ccf4464bb2248d1a543113269954904512e0184b3a",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/dashboard-loading.md",
+      "expected": "9d28547e16ce93c35428be3d4e6b377277187cd52e2a6e66b48223a0ca3bde03",
+      "actual": "9d28547e16ce93c35428be3d4e6b377277187cd52e2a6e66b48223a0ca3bde03",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/dashboard-loading-verification.json",
+      "expected": "3d93139a0b8cb68ab8de3c5512dfe2602b16d1d5b52cd7870a1551e1f21dcd01",
+      "actual": "3d93139a0b8cb68ab8de3c5512dfe2602b16d1d5b52cd7870a1551e1f21dcd01",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiManufacturingCompletionDialog.tsx",
+      "expected": "fcdc4c9956a656c09d482a94dd89b2b758c7914c6d4965991e5b9e44e29fa81b",
+      "actual": "fcdc4c9956a656c09d482a94dd89b2b758c7914c6d4965991e5b9e44e29fa81b",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-manufacturing-completion-browser.test.ts",
+      "expected": "c3de7ead0591a632261501774f758658418dc182c4aff9f198cf1f963b1e8094",
+      "actual": "c3de7ead0591a632261501774f758658418dc182c4aff9f198cf1f963b1e8094",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/manufacturing-completion.md",
+      "expected": "86fb8082b558f0f651bcc112bc0fb9dcc9edb47897856a6485fd962622e714f4",
+      "actual": "86fb8082b558f0f651bcc112bc0fb9dcc9edb47897856a6485fd962622e714f4",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/manufacturing-completion-verification.json",
+      "expected": "03896950b93c1103212711e9a0ffca1bae5835dbf7172fa8cce3b3250b151ec3",
+      "actual": "03896950b93c1103212711e9a0ffca1bae5835dbf7172fa8cce3b3250b151ec3",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/manufacturing-completion-mobile.png",
+      "expected": "21300d1df86e9395bcfe839bc8db38a7781e5fa90d34222ffb9cdb96f2eb1aca",
+      "actual": "21300d1df86e9395bcfe839bc8db38a7781e5fa90d34222ffb9cdb96f2eb1aca",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/manufacturing-completion-desktop.png",
+      "expected": "6181183d5df3d8ad606d2315c9344fd43976fe5c6a4a82ff24747e94a65b409c",
+      "actual": "6181183d5df3d8ad606d2315c9344fd43976fe5c6a4a82ff24747e94a65b409c",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/lib/npi/event-labels.ts",
+      "expected": "4510dd468eca0ba9ac5ee607242ce9432911a47f987611e5d98e59492d739e1c",
+      "actual": "4510dd468eca0ba9ac5ee607242ce9432911a47f987611e5d98e59492d739e1c",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/lib/npi/project-events.ts",
+      "expected": "058190339b58cf3c57722115271dc73da18cd963c5e4d065dda54e0bd1810fab",
+      "actual": "058190339b58cf3c57722115271dc73da18cd963c5e4d065dda54e0bd1810fab",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiProjectHistory.tsx",
+      "expected": "b334d57eadffcf5d969938672b42b1e100422fb2ed630816becc0d3d1c8d2abd",
+      "actual": "b334d57eadffcf5d969938672b42b1e100422fb2ed630816becc0d3d1c8d2abd",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiProjectEventDetail.tsx",
+      "expected": "b74616308b2e9f21b7b81c9b475c689b74e894cf45c64036b7a439bf508b4a9c",
+      "actual": "b74616308b2e9f21b7b81c9b475c689b74e894cf45c64036b7a439bf508b4a9c",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-project-events-http.test.ts",
+      "expected": "879d4a69975de8c5cc2089b2e5301f8b447285ff0a695dab875d45bc862d16a7",
+      "actual": "879d4a69975de8c5cc2089b2e5301f8b447285ff0a695dab875d45bc862d16a7",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-project-history-browser.test.ts",
+      "expected": "eb67a402d0c0229b107979b9478660b1ed772b5096c6c71b9248a7b38556f30c",
+      "actual": "eb67a402d0c0229b107979b9478660b1ed772b5096c6c71b9248a7b38556f30c",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/project-history.md",
+      "expected": "dfdab44eb74b2ab44dfca5fd3a0dfbb97af7cf939ff8c7a3188ce4a190a923ab",
+      "actual": "dfdab44eb74b2ab44dfca5fd3a0dfbb97af7cf939ff8c7a3188ce4a190a923ab",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/project-history-verification.json",
+      "expected": "097d80f599338b8682c50d9b0e7e3729b3aea244dd9ff3f3130d111f97c32785",
+      "actual": "097d80f599338b8682c50d9b0e7e3729b3aea244dd9ff3f3130d111f97c32785",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/project-history-mobile.png",
+      "expected": "88e182bc5a1d23dfd77b27e6a51642083ce836001b2930dacfca452756e11406",
+      "actual": "88e182bc5a1d23dfd77b27e6a51642083ce836001b2930dacfca452756e11406",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/project-history-desktop.png",
+      "expected": "b516e3c6c3a86914e9aeaa2ac7881336e86f81b997f684411a3bb67aa3e78fd7",
+      "actual": "b516e3c6c3a86914e9aeaa2ac7881336e86f81b997f684411a3bb67aa3e78fd7",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiDashboardBriefs.tsx",
+      "expected": "9ccbe1e83fca7dce9bd0cd408d546787f9051b35ada214eb7d3e75d15027a772",
+      "actual": "9ccbe1e83fca7dce9bd0cd408d546787f9051b35ada214eb7d3e75d15027a772",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-dashboard-browsing-dom.test.mjs",
+      "expected": "b3b7bb6b629220075306d131a6b84f058571736a8ac145c949c08ab3cc23dbcd",
+      "actual": "b3b7bb6b629220075306d131a6b84f058571736a8ac145c949c08ab3cc23dbcd",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-dashboard-browsing-browser.test.ts",
+      "expected": "748cd08b45804624810d2b398d6d1a26d076ca61ef88bb8b57686b1c62d05b86",
+      "actual": "748cd08b45804624810d2b398d6d1a26d076ca61ef88bb8b57686b1c62d05b86",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/dashboard-browsing.md",
+      "expected": "9c90c5b426a8fa9a99ab70a418233e79d5f6e3cba55685ebb1f524b89e511841",
+      "actual": "9c90c5b426a8fa9a99ab70a418233e79d5f6e3cba55685ebb1f524b89e511841",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/dashboard-browsing-verification.json",
+      "expected": "30df665107bc2d2f045cda43a7e72e2feb56d25cd87e66285a5410d65ad4cec1",
+      "actual": "30df665107bc2d2f045cda43a7e72e2feb56d25cd87e66285a5410d65ad4cec1",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/dashboard-browsing-desktop.png",
+      "expected": "0f619a0fdb48e1a3c68b7be3907fdd3147d5b325e916cd18eedae81384e70109",
+      "actual": "0f619a0fdb48e1a3c68b7be3907fdd3147d5b325e916cd18eedae81384e70109",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/dashboard-browsing-mobile.png",
+      "expected": "bc6b2b605ff04bcfbd22def620f3e3e3bbbd8eec98292beb7acc287d58e8e9a7",
+      "actual": "bc6b2b605ff04bcfbd22def620f3e3e3bbbd8eec98292beb7acc287d58e8e9a7",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/dashboard-browsing-mobile-paging.png",
+      "expected": "2cfb61483cecb5c044975f7cdf004eea89bcd89cc24d46c3749947f6d2c944ec",
+      "actual": "2cfb61483cecb5c044975f7cdf004eea89bcd89cc24d46c3749947f6d2c944ec",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-procurement-receipt-dom.test.mjs",
+      "expected": "e2e533c555be282c6b2c0de3a6e8f89b0c9c23a5a3f83398c567f4620f439958",
+      "actual": "e2e533c555be282c6b2c0de3a6e8f89b0c9c23a5a3f83398c567f4620f439958",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-procurement-receipt-browser.test.ts",
+      "expected": "e8434af12efc627f9ed76bd433c412d49e4669716a9dc077f2664d2232c7714c",
+      "actual": "e8434af12efc627f9ed76bd433c412d49e4669716a9dc077f2664d2232c7714c",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/procurement-receipt.md",
+      "expected": "a02401acc4b598de83f698d267a7663cb4cfb54766d97e2691ca7df06f5bbe63",
+      "actual": "a02401acc4b598de83f698d267a7663cb4cfb54766d97e2691ca7df06f5bbe63",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/procurement-receipt-verification.json",
+      "expected": "689d5f3fa36cb0efddd604bcaaa8798c085890a8ab8e9146ae02ed2020ac019b",
+      "actual": "689d5f3fa36cb0efddd604bcaaa8798c085890a8ab8e9146ae02ed2020ac019b",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/procurement-receipt-mobile.png",
+      "expected": "fc59f18b7fd84e37108d4f80b308092a5db6bae883f5231c73e0f79e9bfa6395",
+      "actual": "fc59f18b7fd84e37108d4f80b308092a5db6bae883f5231c73e0f79e9bfa6395",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/procurement-receipt-refresh-desktop.png",
+      "expected": "2b151618239ea700d05fdc4b8180ef0160e040495d8ad60617e6e45f6d697deb",
+      "actual": "2b151618239ea700d05fdc4b8180ef0160e040495d8ad60617e6e45f6d697deb",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/procurement-receipt-files-mobile.png",
+      "expected": "4f59b229764e139454f5b6f9968548ab3b98b4eda815f1f1d134a74b2c928976",
+      "actual": "4f59b229764e139454f5b6f9968548ab3b98b4eda815f1f1d134a74b2c928976",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/useNpiFileOperation.ts",
+      "expected": "245a027917514c673b30b53ef86adc4a4b098aa438d2ae2c936ffffdce9d460b",
+      "actual": "245a027917514c673b30b53ef86adc4a4b098aa438d2ae2c936ffffdce9d460b",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiFiles.tsx",
+      "expected": "bf60db580f773edcc337a1dbb19158b2071b24371eb026aee9eccbc26cb16ccb",
+      "actual": "bf60db580f773edcc337a1dbb19158b2071b24371eb026aee9eccbc26cb16ccb",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-file-operation-dom.test.mjs",
+      "expected": "1a4a916dee95a3a59e033eefeac61f5ce8c89fb949708ff6007fcbeb7d383e85",
+      "actual": "1a4a916dee95a3a59e033eefeac61f5ce8c89fb949708ff6007fcbeb7d383e85",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-file-operation-browser.test.ts",
+      "expected": "60d4b2f231cd5442828546b2adc9acd2aa286bc880a8b56599bc856fcf2e66f8",
+      "actual": "60d4b2f231cd5442828546b2adc9acd2aa286bc880a8b56599bc856fcf2e66f8",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/file-operation.md",
+      "expected": "dce950c7e6d976f865e51459bb54d554f2e0497056aa5af1ccc9b5f80a06b192",
+      "actual": "dce950c7e6d976f865e51459bb54d554f2e0497056aa5af1ccc9b5f80a06b192",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/file-operation-verification.json",
+      "expected": "16c5a8ff4a7983525734b015b745765eacdc0e975ca728e1e32cbf8c0afd43e5",
+      "actual": "16c5a8ff4a7983525734b015b745765eacdc0e975ca728e1e32cbf8c0afd43e5",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/file-operation-upload-mobile.png",
+      "expected": "87cf7b5649a2dd74814acc4772efdf57189f6aa807d5efaa5c3aa9f1a966c918",
+      "actual": "87cf7b5649a2dd74814acc4772efdf57189f6aa807d5efaa5c3aa9f1a966c918",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/file-operation-archive-desktop.png",
+      "expected": "336f56660fcea3ea3b61f8c167a1be10cde9f17966fe715f0fad60b44d8bd7a4",
+      "actual": "336f56660fcea3ea3b61f8c167a1be10cde9f17966fe715f0fad60b44d8bd7a4",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/file-operation-issue-mobile.png",
+      "expected": "88e1f95e1b9d46ebc621bc885d5a7b98640015af8eab76ebcc0c4936307a9f15",
+      "actual": "88e1f95e1b9d46ebc621bc885d5a7b98640015af8eab76ebcc0c4936307a9f15",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-manufacturing-recovery-dom.test.mjs",
+      "expected": "64759c45b0133868b885fbfed2bf5ee620b68e11a9b42a5465d72bd8a7956a80",
+      "actual": "64759c45b0133868b885fbfed2bf5ee620b68e11a9b42a5465d72bd8a7956a80",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-manufacturing-recovery-browser.test.ts",
+      "expected": "f9de160cc0584eaa32102e1328d266487a30024fb24e95ce34e0e922992f84ae",
+      "actual": "f9de160cc0584eaa32102e1328d266487a30024fb24e95ce34e0e922992f84ae",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/manufacturing-recovery.md",
+      "expected": "5d2190b30606a04d9a756a0579af7523f381c625b8b1dee63bcf2ce41f513d36",
+      "actual": "5d2190b30606a04d9a756a0579af7523f381c625b8b1dee63bcf2ce41f513d36",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/manufacturing-recovery-verification.json",
+      "expected": "2a4be4b7d655d13f745bb8ebecc3b8a37f5fade8b0a1ec06b41253088b4d9321",
+      "actual": "2a4be4b7d655d13f745bb8ebecc3b8a37f5fade8b0a1ec06b41253088b4d9321",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/manufacturing-recovery-saved-desktop.png",
+      "expected": "baabb1c747a237a7a6d65e43681bc8b7c15a6afe6d1e4d0d307df9808803fc48",
+      "actual": "baabb1c747a237a7a6d65e43681bc8b7c15a6afe6d1e4d0d307df9808803fc48",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/manufacturing-recovery-conflict-mobile.png",
+      "expected": "8ea57392872321e44749b3d11c79047108a2a5b605348b8e5662c1a183655d27",
+      "actual": "8ea57392872321e44749b3d11c79047108a2a5b605348b8e5662c1a183655d27",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/manufacturing-recovery-inline-mobile.png",
+      "expected": "6add9f82cf3eaaefdaf852d0be78169050f388e942fb5de571d4ad10ae594d30",
+      "actual": "6add9f82cf3eaaefdaf852d0be78169050f388e942fb5de571d4ad10ae594d30",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-external-recovery-dom.test.mjs",
+      "expected": "d96dcc5d50deaec8c813bbbea77b009ec4dcded2ec8e47bd035492ced94c285b",
+      "actual": "d96dcc5d50deaec8c813bbbea77b009ec4dcded2ec8e47bd035492ced94c285b",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-external-recovery-http.test.ts",
+      "expected": "87373c51dfa447ebb2e8f83464fc293e5c8cfb4afef174b9aef8757dfd573b4b",
+      "actual": "87373c51dfa447ebb2e8f83464fc293e5c8cfb4afef174b9aef8757dfd573b4b",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-external-recovery-browser.test.ts",
+      "expected": "5a9490af25eebbab33d9dc5d9f5ef54cccf28dc9b5ff98001333399777adc212",
+      "actual": "5a9490af25eebbab33d9dc5d9f5ef54cccf28dc9b5ff98001333399777adc212",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/external-recovery.md",
+      "expected": "30e76a88908ea52c087d1839e106a49ba6238f7d86172b8cc38d3055ceef99cf",
+      "actual": "30e76a88908ea52c087d1839e106a49ba6238f7d86172b8cc38d3055ceef99cf",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/external-recovery-verification.json",
+      "expected": "781d8a5e0035cd9dca641cc7e3e1fb51168fc07ad5fcb8fd3efb0582929ffea5",
+      "actual": "781d8a5e0035cd9dca641cc7e3e1fb51168fc07ad5fcb8fd3efb0582929ffea5",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/external-recovery-unknown-mobile.png",
+      "expected": "006d9c1f40bb07b85c76a4672eeab20ca1daac7e0346557fe7c4a7b2750c8b55",
+      "actual": "006d9c1f40bb07b85c76a4672eeab20ca1daac7e0346557fe7c4a7b2750c8b55",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/external-recovery-files-mobile.png",
+      "expected": "078bd7688fd27a91baf464e1296f5b920be2f04fdc3b180f7bc3b6a9deef95d8",
+      "actual": "078bd7688fd27a91baf464e1296f5b920be2f04fdc3b180f7bc3b6a9deef95d8",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/external-recovery-saved-desktop.png",
+      "expected": "3ef20e64e5e9e11bb610183c389e38942e9f4cb9a9f91c7de835f09cb79da548",
+      "actual": "3ef20e64e5e9e11bb610183c389e38942e9f4cb9a9f91c7de835f09cb79da548",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/lib/npi/procurement-arrival.ts",
+      "expected": "b9bb4829b8c47c1d5483faad51018f3fd1e2b25b6c4efbfa81f132070f583c25",
+      "actual": "b9bb4829b8c47c1d5483faad51018f3fd1e2b25b6c4efbfa81f132070f583c25",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-arrival-windows-dom.test.mjs",
+      "expected": "9f98caa08b5e2baea60a552e72b2b7e36b8fdc3e2a9545717a6d0eb04e16811b",
+      "actual": "9f98caa08b5e2baea60a552e72b2b7e36b8fdc3e2a9545717a6d0eb04e16811b",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-arrival-windows-browser.test.ts",
+      "expected": "9127ea39461923a96e88a7ff7b6598e458254539275f094dde1edf42c15e0d61",
+      "actual": "9127ea39461923a96e88a7ff7b6598e458254539275f094dde1edf42c15e0d61",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/arrival-windows.md",
+      "expected": "69547d15db05a7e0a9f2ab0b9253758af9776e64fed790c07919b8a4b0a54321",
+      "actual": "69547d15db05a7e0a9f2ab0b9253758af9776e64fed790c07919b8a4b0a54321",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/arrival-windows-verification.json",
+      "expected": "1ac9f13b78e2c3c7a5d620463f0439955c5ef7e055b5d9c326bb35d7166d86ef",
+      "actual": "1ac9f13b78e2c3c7a5d620463f0439955c5ef7e055b5d9c326bb35d7166d86ef",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/arrival-windows-personal-mobile.png",
+      "expected": "7cafa921d23a5a4e07c4811c265abf94c43bafc4b8f105c69b51c9b59559bc81",
+      "actual": "7cafa921d23a5a4e07c4811c265abf94c43bafc4b8f105c69b51c9b59559bc81",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/arrival-windows-manager-mobile.png",
+      "expected": "872a7c178e786b2cb35d8234baff3bf13af32ef8c9872978efa94f818da3c98f",
+      "actual": "872a7c178e786b2cb35d8234baff3bf13af32ef8c9872978efa94f818da3c98f",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/arrival-windows-manager-desktop.png",
+      "expected": "bb96f48aed7a1307bdfe07340a623ff6e1be4e497c876765aeffaa4188e6efd6",
+      "actual": "bb96f48aed7a1307bdfe07340a623ff6e1be4e497c876765aeffaa4188e6efd6",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/components/npi/NpiManufacturingException.tsx",
+      "expected": "f3bf68bf0da6de6303b59d64f5810a46d024a47a9c5621c9ffc81da670354cf6",
+      "actual": "f3bf68bf0da6de6303b59d64f5810a46d024a47a9c5621c9ffc81da670354cf6",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-exception-recovery-dom.test.mjs",
+      "expected": "97f797e7065191517475c4c333af7e55192db6dbfb85b990eee9e40e42fc40d2",
+      "actual": "97f797e7065191517475c4c333af7e55192db6dbfb85b990eee9e40e42fc40d2",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-exception-recovery-browser.test.ts",
+      "expected": "c98210d0b2f998137bafec94f1c6354d691a9698fe27d1eb2be3186e90408c2a",
+      "actual": "c98210d0b2f998137bafec94f1c6354d691a9698fe27d1eb2be3186e90408c2a",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/exception-recovery.md",
+      "expected": "821734352e7704e7a11a3ed83dac1c4d7f3e3395fe0c263f6e4e0f3050ec19e9",
+      "actual": "821734352e7704e7a11a3ed83dac1c4d7f3e3395fe0c263f6e4e0f3050ec19e9",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/exception-recovery-verification.json",
+      "expected": "22d947c2b4492b3cc9ac9a5f55b1f77c5af9b322a78c36637c778d6cddb55ce6",
+      "actual": "22d947c2b4492b3cc9ac9a5f55b1f77c5af9b322a78c36637c778d6cddb55ce6",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/exception-recovery-saved-mobile.png",
+      "expected": "158a4635cde55c431fd63f080410020f943a916cd17a4027c46b58528855c54e",
+      "actual": "158a4635cde55c431fd63f080410020f943a916cd17a4027c46b58528855c54e",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/exception-recovery-review-desktop.png",
+      "expected": "7915a10cbae0d0af9d33bff85824471c1137827dc295c17f92c2cfde192a6da9",
+      "actual": "7915a10cbae0d0af9d33bff85824471c1137827dc295c17f92c2cfde192a6da9",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/exception-recovery-new-bom-mobile.png",
+      "expected": "7ae6f9b3ace85a035facf3d6fd641cb8171f1eaebdd0096ec2ad6f5cbed1d4eb",
+      "actual": "7ae6f9b3ace85a035facf3d6fd641cb8171f1eaebdd0096ec2ad6f5cbed1d4eb",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/srs-traceability.md",
+      "expected": "5b12bf3749704e7fe8627f84142f04ec916f7006242bcf2b06d7078ab64f675b",
+      "actual": "5b12bf3749704e7fe8627f84142f04ec916f7006242bcf2b06d7078ab64f675b",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/pilot-acceptance.md",
+      "expected": "3f31910a1c51724630129f7361ef73eae3104c7ac8f7db43ed63667195af6502",
+      "actual": "3f31910a1c51724630129f7361ef73eae3104c7ac8f7db43ed63667195af6502",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/template-editor.md",
+      "expected": "4a0d9fe17f75c186cad1bf4f9558ffde888a027e44d394d5052af8b0ffb2e23c",
+      "actual": "4a0d9fe17f75c186cad1bf4f9558ffde888a027e44d394d5052af8b0ffb2e23c",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/srs-audit-verification.json",
+      "expected": "4cb32c2b526f101eb9cb9f46bb075bce32a2a4da8f14760a414848d7131e3641",
+      "actual": "4cb32c2b526f101eb9cb9f46bb075bce32a2a4da8f14760a414848d7131e3641",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-db-contract.test.ts",
+      "expected": "1d33394f47c0417bb665221732d8b733917dd047aa48cb1199a39d60170b5b19",
+      "actual": "1d33394f47c0417bb665221732d8b733917dd047aa48cb1199a39d60170b5b19",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-unit.test.ts",
+      "expected": "d40cb58bb6134cfc1fb51bb9c915384c7a6712667cccebd452d166e96f25cebc",
+      "actual": "d40cb58bb6134cfc1fb51bb9c915384c7a6712667cccebd452d166e96f25cebc",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-project-code-http.test.ts",
+      "expected": "c6e7ade68525ba094f6d7dc316e1bb0de8d4a136acabb54682ad0577125e1619",
+      "actual": "c6e7ade68525ba094f6d7dc316e1bb0de8d4a136acabb54682ad0577125e1619",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/project-code-conflict.md",
+      "expected": "cb6ad93afdabf929bffbc4a3a300266113a10f25ac874184c6843a19a40234e8",
+      "actual": "cb6ad93afdabf929bffbc4a3a300266113a10f25ac874184c6843a19a40234e8",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/project-code-conflict-verification.json",
+      "expected": "258ac6bb8c5319ef8ec7d075522bb66e12d67a26de5c2f3745d1176036f276ea",
+      "actual": "258ac6bb8c5319ef8ec7d075522bb66e12d67a26de5c2f3745d1176036f276ea",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/pilot-readiness-verification.json",
+      "expected": "fd2587cf3723bca85ba0212f9efa758b19edc873875ebdb4e91dd1f2efe91c2b",
+      "actual": "fd2587cf3723bca85ba0212f9efa758b19edc873875ebdb4e91dd1f2efe91c2b",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/lib/npi/project-change-service.ts",
+      "expected": "c0ecfc4bc64f1c15573bf0bbf1d9d5d2d7709bec94bc67b7576ceb5b26ae86ee",
+      "actual": "c0ecfc4bc64f1c15573bf0bbf1d9d5d2d7709bec94bc67b7576ceb5b26ae86ee",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-supervisor-plan.test.ts",
+      "expected": "f4efb9bad6f5f5b873ee20a75abdd459d4839c05876b89130e17d701b3cec8d4",
+      "actual": "f4efb9bad6f5f5b873ee20a75abdd459d4839c05876b89130e17d701b3cec8d4",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-supervisor-plan-browser.test.ts",
+      "expected": "9bb402b22d287c4b3fefa18b6437c1fd8b8345a9699c3f086603e8b09b0e586c",
+      "actual": "9bb402b22d287c4b3fefa18b6437c1fd8b8345a9699c3f086603e8b09b0e586c",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/supervisor-planning.md",
+      "expected": "bd70cb1ffa851af4f39bd4df12297a82d344a6d49df8ae0dff5325d190670b6a",
+      "actual": "bd70cb1ffa851af4f39bd4df12297a82d344a6d49df8ae0dff5325d190670b6a",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/supervisor-planning-verification.json",
+      "expected": "034ba522977813780f3de7bf3609d94ae9ddbe7f4de0202028dec36793357a0d",
+      "actual": "034ba522977813780f3de7bf3609d94ae9ddbe7f4de0202028dec36793357a0d",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/supervisor-plan-desktop.png",
+      "expected": "df77167ee22ceb06948786e4eadaf1f6a9e4468596745db6f379a4dcf2a4bcb6",
+      "actual": "df77167ee22ceb06948786e4eadaf1f6a9e4468596745db6f379a4dcf2a4bcb6",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/supervisor-plan-mobile.png",
+      "expected": "bc293330c31f469a6a8d6d8abcaff92058405ed317a826324843e0a4a06cbdb6",
+      "actual": "bc293330c31f469a6a8d6d8abcaff92058405ed317a826324843e0a4a06cbdb6",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/lib/npi/office-archive.ts",
+      "expected": "16d62d1d39b9c458e53d2c79e7582809750930f2ce2270b88fa294a325ae7f9d",
+      "actual": "16d62d1d39b9c458e53d2c79e7582809750930f2ce2270b88fa294a325ae7f9d",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/lib/npi/file-types.ts",
+      "expected": "c93acc1c077b9349b20a2ea57f3b931eeeb52ee536897e6f78d3846cc12ef3df",
+      "actual": "c93acc1c077b9349b20a2ea57f3b931eeeb52ee536897e6f78d3846cc12ef3df",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/lib/npi/file-validation.ts",
+      "expected": "5f42876768e43743bb72da3569bd551e978d7e10c60080333b0c6993a5abf0db",
+      "actual": "5f42876768e43743bb72da3569bd551e978d7e10c60080333b0c6993a5abf0db",
+      "matches": true
+    },
+    {
+      "file": "packages/core/src/lib/npi/excel.ts",
+      "expected": "41a841c18ecf71706607bbc18821b2211dafb28b5c02dba2cdea09772f1b2b38",
+      "actual": "41a841c18ecf71706607bbc18821b2211dafb28b5c02dba2cdea09772f1b2b38",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-office-fixtures.ts",
+      "expected": "bc72affde4ac7d596df33ed1aa0d67404463d78b21a1b6d411c34e141c933e86",
+      "actual": "bc72affde4ac7d596df33ed1aa0d67404463d78b21a1b6d411c34e141c933e86",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-file-validation.test.ts",
+      "expected": "056e4e695a972bba520ed4cfd455828346705238a488fe78cf29bfe9254f5c5b",
+      "actual": "056e4e695a972bba520ed4cfd455828346705238a488fe78cf29bfe9254f5c5b",
+      "matches": true
+    },
+    {
+      "file": "scripts/npi-office-files-browser.test.ts",
+      "expected": "7e71421abccade24e9f426a02aac9521e610297c43f85262f8322e26e4035a94",
+      "actual": "7e71421abccade24e9f426a02aac9521e610297c43f85262f8322e26e4035a94",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/office-files.md",
+      "expected": "e3cfa69046d2456a674c8375d03e9d5b21401cbb43e5cc8d54ed1b89b70f5e65",
+      "actual": "e3cfa69046d2456a674c8375d03e9d5b21401cbb43e5cc8d54ed1b89b70f5e65",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/office-files-verification.json",
+      "expected": "700d98d30d61ad089dc8c07a3ff3f6b17dfd256862828b659d1b7a17fce2ee13",
+      "actual": "700d98d30d61ad089dc8c07a3ff3f6b17dfd256862828b659d1b7a17fce2ee13",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/office-files-desktop.png",
+      "expected": "7f0e04ec2e3d5019cd02509be3d29e0bc5c219501520448ad13377a085569100",
+      "actual": "7f0e04ec2e3d5019cd02509be3d29e0bc5c219501520448ad13377a085569100",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/office-files-mobile.png",
+      "expected": "5fe72c6368fb551b85fe55da6da60458602596757358f8ae40ff032772af3b62",
+      "actual": "5fe72c6368fb551b85fe55da6da60458602596757358f8ae40ff032772af3b62",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/full-regression.md",
+      "expected": "e1c3461f16a4221cb174ed740ad778b5cf84570f1c7fe6072e6a1a626cefb346",
+      "actual": "e1c3461f16a4221cb174ed740ad778b5cf84570f1c7fe6072e6a1a626cefb346",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/full-regression-verification.json",
+      "expected": "aa24fcfa12a1407901db4f1f1d6da55b4a5cbeb1504fe41fbb5c204a93ebab5c",
+      "actual": "aa24fcfa12a1407901db4f1f1d6da55b4a5cbeb1504fe41fbb5c204a93ebab5c",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/full-regression-purchase-mobile.png",
+      "expected": "2831b8642ad06ae5eea2e74a73599160e6c122dbe10f96e9c84bd7b220e4416b",
+      "actual": "2831b8642ad06ae5eea2e74a73599160e6c122dbe10f96e9c84bd7b220e4416b",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/full-regression-dashboard-desktop.png",
+      "expected": "5c30227112fa861b1e62d6d10df60ac1ca186281b167c04b040c9c126b150364",
+      "actual": "5c30227112fa861b1e62d6d10df60ac1ca186281b167c04b040c9c126b150364",
+      "matches": true
+    },
+    {
+      "file": "docs/npi/screenshots/full-regression-admin-desktop.png",
+      "expected": "720a80058094e3e096e7922b0214cf89ba6ca7657c663ee4c543206cd40b573a",
+      "actual": "720a80058094e3e096e7922b0214cf89ba6ca7657c663ee4c543206cd40b573a",
+      "matches": true
+    }
+  ],
+  "sourceManifestInputs": [
+    "/tmp/npi-bom-tree-delivered.json",
+    "/tmp/npi-error-contract-delivered.json",
+    "/tmp/npi-upgrade-delivered.json",
+    "/tmp/npi-assignment-delivered.json",
+    "/tmp/npi-other-material-delivered.json",
+    "/tmp/npi-assignment-files-delivered.json",
+    "/tmp/npi-types-delivered.json",
+    "/tmp/npi-issue-recovery-delivered.json",
+    "/tmp/npi-issue-handoff-delivered.json",
+    "/tmp/npi-note-retry-delivered.json",
+    "/tmp/npi-kit-export-delivered.json",
+    "/tmp/npi-kit-browser-layout-delivered.json",
+    "/tmp/npi-kit-browser-docs-delivered.json",
+    "/tmp/npi-navigation-delivered.json",
+    "/tmp/npi-navigation-documentation-delivered.json",
+    "/tmp/npi-mfg-delivered.json",
+    "/tmp/npi-mfg-docs-delivered.json",
+    "/tmp/npi-bom-context-delivered.json",
+    "/tmp/npi-bom-context-docs-delivered.json",
+    "/tmp/npi-procurement-reply-delivered.json",
+    "/tmp/npi-procurement-reply-docs-delivered.json",
+    "/tmp/npi-list-paging-delivered.json",
+    "/tmp/npi-list-paging-docs-delivered.json",
+    "/tmp/npi-dashboard-load-delivered.json",
+    "/tmp/npi-dashboard-load-docs-delivered.json",
+    "/tmp/npi-manufacturing-completion-delivered.json",
+    "/tmp/npi-manufacturing-completion-docs-delivered.json",
+    "/tmp/npi-project-history-delivered.json",
+    "/tmp/npi-project-history-format-delivered.json",
+    "/tmp/npi-project-history-test-fix-delivered.json",
+    "/tmp/npi-project-history-docs-delivered.json",
+    "/tmp/npi-dashboard-browsing-delivered.json",
+    "/tmp/npi-dashboard-browsing-docs-delivered.json",
+    "/tmp/npi-procurement-receipt-delivered.json",
+    "/tmp/npi-procurement-receipt-docs-delivered.json",
+    "/tmp/npi-file-operation-delivered.json",
+    "/tmp/npi-file-operation-docs-delivered.json",
+    "/tmp/npi-manufacturing-recovery-delivered.json",
+    "/tmp/npi-manufacturing-recovery-docs-delivered.json",
+    "/tmp/npi-external-recovery-delivered.json",
+    "/tmp/npi-external-recovery-docs-delivered.json",
+    "/tmp/npi-arrival-windows-delivered.json",
+    "/tmp/npi-arrival-windows-docs-delivered.json",
+    "/tmp/npi-exception-recovery-delivered.json",
+    "/tmp/npi-exception-recovery-docs-delivered.json",
+    "/tmp/npi-srs-audit-delivered.json",
+    "/tmp/npi-project-code-delivered.json",
+    "/tmp/npi-project-code-docs-delivered.json",
+    "/tmp/npi-pilot-readiness-delivered.json",
+    "/tmp/npi-supervisor-plan-delivered.json",
+    "/tmp/npi-supervisor-role-delivered.json",
+    "/tmp/npi-supervisor-plan-docs-delivered.json",
+    "/tmp/npi-office-files-delivered.json",
+    "/tmp/npi-office-files-docs-delivered.json",
+    "/tmp/npi-full-regression-delivered.json",
+    "/tmp/npi-full-regression-docs-delivered.json"
+  ],
+  "logs": {
+    "npi-note-retry-http.log": {
+      "sha256": "05a5168e4be8f9921af0086ff911c58d85113991c5bd94eff4262f75341746c2",
+      "path": "/tmp/npi-note-retry-http.log"
+    },
+    "npi-note-retry-dom.log": {
+      "sha256": "8efe9113b628b0f91887982649f87aa9b94be082909cba5b257ffc9b585d1b20",
+      "path": "/tmp/npi-note-retry-dom.log"
+    },
+    "npi-note-retry-integrated-types.log": {
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614",
+      "path": "/tmp/npi-note-retry-integrated-types.log"
+    },
+    "npi-note-retry-integrated-build.log": {
+      "sha256": "f1c70b8941ef7fb6a0029c2182ff58257c7f006853355a8318eeb11c702ed87e",
+      "path": "/tmp/npi-note-retry-integrated-build.log"
+    },
+    "npi-assignment-files-http.log": {
+      "sha256": "280ee244c8eee83af8c41cf6a7fe40f90946ecba3e3cd45983c22c089a2a68e7",
+      "path": "/tmp/npi-assignment-files-http.log"
+    },
+    "npi-upgrade-test.log": {
+      "sha256": "519bb8d42045a7b543786a4137e097455992a0f5c62136bc6eb7dd42f39fab9e",
+      "path": "/tmp/npi-upgrade-test.log"
+    },
+    "npi-navigation-types-final.log": {
+      "path": "/tmp/npi-navigation-types-final.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-navigation-lint.log": {
+      "path": "/tmp/npi-navigation-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-navigation-regression.log": {
+      "path": "/tmp/npi-navigation-regression.log",
+      "sha256": "65fa81938878a3c4040bc8cfe5a8069e41ff300ed5ec91efb61089fbcc134d4a"
+    },
+    "npi-navigation-delivered-build.log": {
+      "path": "/tmp/npi-navigation-delivered-build.log",
+      "sha256": "69aebf1055464ef67be6eccb9b40ba1a255fd8f482d676a4bb52d7830266ef7d"
+    },
+    "npi-navigation-delivered-browser.log": {
+      "path": "/tmp/npi-navigation-delivered-browser.log",
+      "sha256": "f8231169b722bed907a51b14814cc11abdc834529f7ef1dd0c899c9bda322a72"
+    },
+    "npi-navigation-supervisor-final.log": {
+      "path": "/tmp/npi-navigation-supervisor-final.log",
+      "sha256": "2136a9c939af1e1f751252e0a1846ba80a7c13f9ab7cf7193d6b4def337b907d"
+    },
+    "npi-navigation-final-script-lint.log": {
+      "path": "/tmp/npi-navigation-final-script-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-mfg-types-final.log": {
+      "path": "/tmp/npi-mfg-types-final.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-mfg-lint.log": {
+      "path": "/tmp/npi-mfg-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-mfg-script-lint.log": {
+      "path": "/tmp/npi-mfg-script-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-mfg-delivered-build.log": {
+      "path": "/tmp/npi-mfg-delivered-build.log",
+      "sha256": "0c63f8a6887218bc89b8e726b0cb1b8c7ce56ad76ca92ff08d21e114350705b3"
+    },
+    "npi-mfg-delivered-browser.log": {
+      "path": "/tmp/npi-mfg-delivered-browser.log",
+      "sha256": "f4882e8fb5c151f17a569128de2c01e3d0e97add017390746d406971cdedf0bb"
+    },
+    "npi-mfg-navigation-regression.log": {
+      "path": "/tmp/npi-mfg-navigation-regression.log",
+      "sha256": "f8231169b722bed907a51b14814cc11abdc834529f7ef1dd0c899c9bda322a72"
+    },
+    "npi-bom-context-baseline.log": {
+      "path": "/tmp/npi-bom-context-baseline.log",
+      "sha256": "77ce7d5a772e2e7b946c1d6a37b9aea111c953a469090f4e6814da7a9114ddf6"
+    },
+    "npi-bom-context-types-final.log": {
+      "path": "/tmp/npi-bom-context-types-final.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-bom-context-lint-final.log": {
+      "path": "/tmp/npi-bom-context-lint-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-bom-context-delivered-build.log": {
+      "path": "/tmp/npi-bom-context-delivered-build.log",
+      "sha256": "754e7cb054f7247924c66d6d45c3314809282fcac0a0b8605615265bef114b13"
+    },
+    "npi-bom-context-browser.log": {
+      "path": "/tmp/npi-bom-context-browser.log",
+      "sha256": "2ac411affefe53d2bd7c3f363e742880e93afc6f32be8fd14d44eca98df12fb3"
+    },
+    "npi-bom-context-delivered-browser.log": {
+      "path": "/tmp/npi-bom-context-delivered-browser.log",
+      "sha256": "2ac411affefe53d2bd7c3f363e742880e93afc6f32be8fd14d44eca98df12fb3"
+    },
+    "npi-bom-context-manufacturing-regression.log": {
+      "path": "/tmp/npi-bom-context-manufacturing-regression.log",
+      "sha256": "f4882e8fb5c151f17a569128de2c01e3d0e97add017390746d406971cdedf0bb"
+    },
+    "npi-procurement-reply-types-final.log": {
+      "path": "/tmp/npi-procurement-reply-types-final.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-procurement-reply-script-types.log": {
+      "path": "/tmp/npi-procurement-reply-script-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-procurement-reply-lint-final.log": {
+      "path": "/tmp/npi-procurement-reply-lint-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-procurement-reply-build-final.log": {
+      "path": "/tmp/npi-procurement-reply-build-final.log",
+      "sha256": "a10a5dfd0b03b9ee695430e95b7a04e50777b9ad0b1fad69b66242fb9e3b9e21"
+    },
+    "npi-procurement-reply-browser-final.log": {
+      "path": "/tmp/npi-procurement-reply-browser-final.log",
+      "sha256": "4af322e514fbfcbc299ab676a40cf7c7485deda072112a08208d547b02990027"
+    },
+    "npi-procurement-reply-delivered-build.log": {
+      "path": "/tmp/npi-procurement-reply-delivered-build.log",
+      "sha256": "cf45c9c3cedfd153d665f16f267b1f6635228540d2ffddaac26095c315869731"
+    },
+    "npi-procurement-reply-delivered-browser.log": {
+      "path": "/tmp/npi-procurement-reply-delivered-browser.log",
+      "sha256": "4af322e514fbfcbc299ab676a40cf7c7485deda072112a08208d547b02990027"
+    },
+    "npi-list-paging-types-final.log": {
+      "path": "/tmp/npi-list-paging-types-final.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-list-paging-script-types-final.log": {
+      "path": "/tmp/npi-list-paging-script-types-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-list-paging-lint-final.log": {
+      "path": "/tmp/npi-list-paging-lint-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-list-paging-build.log": {
+      "path": "/tmp/npi-list-paging-build.log",
+      "sha256": "0470801c201a1a6ddd4b4913b744ea714ce47e0407133f1aa82ba0a4e0682337"
+    },
+    "npi-list-paging-browser-final.log": {
+      "path": "/tmp/npi-list-paging-browser-final.log",
+      "sha256": "2fc7e099489775157cf2872b0601ebe5970512864da5d5db58bf30ff5297450e"
+    },
+    "npi-list-paging-delivered-build.log": {
+      "path": "/tmp/npi-list-paging-delivered-build.log",
+      "sha256": "db57bf5489891873fe3f79b79d34c0f87c90d800af15e839954bd831981a8c05"
+    },
+    "npi-list-paging-delivered-browser.log": {
+      "path": "/tmp/npi-list-paging-delivered-browser.log",
+      "sha256": "aaeb28c06579d4cc655c0571fb7b28fa1d9ded27242ce25e386f1f4842610c35"
+    },
+    "npi-dashboard-load-baseline.log": {
+      "path": "/tmp/npi-dashboard-load-baseline.log",
+      "sha256": "f46bb15358dbf5c814d7ffd34c972c24c4b74e0d3a799f22dd39e78a45fb714a"
+    },
+    "npi-dashboard-load-types-final.log": {
+      "path": "/tmp/npi-dashboard-load-types-final.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-dashboard-load-test-types-final.log": {
+      "path": "/tmp/npi-dashboard-load-test-types-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-dashboard-load-lint-final.log": {
+      "path": "/tmp/npi-dashboard-load-lint-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-dashboard-load-build.log": {
+      "path": "/tmp/npi-dashboard-load-build.log",
+      "sha256": "50e4118f8d2df2f82a6bdbcf95569e8749e0d914e126b35a0640196d89319506"
+    },
+    "npi-dashboard-load-http-initial.log": {
+      "path": "/tmp/npi-dashboard-load-http-initial.log",
+      "sha256": "22e3858490b31a372774e666b3346435cb3878512bf167672835ed955e1431d7"
+    },
+    "npi-dashboard-load-http.log": {
+      "path": "/tmp/npi-dashboard-load-http.log",
+      "sha256": "2b951b21b026211e43be97b0db8bb1bc683eeac18bbdf3548abc72628e7b4aa0"
+    },
+    "npi-dashboard-load-navigation.log": {
+      "path": "/tmp/npi-dashboard-load-navigation.log",
+      "sha256": "f8231169b722bed907a51b14814cc11abdc834529f7ef1dd0c899c9bda322a72"
+    },
+    "npi-dashboard-load-delivered-build.log": {
+      "path": "/tmp/npi-dashboard-load-delivered-build.log",
+      "sha256": "e9c6b9cbb6083f369fe0db4fe8a3235b9378e8f0d7d153ea858b637846b9e4e6"
+    },
+    "npi-dashboard-load-delivered-browser.log": {
+      "path": "/tmp/npi-dashboard-load-delivered-browser.log",
+      "sha256": "b5ffed3cc6df2b464620fc75dbba52dd94f672275ac44afddfd807e6fb808f0f"
+    },
+    "npi-manufacturing-completion-all-types-final.log": {
+      "path": "/tmp/npi-manufacturing-completion-all-types-final.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-manufacturing-completion-test-types-final.log": {
+      "path": "/tmp/npi-manufacturing-completion-test-types-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-manufacturing-completion-lint-final.log": {
+      "path": "/tmp/npi-manufacturing-completion-lint-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-manufacturing-completion-build-final.log": {
+      "path": "/tmp/npi-manufacturing-completion-build-final.log",
+      "sha256": "13e498c481e43d0ad97f8d10f32df887a58c8d0877831d71eb7b76b21db35cfd"
+    },
+    "npi-manufacturing-completion-browser-final.log": {
+      "path": "/tmp/npi-manufacturing-completion-browser-final.log",
+      "sha256": "3ea27bb457dad5a1539e8d72213a85eda6d7033043af14cc64d25cd30fa13236"
+    },
+    "npi-manufacturing-completion-reply-regression.log": {
+      "path": "/tmp/npi-manufacturing-completion-reply-regression.log",
+      "sha256": "f4882e8fb5c151f17a569128de2c01e3d0e97add017390746d406971cdedf0bb"
+    },
+    "npi-manufacturing-completion-delivered-build.log": {
+      "path": "/tmp/npi-manufacturing-completion-delivered-build.log",
+      "sha256": "cc33a7009bbf268d9fa7b6cc196ec6f7199dea15514a8f49d89d99b0e79f762d"
+    },
+    "npi-manufacturing-completion-delivered-browser.log": {
+      "path": "/tmp/npi-manufacturing-completion-delivered-browser.log",
+      "sha256": "3ea27bb457dad5a1539e8d72213a85eda6d7033043af14cc64d25cd30fa13236"
+    },
+    "npi-project-history-types-final.log": {
+      "path": "/tmp/npi-project-history-types-final.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-project-history-lint-final.log": {
+      "path": "/tmp/npi-project-history-lint-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-project-history-format-check.log": {
+      "path": "/tmp/npi-project-history-format-check.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-project-history-build-final.log": {
+      "path": "/tmp/npi-project-history-build-final.log",
+      "sha256": "f3557855fd1dd84bdffabf5f776074359ca7c2298ca963c6e3f7892150f2d7bb"
+    },
+    "npi-project-events-http.log": {
+      "path": "/tmp/npi-project-events-http.log",
+      "sha256": "e31cb761d6ce085acc6dbf6352b4cf5bd76b7344bcf2fb8c9a73cb2229ce1de8"
+    },
+    "npi-project-history-overview.log": {
+      "path": "/tmp/npi-project-history-overview.log",
+      "sha256": "6d744cee7f510ea2912b00b3926f94139fb8dc304e1553a49d20ffee9802f91c"
+    },
+    "npi-project-history-browser-final.log": {
+      "path": "/tmp/npi-project-history-browser-final.log",
+      "sha256": "e53264a7512d2b85fcd5218f5e19b8734cf87c3251e799e8d4fab616a4c6bc86"
+    },
+    "npi-project-history-delivered-build.log": {
+      "path": "/tmp/npi-project-history-delivered-build.log",
+      "sha256": "008a2f3f9d763af7331ae6709b1835272fec1b42c3d62f9ad5d318da6fe27ccf"
+    },
+    "npi-project-history-delivered-browser.log": {
+      "path": "/tmp/npi-project-history-delivered-browser.log",
+      "sha256": "e53264a7512d2b85fcd5218f5e19b8734cf87c3251e799e8d4fab616a4c6bc86"
+    },
+    "npi-project-history-test-fix-types.log": {
+      "path": "/tmp/npi-project-history-test-fix-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-project-history-test-fix-lint.log": {
+      "path": "/tmp/npi-project-history-test-fix-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-project-history-diagnostic.log": {
+      "path": "/tmp/npi-project-history-diagnostic.log",
+      "sha256": "2be7079967a8a992110066bd770090e7b76e79ff96e032f3d2477c04b1833790"
+    },
+    "npi-project-history-delivered-browser-initial-failure.log": {
+      "path": "/tmp/npi-project-history-delivered-browser-initial-failure.log",
+      "sha256": "05620f9f6e1c3fe04cebb720b6a352a859499065934723b2b31dc93edaf06c73"
+    },
+    "npi-dashboard-browsing-types.log": {
+      "path": "/tmp/npi-dashboard-browsing-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-dashboard-browsing-test-types.log": {
+      "path": "/tmp/npi-dashboard-browsing-test-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-dashboard-browsing-lint.log": {
+      "path": "/tmp/npi-dashboard-browsing-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-dashboard-browsing-format.log": {
+      "path": "/tmp/npi-dashboard-browsing-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-dashboard-browsing-dom.log": {
+      "path": "/tmp/npi-dashboard-browsing-dom.log",
+      "sha256": "77dbc382b4563f717d7829907f525339991c18196510bfe27c8c262bb99c2e21"
+    },
+    "npi-dashboard-browsing-build.log": {
+      "path": "/tmp/npi-dashboard-browsing-build.log",
+      "sha256": "0cc0f489ca9ce771963d0502e947cbe6d479294af94bf96c068b43f254487bce"
+    },
+    "npi-dashboard-browsing-browser.log": {
+      "path": "/tmp/npi-dashboard-browsing-browser.log",
+      "sha256": "d09088acb1e03ee7a937c2e0da2ff606a560e086953addff0c8b4024315eacf2"
+    },
+    "npi-dashboard-browsing-delivered-build.log": {
+      "path": "/tmp/npi-dashboard-browsing-delivered-build.log",
+      "sha256": "a14292cd00d7f8223f0015f6d6c9fc6945c404062c9873ad23f15d1c5a353d81"
+    },
+    "npi-dashboard-browsing-delivered-browser.log": {
+      "path": "/tmp/npi-dashboard-browsing-delivered-browser.log",
+      "sha256": "d09088acb1e03ee7a937c2e0da2ff606a560e086953addff0c8b4024315eacf2"
+    },
+    "npi-procurement-receipt-types.log": {
+      "path": "/tmp/npi-procurement-receipt-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-procurement-receipt-test-types.log": {
+      "path": "/tmp/npi-procurement-receipt-test-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-procurement-receipt-lint.log": {
+      "path": "/tmp/npi-procurement-receipt-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-procurement-receipt-format.log": {
+      "path": "/tmp/npi-procurement-receipt-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-procurement-receipt-dom.log": {
+      "path": "/tmp/npi-procurement-receipt-dom.log",
+      "sha256": "0f7276c73b650736a76208ac9596c41517d34efb2922305ab42f23cae6da449a"
+    },
+    "npi-procurement-receipt-build.log": {
+      "path": "/tmp/npi-procurement-receipt-build.log",
+      "sha256": "abc82184ed74240c3c8dadd32fdd5036d0f3caf44e287ff03f0f88e3cadf9796"
+    },
+    "npi-procurement-receipt-browser.log": {
+      "path": "/tmp/npi-procurement-receipt-browser.log",
+      "sha256": "04cd16d0042e4726ad6b754c6fb4bd1db326724b195285496b2a8e7bf134f3cd"
+    },
+    "npi-procurement-receipt-delivered-build.log": {
+      "path": "/tmp/npi-procurement-receipt-delivered-build.log",
+      "sha256": "5a2d8dc172f6c61c9dd3ee927eecd753b01f22b4763c5b64f3152821bdfedd7f"
+    },
+    "npi-procurement-receipt-delivered-browser.log": {
+      "path": "/tmp/npi-procurement-receipt-delivered-browser.log",
+      "sha256": "04cd16d0042e4726ad6b754c6fb4bd1db326724b195285496b2a8e7bf134f3cd"
+    },
+    "npi-procurement-receipt-reply-regression.log": {
+      "path": "/tmp/npi-procurement-receipt-reply-regression.log",
+      "sha256": "4af322e514fbfcbc299ab676a40cf7c7485deda072112a08208d547b02990027"
+    },
+    "npi-file-operation-types.log": {
+      "path": "/tmp/npi-file-operation-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-file-operation-test-types.log": {
+      "path": "/tmp/npi-file-operation-test-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-file-operation-lint.log": {
+      "path": "/tmp/npi-file-operation-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-file-operation-format.log": {
+      "path": "/tmp/npi-file-operation-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-file-operation-dom.log": {
+      "path": "/tmp/npi-file-operation-dom.log",
+      "sha256": "20884fa08b853a870de7544d7f1968fe7a9c32d132dba30904d6be0178331034"
+    },
+    "npi-file-operation-dom-regression.log": {
+      "path": "/tmp/npi-file-operation-dom-regression.log",
+      "sha256": "6267c486783640d256b6566eaa45ff8043dd3e90a1e97791e521a2cbf45dacd2"
+    },
+    "npi-file-operation-build.log": {
+      "path": "/tmp/npi-file-operation-build.log",
+      "sha256": "3a4254d6dfde70c77ed2433728427a85ddc18673c32df37d580c339df0753a2d"
+    },
+    "npi-file-operation-browser.log": {
+      "path": "/tmp/npi-file-operation-browser.log",
+      "sha256": "469367d835e11523249c52acef14c9ef2cb01c19e1ea5223716589144ec46e0f"
+    },
+    "npi-file-operation-delivered-build.log": {
+      "path": "/tmp/npi-file-operation-delivered-build.log",
+      "sha256": "7a9d47bd1632388bb8d28261af463dd642d1cedbcf13a3bc26cd48ce10045cdf"
+    },
+    "npi-file-operation-delivered-browser.log": {
+      "path": "/tmp/npi-file-operation-delivered-browser.log",
+      "sha256": "36c4929f283d422d058469c417de93ce1155e6c7a49f0b61ad91bc2f02f90061"
+    },
+    "npi-file-operation-receipt-regression.log": {
+      "path": "/tmp/npi-file-operation-receipt-regression.log",
+      "sha256": "04cd16d0042e4726ad6b754c6fb4bd1db326724b195285496b2a8e7bf134f3cd"
+    },
+    "npi-manufacturing-recovery-before.log": {
+      "path": "/tmp/npi-manufacturing-recovery-before.log",
+      "sha256": "417c638e91e0067a841f644a47a74ac3398a6cfa75cedeec6b66d83e0bd8158a"
+    },
+    "npi-manufacturing-recovery-types.log": {
+      "path": "/tmp/npi-manufacturing-recovery-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-manufacturing-recovery-test-types.log": {
+      "path": "/tmp/npi-manufacturing-recovery-test-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-manufacturing-recovery-lint.log": {
+      "path": "/tmp/npi-manufacturing-recovery-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-manufacturing-recovery-format.log": {
+      "path": "/tmp/npi-manufacturing-recovery-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-manufacturing-recovery-dom.log": {
+      "path": "/tmp/npi-manufacturing-recovery-dom.log",
+      "sha256": "29663a348654b2fcf67a6325f2840719e46813c031c04e7dccfbbfda15b4e7e3"
+    },
+    "npi-manufacturing-recovery-dom-regression.log": {
+      "path": "/tmp/npi-manufacturing-recovery-dom-regression.log",
+      "sha256": "25b6920a4930ace03bccc055895a026c5a8bfb93e23a9aa14a83f7ad7821dc13"
+    },
+    "npi-manufacturing-recovery-build.log": {
+      "path": "/tmp/npi-manufacturing-recovery-build.log",
+      "sha256": "66070a0c38414617c59023619eba1680eb66590fbd092125869c44504a9971e7"
+    },
+    "npi-manufacturing-recovery-browser.log": {
+      "path": "/tmp/npi-manufacturing-recovery-browser.log",
+      "sha256": "df77b636015301db67b6b6425cc279cb430db3dcd8ea22c5f9cffde694cf6fd2"
+    },
+    "npi-manufacturing-recovery-delivered-build.log": {
+      "path": "/tmp/npi-manufacturing-recovery-delivered-build.log",
+      "sha256": "43281ebcf925a34807b5c1849e62223c25b7fc9286c6c75a2ef4fcbfd16979b4"
+    },
+    "npi-manufacturing-recovery-delivered-browser.log": {
+      "path": "/tmp/npi-manufacturing-recovery-delivered-browser.log",
+      "sha256": "df77b636015301db67b6b6425cc279cb430db3dcd8ea22c5f9cffde694cf6fd2"
+    },
+    "npi-manufacturing-recovery-quick-regression.log": {
+      "path": "/tmp/npi-manufacturing-recovery-quick-regression.log",
+      "sha256": "f4882e8fb5c151f17a569128de2c01e3d0e97add017390746d406971cdedf0bb"
+    },
+    "npi-external-recovery-before.log": {
+      "path": "/tmp/npi-external-recovery-before.log",
+      "sha256": "70c917e3a3b706a33f4ad6f192f8a8e5edbb9cbdb6153bb7d256e91cc55806ba"
+    },
+    "npi-external-recovery-types.log": {
+      "path": "/tmp/npi-external-recovery-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-external-recovery-test-types.log": {
+      "path": "/tmp/npi-external-recovery-test-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-external-recovery-lint.log": {
+      "path": "/tmp/npi-external-recovery-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-external-recovery-format.log": {
+      "path": "/tmp/npi-external-recovery-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-external-recovery-dom.log": {
+      "path": "/tmp/npi-external-recovery-dom.log",
+      "sha256": "2d52b6fc3f05dec89831e92fead4f7353c887407396009c31de89f3896a70750"
+    },
+    "npi-external-recovery-api-regression.log": {
+      "path": "/tmp/npi-external-recovery-api-regression.log",
+      "sha256": "d3c44e87769ae35f5134e6d33e93fda7a2d35e4c086c52aeb314c388c041b563"
+    },
+    "npi-external-recovery-http.log": {
+      "path": "/tmp/npi-external-recovery-http.log",
+      "sha256": "f11919b1e60e98a940106fb002b6deb27984371022cdc244bd0e1f1d3df9c478"
+    },
+    "npi-external-recovery-build.log": {
+      "path": "/tmp/npi-external-recovery-build.log",
+      "sha256": "a3531eb28a7ae20208175b749c05cc8611418facbe51380d8bd35454ac7c0533"
+    },
+    "npi-external-recovery-browser.log": {
+      "path": "/tmp/npi-external-recovery-browser.log",
+      "sha256": "6e205b7fa945cdbadc5d984de63bdf57a04e9a6d137503b677a8491714f71e70"
+    },
+    "npi-external-recovery-delivered-build.log": {
+      "path": "/tmp/npi-external-recovery-delivered-build.log",
+      "sha256": "4196a93426df1aeea9eeaecdfc73c4a5aeb671c22d50bd8c4241ceec1e686469"
+    },
+    "npi-external-recovery-delivered-http.log": {
+      "path": "/tmp/npi-external-recovery-delivered-http.log",
+      "sha256": "dfbdbdc6b098cdd33f0696a99e907ca924498e67fc2cb844ac8b488c9da83fbc"
+    },
+    "npi-external-recovery-delivered-browser.log": {
+      "path": "/tmp/npi-external-recovery-delivered-browser.log",
+      "sha256": "6e205b7fa945cdbadc5d984de63bdf57a04e9a6d137503b677a8491714f71e70"
+    },
+    "npi-arrival-windows-types.log": {
+      "path": "/tmp/npi-arrival-windows-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-arrival-windows-delivered-types.log": {
+      "path": "/tmp/npi-arrival-windows-delivered-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-arrival-windows-test-types.log": {
+      "path": "/tmp/npi-arrival-windows-test-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-arrival-windows-lint.log": {
+      "path": "/tmp/npi-arrival-windows-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-arrival-windows-format.log": {
+      "path": "/tmp/npi-arrival-windows-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-arrival-windows-dom.log": {
+      "path": "/tmp/npi-arrival-windows-dom.log",
+      "sha256": "b5e58bd34498306d1f746a5b3f53619a3f42e9f38b15955d039e2ffb0c64113d"
+    },
+    "npi-arrival-windows-build.log": {
+      "path": "/tmp/npi-arrival-windows-build.log",
+      "sha256": "f9071d65eaef52518d68b4cca65bbb2cae9e7d2df805b3fb0fd3fbfaf551d54b"
+    },
+    "npi-arrival-windows-browser.log": {
+      "path": "/tmp/npi-arrival-windows-browser.log",
+      "sha256": "4d6c76ec53cb536cecc6fec08c8c62cb6384bab486c07d998f4e9d1dd5b0cf44"
+    },
+    "npi-arrival-windows-delivered-build.log": {
+      "path": "/tmp/npi-arrival-windows-delivered-build.log",
+      "sha256": "ab5a17ee59692e21707ff99da75ba05497e2fef4f293283ed453c197c830915c"
+    },
+    "npi-arrival-windows-delivered-browser.log": {
+      "path": "/tmp/npi-arrival-windows-delivered-browser.log",
+      "sha256": "4d6c76ec53cb536cecc6fec08c8c62cb6384bab486c07d998f4e9d1dd5b0cf44"
+    },
+    "npi-arrival-windows-paging-regression.log": {
+      "path": "/tmp/npi-arrival-windows-paging-regression.log",
+      "sha256": "9c52843bd0b9eea6d94825ebaf5fc3578e8f9f334c801cb1b1c4c020d3bcba62"
+    },
+    "npi-exception-recovery-before.log": {
+      "path": "/tmp/npi-exception-recovery-before.log",
+      "sha256": "3633b2bca6a8996cfe84893c1159803e9301e9ce0a333fafbf5b66300e044137"
+    },
+    "npi-exception-recovery-types.log": {
+      "path": "/tmp/npi-exception-recovery-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-exception-recovery-delivered-types.log": {
+      "path": "/tmp/npi-exception-recovery-delivered-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-exception-recovery-test-types.log": {
+      "path": "/tmp/npi-exception-recovery-test-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-exception-recovery-lint.log": {
+      "path": "/tmp/npi-exception-recovery-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-exception-recovery-format.log": {
+      "path": "/tmp/npi-exception-recovery-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-exception-recovery-dom.log": {
+      "path": "/tmp/npi-exception-recovery-dom.log",
+      "sha256": "a8a3589e71f6b5eabdba3f140ed9bb27e40b3823c9e07bbe6902c382ab6f3d0d"
+    },
+    "npi-exception-recovery-build.log": {
+      "path": "/tmp/npi-exception-recovery-build.log",
+      "sha256": "19d2b46e774a697706cad61a5e028deb71e6002b1d5a52ec26bb4b6ad25e66a2"
+    },
+    "npi-exception-recovery-browser.log": {
+      "path": "/tmp/npi-exception-recovery-browser.log",
+      "sha256": "7b0280218acb826cae789e5119c7f28d34da0dfb262951c42b4abd0b2fcd8c63"
+    },
+    "npi-exception-recovery-delivered-build.log": {
+      "path": "/tmp/npi-exception-recovery-delivered-build.log",
+      "sha256": "917bec39fca4f1b20b2418de4553b05447f32fd0a95fd3ef64d0c6550b1706cd"
+    },
+    "npi-exception-recovery-delivered-browser.log": {
+      "path": "/tmp/npi-exception-recovery-delivered-browser.log",
+      "sha256": "7b0280218acb826cae789e5119c7f28d34da0dfb262951c42b4abd0b2fcd8c63"
+    },
+    "npi-exception-recovery-quick-regression.log": {
+      "path": "/tmp/npi-exception-recovery-quick-regression.log",
+      "sha256": "f4882e8fb5c151f17a569128de2c01e3d0e97add017390746d406971cdedf0bb"
+    },
+    "npi-srs-audit-unit.log": {
+      "path": "/tmp/npi-srs-audit-unit.log",
+      "sha256": "43299a7c8062ef5e55d38b75283811f21a17b70667da66e43034f127cfe6ac51",
+      "bytes": 6228
+    },
+    "npi-db-contract.log": {
+      "path": "/tmp/npi-db-contract.log",
+      "sha256": "94bbb9d9e19d8227920b473df0e9994f9d8e26938e28c8342b83cc9a7448a0fb",
+      "bytes": 95
+    },
+    "npi-db-contract-lint.log": {
+      "path": "/tmp/npi-db-contract-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "npi-db-contract-types.log": {
+      "path": "/tmp/npi-db-contract-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "npi-db-contract-format-write.log": {
+      "path": "/tmp/npi-db-contract-format-write.log",
+      "sha256": "b2bcfd38c65a441b1c362d661f210b16534176fe938a0f39b54369b1baa3f40a",
+      "bytes": 37
+    },
+    "npi-srs-audit-doc-format.log": {
+      "path": "/tmp/npi-srs-audit-doc-format.log",
+      "sha256": "546cca98851da0dcf40cfe21a7a96c3001438d77ad31fc0321a42706f061b7e4",
+      "bytes": 67
+    },
+    "npi-project-code-before.log": {
+      "path": "/tmp/npi-project-code-before.log",
+      "sha256": "cc3c3694f476e9e300a86b648286a50efa0f569444c0027ea4cc2a26ab1ff593"
+    },
+    "npi-project-code-candidate.log": {
+      "path": "/tmp/npi-project-code-candidate.log",
+      "sha256": "27d8fd131516bde4fbf7aa98a5dab8c4b412bafd546f1a15b1532b825e15d9dc"
+    },
+    "npi-project-code-types.log": {
+      "path": "/tmp/npi-project-code-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-project-code-lint.log": {
+      "path": "/tmp/npi-project-code-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-project-code-format.log": {
+      "path": "/tmp/npi-project-code-format.log",
+      "sha256": "170cff786e364d9d6798995813b6e88d6e976dc7fde877cd9191a8a904f3a0b8"
+    },
+    "npi-project-code-build.log": {
+      "path": "/tmp/npi-project-code-build.log",
+      "sha256": "5b1c4841961a097143f031921098e837ae3c3af69e096bce6fd5dacf5adfae38"
+    },
+    "npi-project-code-delivered-build.log": {
+      "path": "/tmp/npi-project-code-delivered-build.log",
+      "sha256": "e44083cc5f8c45920f31ac9127f922f9dd10bc2661970ae0a22b667811a6837a"
+    },
+    "npi-project-code-doc-format.log": {
+      "path": "/tmp/npi-project-code-doc-format.log",
+      "sha256": "dbccdfa72a266aab52848d7e34afe6595cf460678290ec397ea5f771ad4901ea"
+    },
+    "npi-supervisor-plan-service.log": {
+      "path": "/tmp/npi-supervisor-plan-service.log",
+      "sha256": "7b782c64b6b875beb10c2e88e1f48bef6f43ea29d5d56000b8882a03bace2366"
+    },
+    "npi-supervisor-plan-role-types.log": {
+      "path": "/tmp/npi-supervisor-plan-role-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-supervisor-plan-role-lint.log": {
+      "path": "/tmp/npi-supervisor-plan-role-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-supervisor-plan-role-build.log": {
+      "path": "/tmp/npi-supervisor-plan-role-build.log",
+      "sha256": "3d1c3435bf8b6219a4c21332c5c327eca627314044feb85d60a17ff9bb633cd1"
+    },
+    "npi-supervisor-plan-role-browser.log": {
+      "path": "/tmp/npi-supervisor-plan-role-browser.log",
+      "sha256": "52185f7d55c6ddc3ba8d2ff5307f18b77e6cb92252dcff06bc8a2c3d605824f0"
+    },
+    "npi-supervisor-role-delivered-build.log": {
+      "path": "/tmp/npi-supervisor-role-delivered-build.log",
+      "sha256": "d2dfe67b316469805c6392c24f8051ac29c51de7262414b0b80e564bd0a8dc47"
+    },
+    "npi-supervisor-role-delivered-browser.log": {
+      "path": "/tmp/npi-supervisor-role-delivered-browser.log",
+      "sha256": "52185f7d55c6ddc3ba8d2ff5307f18b77e6cb92252dcff06bc8a2c3d605824f0"
+    },
+    "npi-supervisor-plan-final-lint.log": {
+      "path": "/tmp/npi-supervisor-plan-final-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-office-files-unit.log": {
+      "path": "/tmp/npi-office-files-unit.log",
+      "sha256": "f0223d7b306dc160af85f5a3e9c51517ed317bff1e2a036966748c113a345126"
+    },
+    "npi-office-files-dom.log": {
+      "path": "/tmp/npi-office-files-dom.log",
+      "sha256": "4a99bad6cb40fe0836ae2554d624d9ca469285610240eadab5702bdea05b45f0"
+    },
+    "npi-office-files-types-final.log": {
+      "path": "/tmp/npi-office-files-types-final.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-office-files-lint-final.log": {
+      "path": "/tmp/npi-office-files-lint-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-office-files-build.log": {
+      "path": "/tmp/npi-office-files-build.log",
+      "sha256": "95a38d0db25c0da52963617093e252fe021827d513ec023fda665f6193d2ba61"
+    },
+    "npi-office-files-browser.log": {
+      "path": "/tmp/npi-office-files-browser.log",
+      "sha256": "5c57a42613781311c3a413665d4b7c80d997d7837361b1929ee8db264fe30016"
+    },
+    "npi-office-files-delivered-build.log": {
+      "path": "/tmp/npi-office-files-delivered-build.log",
+      "sha256": "cf6a4fe57390459ee3bf7e321fac01aaa8264faf47112ddacc36d9626d5570f2"
+    },
+    "npi-office-files-delivered-browser.log": {
+      "path": "/tmp/npi-office-files-delivered-browser.log",
+      "sha256": "5c57a42613781311c3a413665d4b7c80d997d7837361b1929ee8db264fe30016"
+    },
+    "npi-full-regression-http.log": {
+      "path": "/tmp/npi-full-regression-http.log",
+      "sha256": "e19516f6d5070db5ab89a4f38a207d31a97a123b07406365eaf88e3c185194b5"
+    },
+    "npi-full-regression-browser-r7.log": {
+      "path": "/tmp/npi-full-regression-browser-r7.log",
+      "sha256": "f88759a75be93d065e0a46263ab2f0990987de2b946cb8f598db9376ef052aee"
+    },
+    "npi-full-regression-browser-r8.log": {
+      "path": "/tmp/npi-full-regression-browser-r8.log",
+      "sha256": "202bc4c5361aa656834fe3ff3680fecd92029069e426c534b3988de1eaf02e21"
+    },
+    "npi-full-regression-build-fixed.log": {
+      "path": "/tmp/npi-full-regression-build-fixed.log",
+      "sha256": "d15b52b3d16f7e7eaa07f02b21eb9a04d9ee1afb616500f258ad3e72889a5508"
+    },
+    "npi-full-regression-types-fixed.log": {
+      "path": "/tmp/npi-full-regression-types-fixed.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-full-regression-receipt-dom.log": {
+      "path": "/tmp/npi-full-regression-receipt-dom.log",
+      "sha256": "cf31d9ac814303d563fd76c3d7325c467c75565a6b89f68a1d1b6ccc1db18fd9"
+    },
+    "npi-full-regression-lint-fixed.log": {
+      "path": "/tmp/npi-full-regression-lint-fixed.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-full-regression-delivered-build.log": {
+      "path": "/tmp/npi-full-regression-delivered-build.log",
+      "sha256": "0f34d17b867711fdfa309c8a2528b1e70a76ac6da79e7fcaad502cbca9d1e449"
+    },
+    "npi-full-regression-delivered-browser.log": {
+      "path": "/tmp/npi-full-regression-delivered-browser.log",
+      "sha256": "202bc4c5361aa656834fe3ff3680fecd92029069e426c534b3988de1eaf02e21"
+    }
+  },
+  "latest": {
+    "http": 37,
+    "issueDom": 6,
+    "standardTypecheck": "pass",
+    "build": "pass",
+    "kitExportWorkbook": 2,
+    "kitExportDom": 2,
+    "kitExportBrowser": "passed: desktop 26 rows, mobile filtered one row; no horizontal overflow, page errors or business writes",
+    "fullHttpCurrent": "37 passed, 0 failed, 0 skipped; current source",
+    "supervisorPlanning": "plan-only scoped verification passed",
+    "fullBrowserCurrent": "candidate and delivered actual build passed, including two real ERP samples",
+    "procurementIdentity": "code, BOM version and source-row regression fixed and verified"
+  },
+  "earlierIndependentChecks": {
+    "filesHttp": 11,
+    "upgrade": 4
+  },
+  "openGates": [],
+  "bottleneckChecks": {
+    "componentTests": 2,
+    "workbookTests": 2,
+    "actualTypecheck": "passed",
+    "actualBuild": "passed",
+    "actualBrowser": "passed",
+    "scope": "Known material focus, cancel, export mark, manufacturing node mobile focus, no overflow or page errors"
+  },
+  "overviewChecks": {
+    "componentTests": 4,
+    "actualTypecheck": "passed",
+    "actualBuild": "passed",
+    "actualBrowser": "passed",
+    "scope": "Overview known material, manufacturing focus, completed readiness wording; desktop and mobile layout"
+  },
+  "predictionChecks": {
+    "noteTests": 2,
+    "workbookTests": 3,
+    "bottleneckDomTests": 2,
+    "overviewDomTests": 4,
+    "exportDomTests": 2,
+    "actualTypecheck": "passed",
+    "actualBuild": "passed",
+    "actualBrowser": "passed",
+    "scope": "Missing key commitments versus actual BOM revision review-only incompleteness; fixed header, cards, overview, export and mobile layout"
+  },
+  "supervisorHistoryChecks": {
+    "actualBrowser": "passed",
+    "scriptTypecheck": "passed",
+    "scriptLint": "passed",
+    "appSourceChanged": false,
+    "scope": "Supervisor read-only change-count filtering and complete promise history in actual built app; synthetic isolated test data. Does not validate authorized-adjustment policy, stopped-tracking toggle case, all mobile workflows or full SRS acceptance."
+  },
+  "localRuntimeCheck": {
+    "snapshot": "docs/npi/local-runtime-verification.json",
+    "scope": "Read-only process origin, Vite delivered feature markers, API watch mode and unauthenticated 401 through direct/proxy paths",
+    "serviceRestarted": false,
+    "formalBusinessDataWritten": false
+  },
+  "settingsDelivery": {
+    "authorizedByUser": true,
+    "sixFilesSynced": true,
+    "actualTypecheck": "passed",
+    "actualBuild": "passed",
+    "relatedTests": 14,
+    "actualBrowser": "passed",
+    "isolatedTestCleanup": "passed"
+  },
+  "navigationDelivery": {
+    "modules": [
+      "首页",
+      "新品项目",
+      "BOM管理",
+      "制造准备",
+      "采购管理",
+      "报表看板",
+      "基础数据",
+      "系统设置"
+    ],
+    "roleScoped": true,
+    "fourNodeWorkbench": true,
+    "bomDeepLink": true,
+    "procurementFocus": true,
+    "reportFiltersAndPagination": true,
+    "actualBuild": "passed",
+    "actualBrowser": "passed",
+    "live3410": "verified",
+    "details": "docs/npi/navigation-browser-verification.json"
+  },
+  "manufacturingQuickReply": {
+    "oneClickEntry": true,
+    "fourNodeBatch": true,
+    "reasonAndHistory": true,
+    "optimisticConflictRecovery": true,
+    "saveDismissalProtection": true,
+    "staleNavigationGuard": true,
+    "nodeScopedCounters": true,
+    "actualBrowser": "passed",
+    "live3410": "verified",
+    "details": "docs/npi/manufacturing-quick-verification.json"
+  },
+  "bomRequestContext": {
+    "latestVersionWins": true,
+    "readFailureRecovery": true,
+    "projectScopedReads": true,
+    "originalProjectImport": true,
+    "actualBrowser": "passed",
+    "manufacturingRegression": "passed",
+    "live3410": "verified",
+    "details": "docs/npi/bom-request-context-verification.json"
+  },
+  "procurementReply": {
+    "firstReplyDateOnly": true,
+    "conflictRecovery": true,
+    "fieldMerge": true,
+    "requiredChangeReasons": true,
+    "saveDismissalProtection": true,
+    "transferAndArrivalLocks": true,
+    "actualBrowser": "passed",
+    "live3410": "verified",
+    "details": "docs/npi/procurement-reply-verification.json"
+  },
+  "listPagination": {
+    "pageSize": 25,
+    "purchase": true,
+    "todayActivity": true,
+    "promiseChangeTasks": true,
+    "fullScopeSearchAndCounts": true,
+    "independentReportPages": true,
+    "actualBrowser": "passed",
+    "supervisorReadOnly": true,
+    "live3410": "verified",
+    "details": "docs/npi/list-pagination-verification.json"
+  },
+  "dashboardLoading": {
+    "batchQueries": true,
+    "nonEmptySelects": 11,
+    "emptySelects": 4,
+    "sharedSummaryCalculation": true,
+    "baselineParity": true,
+    "historyAndDetailRetained": true,
+    "explicitTestTemplateFixtures": true,
+    "httpTests": 36,
+    "actualBrowser": "passed",
+    "runtime": "source root and post-sync start verified",
+    "details": "docs/npi/dashboard-loading-verification.json"
+  },
+  "manufacturingCompletion": {
+    "directTaskEntry": true,
+    "sharedProjectForm": true,
+    "latestConflictRecovery": true,
+    "completedDatesLocked": true,
+    "savePendingGuard": true,
+    "refreshRetryWithoutRepeatWrite": true,
+    "permissionRevocationGuard": true,
+    "actualDesktopAndMobile": "passed",
+    "live3410": "verified",
+    "details": "docs/npi/manufacturing-completion-verification.json"
+  },
+  "projectHistory": {
+    "allEventHistoryReachable": true,
+    "eventServerPagination": true,
+    "promiseClientPagination": true,
+    "eventCursorMicroseconds": true,
+    "promiseOrderPreserved": true,
+    "dateAndCategorySearch": true,
+    "permissionScopeVerified": true,
+    "lateResponseIsolation": true,
+    "actualDesktopAndMobile": "passed",
+    "live3410": "verified",
+    "details": "docs/npi/project-history-verification.json"
+  },
+  "dashboardBrowsing": {
+    "projectAndNormalPageSize": 25,
+    "briefPreviewSize": 5,
+    "briefExpandedPageSize": 25,
+    "allTodosAndWarningsReachable": true,
+    "independentPaging": true,
+    "actualBrowser": "80 projects, 112 todos, 53 warnings; desktop/mobile passed",
+    "live3410": "verified",
+    "details": "docs/npi/dashboard-browsing-verification.json"
+  },
+  "procurementReceipt": {
+    "savedStateRetained": true,
+    "refreshOnlyRetry": true,
+    "unknownSubmissionRequiresReload": true,
+    "directReceiptFiles": true,
+    "photoAssociationAndBytesVerified": true,
+    "actualBrowser": "passed",
+    "originalReplyRegression": "passed on actual build",
+    "live3410": "verified",
+    "details": "docs/npi/procurement-receipt-verification.json"
+  },
+  "fileOperation": {
+    "uploadAndArchiveModalCloseProtected": true,
+    "immediateDuplicateSubmitGuard": true,
+    "staleWindowCallbacksIgnored": true,
+    "issueAndFileWritesCoordinated": true,
+    "archivedDownloadBytesVerified": true,
+    "actualBrowser": "passed",
+    "procurementReceiptRegression": "passed on actual build",
+    "live3410": "verified",
+    "details": "docs/npi/file-operation-verification.json"
+  },
+  "manufacturingRecovery": {
+    "savedStateRetained": true,
+    "refreshOnlyRetry": true,
+    "unknownSubmissionRequiresFreshPlan": true,
+    "editedDatesAndReasonsPreserved": true,
+    "completedNodesLocked": true,
+    "dialogAndInlineCovered": true,
+    "actualBrowser": "passed",
+    "quickReplyRegression": "passed on actual build",
+    "live3410": "verified",
+    "details": "docs/npi/manufacturing-recovery-verification.json"
+  },
+  "externalRecovery": {
+    "optionalRequestIdentity": true,
+    "concurrentRetryCreatesOneMaterial": true,
+    "actorAndProjectScoped": true,
+    "changedPayloadRejected": true,
+    "currentHistoryPreserved": true,
+    "refreshOnlyRetry": true,
+    "directTechnicalFiles": true,
+    "actualHttp": "passed",
+    "actualBrowser": "passed",
+    "apiRegression": "36 passed",
+    "live3410": "verified",
+    "apiReload": "verified by source directory and start timestamp",
+    "details": "docs/npi/external-recovery-verification.json"
+  },
+  "arrivalWindows": {
+    "todayAnd7And14": true,
+    "currentPromiseSorting": true,
+    "exactOwnerFilter": true,
+    "combinedStatusAndSearch": true,
+    "scopePreserved": true,
+    "receiptRefreshPreservesFilter": true,
+    "actualBrowser": "passed",
+    "pagingRegression": "passed",
+    "mobileWidths": [
+      320,
+      390
+    ],
+    "live3410": "verified",
+    "details": "docs/npi/arrival-windows-verification.json"
+  },
+  "exceptionRecovery": {
+    "knownSavedRefreshOnly": true,
+    "explicitBomReview": true,
+    "editedInputRetention": true,
+    "roleAndCompletionLocks": "DOM verified",
+    "unmountContext": "DOM verified",
+    "trackingAndFirstPromiseRetained": "browser verified",
+    "sameCodeBomReplacementReselection": "browser verified",
+    "unknownResponseReadBeforeContinue": true,
+    "actualBrowser": "passed",
+    "manufacturingQuickRegression": "passed",
+    "live3410": "verified",
+    "details": "docs/npi/exception-recovery-verification.json"
+  },
+  "srsAudit": {
+    "verifiedAt": "2026-09-15T17:35:17.317Z",
+    "unitPassed": 26,
+    "realSamplesPassed": 2,
+    "databaseCases": [
+      "DB-01",
+      "DB-02"
+    ],
+    "rolledBack": true,
+    "currentFullHttpRerun": "not executed: automatic review rejection",
+    "productSourceChanged": false,
+    "traceability": "docs/npi/srs-traceability.md",
+    "pilotTemplate": "docs/npi/pilot-acceptance.md",
+    "details": "docs/npi/srs-audit-verification.json"
+  },
+  "projectCodeConflict": {
+    "verifiedAt": "2026-09-15T17:49:15.666Z",
+    "concurrentRequests": 5,
+    "exactlyOneProject": true,
+    "fourManufacturingNodes": true,
+    "singleCreationEvent": true,
+    "errorCode": "DUPLICATE_PROJECT_CODE",
+    "unrelatedUniqueConflictsPreserved": true,
+    "actualBuild": true,
+    "apiReloadVerified": true,
+    "fixturesCleaned": true,
+    "fullHttpRun": false,
+    "details": "docs/npi/project-code-conflict-verification.json"
+  },
+  "pilotReadiness": {
+    "observedAt": "2026-09-15T17:54:16.289Z",
+    "readOnly": true,
+    "formalProjects": 0,
+    "activeUsers": 1,
+    "activeNpiAdminUsers": 1,
+    "enabledTemplates": 1,
+    "pilotIsRecommendedNotCodeDeliveryGate": true,
+    "details": "docs/npi/pilot-readiness-verification.json"
+  },
+  "supervisorPlanning": {
+    "verifiedAt": "2026-09-15T22:51:36.901Z",
+    "decision": "只调整计划，承诺由责任人回复",
+    "reasonVersionAndPreviewRequired": true,
+    "promisesAndActualsPreserved": true,
+    "roleChangeUiProtected": true,
+    "serviceTransactionRollback": "passed zero residuals",
+    "actualDesktopMobileBrowser": "passed zero scoped database residuals",
+    "typecheck": "passed",
+    "build": "passed",
+    "live3410": "verified",
+    "apiReload": "verified",
+    "fullHttpRun": false,
+    "fullBrowserRun": false,
+    "details": "docs/npi/supervisor-planning-verification.json"
+  },
+  "officeAttachments": {
+    "verifiedAt": "2026-09-15T23:09:04.375Z",
+    "formats": [
+      "docx",
+      "xlsx"
+    ],
+    "originalBytesPreserved": true,
+    "archiveDownload": true,
+    "roleScopePreserved": true,
+    "officeDownloadOnly": true,
+    "formatAndBomUnit": 31,
+    "existingAttachmentDom": 5,
+    "actualDesktopMobile": "passed",
+    "ownFixtureAndVaultCleanup": "passed",
+    "sharedNativeCounters": "not rewound",
+    "bomImportLimitsUnchanged": true,
+    "live3410": "verified",
+    "apiReload": "verified",
+    "fullHttpRun": false,
+    "fullBomBrowserRun": false,
+    "details": "docs/npi/office-files-verification.json"
+  },
+  "verifiedAt": "2026-09-15T23:44:38.384Z",
+  "fullRegression": {
+    "verifiedAt": "2026-09-15T23:44:38.384Z",
+    "details": "docs/npi/full-regression-verification.json",
+    "httpPass": 37,
+    "actualDesktopMobile": "passed",
+    "diagnosticRetentionExplicitlyAuthorized": true,
+    "formalBusinessDataWritten": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "actor": "supervisor",
+  "firstCommitExcluded": true,
+  "thresholds": [
+    1,
+    2,
+    3
+  ],
+  "completedToggle": true,
+  "descendingChanges": true,
+  "search": true,
+  "focus": true,
+  "fullHistory": true,
+  "mobileOverflow": false,
+  "writes": [],
+  "pageErrors": [],
+  "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+  "scope": "Supervisor read-only change-count filtering and complete promise history in actual built app; synthetic isolated test data. Does not validate authorized-adjustment policy, stopped-tracking toggle case, all mobile workflows or full SRS acceptance."
+}

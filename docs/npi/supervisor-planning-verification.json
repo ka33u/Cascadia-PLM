@@ -1,0 +1,112 @@
+{
+  "verifiedAt": "2026-09-15T22:50:50.346Z",
+  "userDecision": "只调整计划，承诺由责任人回复",
+  "scope": "Supervisor project profile/dates/owner handoff and unfinished material/node planning; promise/completion authority unchanged.",
+  "service": {
+    "verifiedAt": "2026-09-15T22:33:57.501Z",
+    "passed": true,
+    "checks": [
+      "Material plan: reason, version and owner-role checks; ownership/date changed; promises retained",
+      "No expansion to replies, completion, completion correction, material creation or role administration",
+      "Project changes: preview invalidation, role recheck, owner handoff, dates/profile and continued supervisor access",
+      "Audit records identify supervisor and reason; original promise/history/author retained",
+      "Completed item and closed-project plan adjustments rejected"
+    ],
+    "rolledBack": true,
+    "fixtureRowsRemaining": 0,
+    "scope": "Service-level planning authorization only, single rollback transaction; no full HTTP suite, UI, schema migration or retained diagnostic fixture rows."
+  },
+  "browser": {
+    "verifiedAt": "2026-09-15T22:49:04.759Z",
+    "passed": true,
+    "checks": [
+      "Desktop: six modules; material date/owner adjustment with required reason; original promise/author retained; no reply or completion buttons",
+      "Mobile: preview, required reason and project dates/technical handoff persist; supervisor stays in project; no horizontal overflow",
+      "Real HTTP denies supervisor promise/completion; both changes retain supervisor actor and reason in audit",
+      "Former manufacturing owner changed to supervisor loses reply/completion/exception entry in task and project views while retaining plan adjustment",
+      "Completed material has no correction/plan buttons; completed project has no planning entry"
+    ],
+    "cleaned": true,
+    "residuals": {
+      "users": 0,
+      "projects": 0,
+      "events": 0,
+      "sessions": 0
+    },
+    "pageErrors": [],
+    "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "scope": "Supervisor plan-only UI and matching endpoint denials. No full API/browser suite; own synthetic fixtures deleted."
+  },
+  "runtime": {
+    "verifiedAt": "2026-09-15T22:50:08.354Z",
+    "sourceSha256": "c0ecfc4bc64f1c15573bf0bbf1d9d5d2d7709bec94bc67b7576ceb5b26ae86ee",
+    "bundleSha256": "d159f7de62f2d3b5afb0d4d72db76036b9b365996f6a691874f999c3050bd85c",
+    "bundleHasSupervisorPlanAuthorization": true,
+    "ui3410HasPlanEntry": true,
+    "api": {
+      "pid": 42080,
+      "cwd": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+      "startedAt": "Wed Sep 16 06:43:28 2026",
+      "sourceModifiedAt": "2026-09-15T22:43:11.684Z",
+      "startedAtOrAfterSourceSecond": true,
+      "anonymousStatus": 401
+    },
+    "scope": "Read-only actual source/bundle, listener directory/start time and anonymous API status. Supervisor planning browser behavior tested against actual bundle in the explicit _test DB; no formal data requests or restart."
+  },
+  "files": {
+    "packages/core/src/lib/npi/service.ts": "fa7fcde177d1cedcf4872063b7a5cb1a6b4e5d07195baa257899e77598ac65dd",
+    "packages/core/src/lib/npi/project-change-service.ts": "c0ecfc4bc64f1c15573bf0bbf1d9d5d2d7709bec94bc67b7576ceb5b26ae86ee",
+    "packages/core/src/components/npi/NpiWorkspace.tsx": "1e8238f7a93c5fa27865fcb22527f44da02f394af013684ad72edb9ffa69a948",
+    "scripts/npi-http.test.ts": "5455e65d1f9ffceeb426b80317a74f9d747836f9cac9f1c8c77fcf937004ff16",
+    "scripts/npi-bom-browser.test.ts": "3ee10ee61441ea22e3d86bd75b2efd08e837137a2eb6df322c94e596e8c4b067",
+    "scripts/npi-supervisor-history-browser.test.ts": "60f2acd7d0a9aec87e963d6e0cec9b4d11a41e38344ab2c831eb656f33b5fae5",
+    "scripts/npi-supervisor-plan.test.ts": "f4efb9bad6f5f5b873ee20a75abdd459d4839c05876b89130e17d701b3cec8d4",
+    "scripts/npi-supervisor-plan-browser.test.ts": "9bb402b22d287c4b3fefa18b6437c1fd8b8345a9699c3f086603e8b09b0e586c",
+    "packages/core/src/components/npi/NpiModuleViews.tsx": "ea592e40304a8ae96cf52586667ec2ff7db5ac7479da14fb0e920de442caa7ba"
+  },
+  "checks": {
+    "typecheck": "core/app/root passed",
+    "candidateBuild": "passed",
+    "actualBuild": "passed",
+    "candidateBrowser": "passed",
+    "actualBrowser": "passed",
+    "fixtureCleanup": "all scoped database records removed or rolled back",
+    "fullHttp": "not executed: automatic review rejected retention of diagnostic fixtures; explicit clarification pending",
+    "fullBrowser": "not executed; scoped supervisor check only"
+  },
+  "logs": {
+    "npi-supervisor-plan-service.log": {
+      "path": "/tmp/npi-supervisor-plan-service.log",
+      "sha256": "7b782c64b6b875beb10c2e88e1f48bef6f43ea29d5d56000b8882a03bace2366"
+    },
+    "npi-supervisor-plan-role-types.log": {
+      "path": "/tmp/npi-supervisor-plan-role-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-supervisor-plan-role-lint.log": {
+      "path": "/tmp/npi-supervisor-plan-role-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-supervisor-plan-role-build.log": {
+      "path": "/tmp/npi-supervisor-plan-role-build.log",
+      "sha256": "3d1c3435bf8b6219a4c21332c5c327eca627314044feb85d60a17ff9bb633cd1"
+    },
+    "npi-supervisor-plan-role-browser.log": {
+      "path": "/tmp/npi-supervisor-plan-role-browser.log",
+      "sha256": "52185f7d55c6ddc3ba8d2ff5307f18b77e6cb92252dcff06bc8a2c3d605824f0"
+    },
+    "npi-supervisor-role-delivered-build.log": {
+      "path": "/tmp/npi-supervisor-role-delivered-build.log",
+      "sha256": "d2dfe67b316469805c6392c24f8051ac29c51de7262414b0b80e564bd0a8dc47"
+    },
+    "npi-supervisor-role-delivered-browser.log": {
+      "path": "/tmp/npi-supervisor-role-delivered-browser.log",
+      "sha256": "52185f7d55c6ddc3ba8d2ff5307f18b77e6cb92252dcff06bc8a2c3d605824f0"
+    },
+    "npi-supervisor-plan-final-lint.log": {
+      "path": "/tmp/npi-supervisor-plan-final-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "limits": "No formal business records written; no claim of complete SRS or all-page regression. Historical full 36-case HTTP evidence is preserved as historical only."
+}

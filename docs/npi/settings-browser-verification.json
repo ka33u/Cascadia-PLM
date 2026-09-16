@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "templateSearchAndPagination": true,
+  "templateEditorIdentity": true,
+  "roleSearchAndPagination": true,
+  "roleSaveRefresh": true,
+  "mobileOverflow": false,
+  "pageErrors": [],
+  "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+  "testCleanup": "Completed successfully in final run",
+  "scope": "Settings template and role search/pagination, editor identity, test role save/refresh, desktop/mobile; isolated _test database only"
+}

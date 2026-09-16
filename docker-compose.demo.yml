@@ -1,0 +1,179 @@
+# Cascadia PLM — Quickstart demo (no clone, no build)
+#
+# Usage (no repo clone required):
+#
+#   curl -O https://raw.githubusercontent.com/Cascadia-PLM/Cascadia-App/main/docker-compose.demo.yml
+#   docker compose -f docker-compose.demo.yml up -d
+#
+# Then open http://localhost:3000 and log in with:
+#   admin@cascadia.local / Cascadia
+#
+# First run pulls ~1.2 GB of pre-built images from ghcr.io (2-5 min on a typical
+# connection) and seeds the database. Subsequent boots are no-ops — the demo
+# seed exits early when it sees the ROBOT-ARM program already exists.
+#
+# Reset everything (wipes only this stack's volumes):
+#
+#   docker compose -f docker-compose.demo.yml down -v
+#
+# Pin to a specific image version (recommended for stable demos):
+#   replace `:latest` below with `:sha-<short>` from the GitHub Actions
+#   "publish-demo-images" workflow run output.
+#
+# Notes:
+#   * Credentials below (Postgres, RabbitMQ, admin login) are hardcoded demo
+#     literals, and the app port is published on 127.0.0.1 only, so nothing here
+#     is reachable from your LAN. DO NOT reuse this compose file for any
+#     deployment past your laptop.
+#   * Running the demo on a remote VM? Set DEMO_BIND=0.0.0.0 (the admin
+#     credential above is public knowledge — do not do this on an untrusted
+#     network).
+#   * All volumes are namespaced cascadia_demo_* and the project is named
+#     cascadia-demo, so this stack does not conflict with the contributor
+#     compose (docker-compose.demo-with-build.yml) or the dev stack.
+#   * Working from a clone? Use docker-compose.demo-with-build.yml instead
+#     to build images from your working tree.
+
+name: cascadia-demo
+
+services:
+  postgres:
+    image: postgres:18-alpine@sha256:d3e1620b530c944afa6e887d22eb899824da68e19c52024bf98f5220c88a65b2
+    container_name: cascadia-demo-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: cascadia
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - cascadia_demo_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres -d cascadia']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks: [cascadia-demo]
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine@sha256:606d8c0d6b3c18d1da9afc53bc7cdb2a8d5486df91b5a9830e9e07626c9ae281
+    container_name: cascadia-demo-rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: cascadia
+      RABBITMQ_DEFAULT_PASS: cascadia
+    volumes:
+      - cascadia_demo_rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ['CMD', 'rabbitmq-diagnostics', '-q', 'ping']
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    networks: [cascadia-demo]
+
+  # One-shot init container: copies the bundled demo dataset (~592 MB of
+  # STEPs/GLBs/thumbnails) from the cascadia-demo-data image into a named
+  # volume the app reads from. `cp -rn` is no-op on rerun, so restarts are
+  # cheap. The app depends on this completing successfully before booting.
+  demo-data-loader:
+    image: ghcr.io/cascadia-plm/cascadia-demo-data:latest@sha256:2b1535e5a5f7c4a3ba66f02b67ef7adfd16092cba7674570ddb3e93d313ddffd
+    container_name: cascadia-demo-data-loader
+    volumes:
+      - cascadia_demo_app_data:/out
+    command: sh -c "cp -rn /demo-data/. /out/ && echo 'demo data loaded'"
+    networks: [cascadia-demo]
+
+  app:
+    image: ghcr.io/cascadia-plm/cascadia-app:latest@sha256:cedffb9848d8356882e5fc1836d14544d0825ce1b2a6e52a9bbe07e5461569fb
+    container_name: cascadia-demo-app
+    restart: unless-stopped
+    depends_on:
+      postgres: { condition: service_healthy }
+      rabbitmq: { condition: service_healthy }
+      demo-data-loader: { condition: service_completed_successfully }
+    environment:
+      NODE_ENV: production
+      DATABASE_SSL: disable
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/cascadia
+      BASE_URL: http://localhost:3000
+      FILE_STORAGE_PATH: /app/storage/files
+      VAULT_TYPE: local
+      VAULT_ROOT: /app/vault
+      RABBITMQ_URL: amqp://cascadia:cascadia@rabbitmq:5672
+      DEMO_DATA_DIR: /app/demo-data
+    ports:
+      - '${DEMO_BIND:-127.0.0.1}:${DEMO_APP_PORT:-3000}:3000'
+    volumes:
+      - cascadia_demo_app_storage:/app/storage
+      - cascadia_demo_app_vault:/app/vault
+      - cascadia_demo_app_data:/app/demo-data:ro
+    # First-boot seed (drizzle push + minimal seed + demo seed with vault
+    # ingest) takes 60-120s before the HTTP server starts. Override the
+    # Dockerfile HEALTHCHECK's start_period accordingly.
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "require('http').get('http://localhost:3000/api/v1/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 180s
+    networks: [cascadia-demo]
+    # First boot: push schema → minimal seed → demo seed → serve.
+    # All steps are idempotent so reboots are safe.
+    command: >
+      sh -c "node scripts/drizzle.mjs push --force
+      && npx tsx scripts/seed-minimal.ts
+      && npx tsx scripts/seed-demo.ts
+      && npm run serve"
+
+  cad-converter:
+    image: ghcr.io/cascadia-plm/cascadia-cad-converter:latest@sha256:5f781382ed95faec947d0b49f31d228f4fb91f47a374ef1d47e409857edb248e
+    container_name: cascadia-demo-cad-converter
+    restart: unless-stopped
+    depends_on:
+      postgres: { condition: service_healthy }
+      rabbitmq: { condition: service_healthy }
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/cascadia
+      RABBITMQ_URL: amqp://cascadia:cascadia@rabbitmq:5672
+      VAULT_ROOT: /vault
+      WORKER_CONCURRENCY: 2
+      HEALTH_PORT: 3003
+    volumes:
+      # Share the app's vault volume so the converter can read user uploads
+      # and write STL/GLB outputs back to the same store the app sees.
+      - cascadia_demo_app_vault:/vault
+    networks: [cascadia-demo]
+
+  jobs-worker:
+    image: ghcr.io/cascadia-plm/cascadia-jobs-worker:latest@sha256:0be3d3020d25fce60ca4a3136de17751cd864251c1d75f7a57a87d8690119e75
+    container_name: cascadia-demo-jobs-worker
+    restart: unless-stopped
+    depends_on:
+      postgres: { condition: service_healthy }
+      rabbitmq: { condition: service_healthy }
+    environment:
+      NODE_ENV: production
+      DATABASE_SSL: disable
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/cascadia
+      RABBITMQ_URL: amqp://cascadia:cascadia@rabbitmq:5672
+      WORKER_CONCURRENCY: 5
+      JOB_TYPES: '*'
+      JOB_TIMEOUT: 300000
+    networks: [cascadia-demo]
+
+volumes:
+  cascadia_demo_postgres_data:
+  cascadia_demo_rabbitmq_data:
+  cascadia_demo_app_storage:
+  cascadia_demo_app_vault:
+  cascadia_demo_app_data:
+
+networks:
+  cascadia-demo:
+    driver: bridge

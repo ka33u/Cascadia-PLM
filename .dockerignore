@@ -1,0 +1,77 @@
+# Build context filter for the repo-root builds (docker/app.Dockerfile,
+# workers/node/Dockerfile). Both do `COPY . .` in their builder stage, so
+# anything not excluded here is both transferred to the daemon and baked into
+# a builder layer that `cache-to: gha,mode=max` uploads.
+#
+# Keep in sync with .gitignore: a path that is gitignored but not listed here
+# is absent in CI (fresh checkout) yet ships from every developer machine.
+
+# Dependencies
+node_modules
+npm-debug.log*
+
+# Environment files — .env.docker is gitignored and would otherwise be
+# included; the .example files are not needed inside an image either.
+.env
+.env.*
+.env.local
+.env.*.local
+
+# Build outputs
+dist
+.output
+.vinxi
+.vite
+.nitro
+.tanstack
+html
+
+# Runtime data. `vault` is the local file-vault store and reaches multiple GB.
+# These match root-level entries only, so src/lib/vault is unaffected.
+vault
+vault-storage
+storage
+todos.json
+
+# Demo dataset (~200 MB of GLB + thumbnails, ~590 MB with STEPs). Only
+# docker/demo-data.Dockerfile needs it, and that build uses `demo-data` as its
+# own context with demo-data/.dockerignore filtering it.
+demo-data
+
+# Git
+.git
+.gitignore
+
+# IDE / agent tooling
+.vscode
+.idea
+.claude
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage
+.nyc_output
+test-results
+playwright-report
+playwright/.auth
+
+# Documentation
+*.md
+!README.md
+
+# Scripts and configs
+drizzle
+*.sql
+reset-db.js
+list-tables.js
+
+# Temp files
+*.log
+tmp
+temp

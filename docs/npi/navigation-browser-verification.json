@@ -1,0 +1,108 @@
+{
+  "verifiedAt": "2026-09-15T11:48:34.416Z",
+  "browser": {
+    "passed": true,
+    "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "adminModules": [
+      "首页",
+      "新品项目",
+      "BOM管理",
+      "制造准备",
+      "采购管理",
+      "报表看板",
+      "基础数据",
+      "系统设置"
+    ],
+    "projectPagination": true,
+    "bomDeepLinkLoadsRows": true,
+    "fourNodeFilters": true,
+    "purchaseFocus": true,
+    "reportStageFilter": true,
+    "separateSettings": true,
+    "roleScope": true,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "shortViewportSidebar": "passed: 1280x640 scroll to bottom management link and return to home",
+  "runtime": {
+    "observedAt": "2026-09-15T11:47:08.588Z",
+    "root": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "checks": {
+      "navigation": {
+        "status": 200,
+        "markers": {
+          "新品项目": true,
+          "BOM管理": true,
+          "制造准备": true,
+          "采购管理": true,
+          "报表看板": true,
+          "基础数据": true,
+          "系统设置": true
+        }
+      },
+      "NpiWorkspace": {
+        "status": 200,
+        "markers": {
+          "navigationFor": true,
+          "NpiPreparationBoard": true,
+          "NpiProjectLibrary": true,
+          "NpiReports": true
+        }
+      },
+      "page": 200,
+      "unauthenticatedApi": 401
+    }
+  },
+  "checks": {
+    "candidateTypecheck": "passed",
+    "changedFilesLint": "passed",
+    "relatedComponentTests": 8,
+    "actualBuild": "passed",
+    "actualNavigationBrowser": "passed; fixture cleanup completed",
+    "supervisorHistoryBrowser": "passed on candidate with identical source",
+    "fullLegacyBomBrowser": "updated affected expectations; full script not rerun"
+  },
+  "screenshots": [
+    "screenshots/navigation-home-desktop.png",
+    "screenshots/navigation-bom-desktop.png",
+    "screenshots/navigation-manufacturing-desktop.png",
+    "screenshots/navigation-manufacturing-mobile.png",
+    "screenshots/navigation-reports-desktop.png",
+    "screenshots/navigation-settings-mobile.png"
+  ],
+  "logs": {
+    "npi-navigation-types-final.log": {
+      "path": "/tmp/npi-navigation-types-final.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-navigation-lint.log": {
+      "path": "/tmp/npi-navigation-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-navigation-regression.log": {
+      "path": "/tmp/npi-navigation-regression.log",
+      "sha256": "65fa81938878a3c4040bc8cfe5a8069e41ff300ed5ec91efb61089fbcc134d4a"
+    },
+    "npi-navigation-delivered-build.log": {
+      "path": "/tmp/npi-navigation-delivered-build.log",
+      "sha256": "69aebf1055464ef67be6eccb9b40ba1a255fd8f482d676a4bb52d7830266ef7d"
+    },
+    "npi-navigation-delivered-browser.log": {
+      "path": "/tmp/npi-navigation-delivered-browser.log",
+      "sha256": "f8231169b722bed907a51b14814cc11abdc834529f7ef1dd0c899c9bda322a72"
+    },
+    "npi-navigation-supervisor-final.log": {
+      "path": "/tmp/npi-navigation-supervisor-final.log",
+      "sha256": "2136a9c939af1e1f751252e0a1846ba80a7c13f9ab7cf7193d6b4def337b907d"
+    },
+    "npi-navigation-final-script-lint.log": {
+      "path": "/tmp/npi-navigation-final-script-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "limitations": [
+    "No full SRS acceptance claim",
+    "No real business pilot performed",
+    "Existing unrelated final assignment layout review remains separate"
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "verifiedAt": "2026-09-15T15:24:19.311Z",
+  "actualBrowser": {
+    "passed": true,
+    "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "refreshFailuresRecovered": 2,
+    "completionPosts": {
+      "A": 1,
+      "B": 1
+    },
+    "completionEvents": {
+      "A": 1,
+      "B": 1
+    },
+    "replyPosts": 1,
+    "pendingCloseProtected": true,
+    "lostResponseRecovered": true,
+    "changedActorBlocked": true,
+    "attachmentIntentPreserved": true,
+    "photoUploadedAndDownloaded": true,
+    "photoOwnershipCorrect": true,
+    "otherProjectFilesIsolated": true,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "candidateBrowser": {
+    "passed": true,
+    "applicationRoot": "/private/tmp/npi-procurement-receipt-review",
+    "refreshFailuresRecovered": 2,
+    "completionPosts": {
+      "A": 1,
+      "B": 1
+    },
+    "completionEvents": {
+      "A": 1,
+      "B": 1
+    },
+    "replyPosts": 1,
+    "pendingCloseProtected": true,
+    "lostResponseRecovered": true,
+    "changedActorBlocked": true,
+    "attachmentIntentPreserved": true,
+    "photoUploadedAndDownloaded": true,
+    "photoOwnershipCorrect": true,
+    "otherProjectFilesIsolated": true,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "actualReplyRegression": {
+    "passed": true,
+    "applicationRoot": "/Users/zhangyu/Documents/Cascadia-NPI/app",
+    "firstReplyDateOnly": true,
+    "changeReasonRequired": true,
+    "conflictPreservesDraft": true,
+    "explicitLatestAcceptance": true,
+    "untouchedFieldsRefresh": true,
+    "failedReadRecovery": true,
+    "busyProtection": true,
+    "transferredItemLocked": true,
+    "concurrentArrivalLocked": true,
+    "supplierOnlyPreservesHistory": true,
+    "arrivalAndHistory": true,
+    "mobileOverflow": false,
+    "pageErrors": []
+  },
+  "runtime": {
+    "verifiedAt": "2026-09-15T15:22:33.466Z",
+    "observations": [
+      {
+        "file": "NpiWorkspace.tsx",
+        "status": 200,
+        "markers": {
+          "onOpenFiles": true,
+          "setPurchases(next.items)": true,
+          "登录账号已改变，请整页刷新核对。": true
+        },
+        "sha256": "976b03987c0f4b00a6f6eaee5242107fd6ea547fd1eb73914b4386a9290f7cab"
+      },
+      {
+        "file": "NpiProcurementReplyDialog.tsx",
+        "status": 200,
+        "markers": {
+          "保存并补充资料": true,
+          "重试刷新列表": true,
+          "needsReload": true,
+          "afterSave": true
+        },
+        "sha256": "bea1ec833a20e3448735edc6494b4f9ba60e8ec5fc2daa2b82f27bc7a040541d"
+      }
+    ],
+    "scope": "Read-only 3410 source modules; no login, restart or formal data requests."
+  },
+  "checks": {
+    "typecheck": "Core, app and root passed; root repeated after adding browser test",
+    "lint": "passed",
+    "format": "passed",
+    "dom": "5 passed",
+    "candidateBuild": "passed exit 0",
+    "actualBuild": "passed exit 0",
+    "candidateBrowser": "passed exit 0 and cleanup",
+    "actualBrowser": "passed exit 0 and cleanup",
+    "originalProcurementReplyRegression": "passed on actual build with exit 0 and cleanup"
+  },
+  "files": {
+    "packages/core/src/components/npi/NpiProcurementReplyDialog.tsx": "6404ab2ca03637289d7a486a754e9e1521bbac92f539ff28c5cefec70dd7300f",
+    "packages/core/src/components/npi/NpiWorkspace.tsx": "56b6732f0d0735ae79e2fb0c1ecbab236d902aeeaf6b95990b628e33369fd569",
+    "scripts/npi-procurement-receipt-dom.test.mjs": "e2e533c555be282c6b2c0de3a6e8f89b0c9c23a5a3f83398c567f4620f439958",
+    "scripts/npi-procurement-receipt-browser.test.ts": "e8434af12efc627f9ed76bd433c412d49e4669716a9dc077f2664d2232c7714c"
+  },
+  "logs": {
+    "npi-procurement-receipt-types.log": {
+      "path": "/tmp/npi-procurement-receipt-types.log",
+      "sha256": "27d03faa14589496afc0f562edef2e98ee3b5911390130e18806cf1ac4c03614"
+    },
+    "npi-procurement-receipt-test-types.log": {
+      "path": "/tmp/npi-procurement-receipt-test-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-procurement-receipt-lint.log": {
+      "path": "/tmp/npi-procurement-receipt-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "npi-procurement-receipt-format.log": {
+      "path": "/tmp/npi-procurement-receipt-format.log",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    "npi-procurement-receipt-dom.log": {
+      "path": "/tmp/npi-procurement-receipt-dom.log",
+      "sha256": "0f7276c73b650736a76208ac9596c41517d34efb2922305ab42f23cae6da449a"
+    },
+    "npi-procurement-receipt-build.log": {
+      "path": "/tmp/npi-procurement-receipt-build.log",
+      "sha256": "abc82184ed74240c3c8dadd32fdd5036d0f3caf44e287ff03f0f88e3cadf9796"
+    },
+    "npi-procurement-receipt-browser.log": {
+      "path": "/tmp/npi-procurement-receipt-browser.log",
+      "sha256": "04cd16d0042e4726ad6b754c6fb4bd1db326724b195285496b2a8e7bf134f3cd"
+    },
+    "npi-procurement-receipt-delivered-build.log": {
+      "path": "/tmp/npi-procurement-receipt-delivered-build.log",
+      "sha256": "5a2d8dc172f6c61c9dd3ee927eecd753b01f22b4763c5b64f3152821bdfedd7f"
+    },
+    "npi-procurement-receipt-delivered-browser.log": {
+      "path": "/tmp/npi-procurement-receipt-delivered-browser.log",
+      "sha256": "04cd16d0042e4726ad6b754c6fb4bd1db326724b195285496b2a8e7bf134f3cd"
+    },
+    "npi-procurement-receipt-reply-regression.log": {
+      "path": "/tmp/npi-procurement-receipt-reply-regression.log",
+      "sha256": "4af322e514fbfcbc299ab676a40cf7c7485deda072112a08208d547b02990027"
+    }
+  },
+  "screenshots": [
+    "docs/npi/screenshots/procurement-receipt-mobile.png",
+    "docs/npi/screenshots/procurement-receipt-refresh-desktop.png",
+    "docs/npi/screenshots/procurement-receipt-files-mobile.png"
+  ],
+  "limits": "Existing backend completion, permission and Document/Vault rules reused unchanged. Browser uses explicitly isolated _test database and temporary Vault; owned data/files cleaned. No full SRS or production pilot acceptance claim."
+}
