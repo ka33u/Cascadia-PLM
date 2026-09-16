@@ -1,0 +1,33 @@
+services:
+  database:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: npi_workspace
+      POSTGRES_USER: npi
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - database:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U npi -d npi_workspace]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+  app:
+    build: .
+    ports: ["3410:3410"]
+    environment:
+      DATABASE_URL: postgres://npi:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@database:5432/npi_workspace
+      BASE_URL: ${BASE_URL:-http://localhost:3410}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:?Set ADMIN_EMAIL in .env}
+      ADMIN_NAME: ${ADMIN_NAME:-管理员}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Set ADMIN_PASSWORD in .env}
+    depends_on:
+      database:
+        condition: service_healthy
+    volumes:
+      - attachments:/app/runtime/attachments
+    restart: unless-stopped
+volumes:
+  database:
+  attachments:

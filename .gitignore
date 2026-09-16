@@ -1,75 +1,11 @@
-node_modules
-.DS_Store
-dist
-dist-ssr
-*.local
-count.txt
+node_modules/
+dist/
 .env
-.nitro
-.tanstack
-.output
-apps/*/src/routeTree.gen.ts
-.vinxi
-todos.json
-.vscode/
-/vault/
-/storage/
-.env.docker
-
-# Demo dataset. Lives in Cascadia-PLM/Demo-Data and is fetched on demand by
-# `npm run demo:fetch` (scripts/fetch-demo-data.ts), which clones it here at a
-# pinned tag. Never commit it back into this repo.
-demo-data/
-html/
-.gcloudignore
-
-# Test artifacts
-test-results/
-playwright-report/
-playwright/.auth/
-coverage/
-
-
-# Claude Code local enforcement (not committed to repo)
-# These provide hard commit-blocking on local machine only
-# Other machines still get testing workflow via CLAUDE.md rules
-.claude/hooks/
-.claude/dev-session.json
-.claude/settings.local.json
-.claude/scheduled_tasks.lock
-
-# VS Code Counter extension output
-.VSCodeCounter/
-
-# Generated attribution. `npm run build` writes it into dist/ and .output/ for
-# the images; `npm run notices` writes it here for a look. Derived entirely
-# from the lockfile and the installed tree, so a committed copy would be one
-# more artefact to drift out of date with what it credits.
-/THIRD-PARTY-NOTICES.txt
-
-# Python bytecode (workers)
-__pycache__/
-*.pyc
-
-# pytest's run cache. It drops a .gitignore of its own, so this is belt and
-# braces — but the directory is also listed in .prettierignore, and keeping
-# both statements next to their subject is cheaper than remembering why only
-# one of them exists.
-.pytest_cache/
-
-# Docker build transcripts. Two were once committed by an accidental redirect
-# into the repo root — 10,631 lines of `docker build` output that no gate
-# objects to, since build output is ordinary text with nothing sensitive in
-# it. Ignored so a stray redirect cannot repeat that.
-.build_*.log
-
-# Independent NPI runtime
-.npi-local/
-
-# Local NPI configuration, runtime data and editor/sync copies
 .env.*
-!.env*.example
-/runtime/
+!.env.example
+runtime/
+playwright-report/
+test-results/
 *.log
 *.tsbuildinfo
-* [2-9].*
+.DS_Store

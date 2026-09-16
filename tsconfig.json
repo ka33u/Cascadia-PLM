@@ -1,26 +1,11 @@
 {
-  "extends": "./tsconfig.base.json",
-  // Everything outside the workspace packages: root tooling and the E2E suite.
-  // The packages and apps each have their own project; this one catches what
-  // would otherwise belong to none, which type-aware linting treats as an error.
-  "include": [
-    "scripts/**/*.ts",
-    "scripts/**/*.mjs",
-    "publish/**/*.ts",
-    "publish/**/*.mjs",
-    "tests/**/*.ts",
-    "*.config.ts",
-    "eslint.config.js",
-    "prettier.config.js"
-  ],
-  // Unreferenced sync-conflict copy; the canonical HTTP test remains included.
-  "exclude": ["scripts/npi-http.test 2.ts"],
   "compilerOptions": {
-    "allowJs": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./packages/core/src/*"],
-      "@cascadia/core/*": ["./packages/core/src/*"]
-    }
-  }
+    "target": "ES2022", "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext", "moduleResolution": "Bundler", "jsx": "react-jsx",
+    "strict": true, "noEmit": true, "skipLibCheck": true,
+    "esModuleInterop": true, "allowImportingTsExtensions": true,
+    "resolveJsonModule": true, "types": ["node", "vite/client"],
+    "baseUrl": ".", "paths": { "@/*": ["src/*"] }
+  },
+  "include": ["src", "scripts", "vite.config.ts", "drizzle.config.ts"]
 }
